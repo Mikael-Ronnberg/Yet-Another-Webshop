@@ -1,3 +1,5 @@
+import { Bag } from "../../icons/Bag";
+import { Search } from "../../icons/Search";
 import "./Navbar.scss";
 
 export const Navbar = () => {
@@ -10,7 +12,9 @@ export const Navbar = () => {
           PIECES FROM OUR PAST, TO SAVE OUR FUTURE 🌎
         </span>
         <div className="white_span">
-          <div className="search_nav"></div>
+          <div className="search_nav">
+            <Search></Search>
+          </div>
           <nav className="navigation_links">
             <ul>
               <li>NEW IN</li>
@@ -27,7 +31,9 @@ export const Navbar = () => {
             </ul>
           </nav>
           <div className="logo"></div>
-          <div className="login"></div>
+          <div className="login">
+            <Bag></Bag>
+          </div>
         </div>
       </header>
     </>
