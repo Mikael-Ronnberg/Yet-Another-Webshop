@@ -1,2 +1,9 @@
-// body {
-// }
+@use "../../scss/components/index" as comp;
+
+.main_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

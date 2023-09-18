@@ -1,9 +1,21 @@
 @use "./../variables" as var;
 
-// .btn_blue {
+.btn_blue {
+  width: 122px;
+  height: 44px;
+  background-color: var.$primary;
+  color: var.$secondary;
+  border: none;
+  font-size: 1rem;
+  border-radius: 3px;
+}
 
-// }
-
-// .btn_white {
-
-// }
+.btn_white {
+  width: 122px;
+  height: 44px;
+  background-color: var.$secondary;
+  color: var.$primary;
+  border: none;
+  font-size: 1rem;
+  border-radius: 3px;
+}

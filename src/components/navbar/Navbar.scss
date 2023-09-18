@@ -11,11 +11,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-  }
 }
 
 .blue_span {
@@ -37,6 +32,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .search_nav {
+    width: 10rem;
+    height: 5rem;
+  }
+
+  .navigation_links {
+    display: none;
+    @include var.tablet {
+    }
+    @include var.desktop {
+      display: show;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+      }
+    }
+  }
 
   .logo {
     width: 18rem;

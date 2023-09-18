@@ -11,7 +11,7 @@ export const Navbar = () => {
         </span>
         <div className="white_span">
           <div className="search_nav"></div>
-          <nav>
+          <nav className="navigation_links">
             <ul>
               <li>NEW IN</li>
               <li>WOMEN</li>
@@ -26,7 +26,7 @@ export const Navbar = () => {
               <li>SWIPER</li>
             </ul>
           </nav>
-          <div className="logo">Logo</div>
+          <div className="logo"></div>
           <div className="login"></div>
         </div>
       </header>

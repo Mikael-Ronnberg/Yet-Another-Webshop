@@ -6,7 +6,10 @@ export const Home = () => {
   return (
     <>
       <Navbar />
-      <main className="main_container"></main>
+      <main className="main_container">
+        <button className="btn_blue">SHOP EDIT</button>
+        <button className="btn_white">TO SWIPER</button>
+      </main>
       <Footer />
     </>
   );
