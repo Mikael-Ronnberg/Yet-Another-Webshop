@@ -1,6 +1,11 @@
 .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   ul {
     display: flex;
+    justify-content: space-between;
     list-style: none;
   }
 }
