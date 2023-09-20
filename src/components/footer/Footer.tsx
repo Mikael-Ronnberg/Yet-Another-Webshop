@@ -1,3 +1,4 @@
+import "./Footer.scss";
 import { Airplane } from "../../icons/Airplane";
 import { Gift } from "../../icons/Gift";
 import { Leaf } from "../../icons/Leaf";
@@ -25,7 +26,7 @@ export const Footer = () => {
             <p>CIRCULARITY</p>
           </div>
         </section>
-        <article>
+        <article className="grey_bar">
           <h4>ABOUT US</h4>
           <ul>
             <li>Blog</li>
@@ -35,7 +36,7 @@ export const Footer = () => {
             <li>Our Vintage</li>
           </ul>
         </article>
-        <article>
+        <article className="grey_bar">
           <h4>HELP</h4>
           <ul>
             <li>Delivery</li>
@@ -45,7 +46,7 @@ export const Footer = () => {
             <li>Terms of Service</li>
           </ul>
         </article>
-        <article>
+        <article className="grey_bar">
           <h4>SIGN UP!</h4>
           <p>
             Sign up to be the first to hear about our newest drops, exclusive
