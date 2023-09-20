@@ -1,18 +1,27 @@
+import { Airplane } from "../../icons/Airplane";
+import { Gift } from "../../icons/Gift";
+import { Leaf } from "../../icons/Leaf";
+import { Visit } from "../../icons/Visit";
+
 export const Footer = () => {
   return (
     <>
       <footer>
         <section className="blue_bar">
           <div>
+            <Visit></Visit>
             <p>VISIT OUR STORES</p>
           </div>
           <div>
+            <Airplane></Airplane>
             <p>GLOBAL DELIVERY</p>
           </div>
           <div>
+            <Gift></Gift>
             <p>GIFT CARDS</p>
           </div>
           <div>
+            <Leaf></Leaf>
             <p>CIRCULARITY</p>
           </div>
         </section>

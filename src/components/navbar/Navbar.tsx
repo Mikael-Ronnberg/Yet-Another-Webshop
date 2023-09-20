@@ -1,4 +1,5 @@
 import { Bag } from "../../icons/Bag";
+import { Login } from "../../icons/Login";
 import { Search } from "../../icons/Search";
 import "./Navbar.scss";
 
@@ -32,6 +33,7 @@ export const Navbar = () => {
           </nav>
           <div className="logo"></div>
           <div className="login">
+            <Login></Login>
             <Bag></Bag>
           </div>
         </div>
