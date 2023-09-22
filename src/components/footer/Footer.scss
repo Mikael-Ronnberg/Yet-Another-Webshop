@@ -1,6 +1,7 @@
 @use "../../scss/variables/index" as var;
 
 footer {
+  height: 150vh;
   background-color: var.$tertiary;
 }
 
@@ -20,15 +21,14 @@ footer {
     justify-content: center;
     align-items: center;
   }
-
   p {
     margin: 0.5rem;
   }
 }
 
 .grey_bar {
-  width: 50vw;
-  height: 18vh;
+  width: 100vw;
+  height: 30vh;
   color: var.$primary;
   padding: 1rem;
 
@@ -47,9 +47,9 @@ footer {
 
 .currency_container {
   width: 100vw;
-  height: 3rem;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  height: 5vh;
+  border-top: 1px solid Black;
+  border-bottom: 1px solid black;
   p {
     text-align: center;
     margin-left: 1rem;
@@ -59,4 +59,9 @@ footer {
     background-color: #efefef;
     border: 1px solid #767676;
   }
+}
+
+.final_part  {
+  height: 10vh;
+  width: 100vw;
 }

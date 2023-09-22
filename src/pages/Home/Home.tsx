@@ -7,8 +7,10 @@ export const Home = () => {
     <>
       <Navbar />
       <main className="main_container">
-        <button className="btn_blue">SHOP EDIT</button>
-        <button className="btn_white">TO SWIPER</button>
+        <div className="hero_container">
+          <button className="btn_blue">SHOP EDIT</button>
+          <button className="btn_white">TO SWIPER</button>
+        </div>
       </main>
       <Footer />
     </>

@@ -29,6 +29,7 @@
 }
 
 .white_span {
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,6 +59,7 @@
   .logo {
     width: 18rem;
     height: 5rem;
+    background-size: cover;
     background-image: url("../../assets/div.logo.png");
     background-repeat: no-repeat;
   }

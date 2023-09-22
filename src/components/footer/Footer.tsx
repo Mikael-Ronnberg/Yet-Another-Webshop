@@ -65,7 +65,9 @@ export const Footer = () => {
         <span className="currency_container">
           <p>SEK</p>
         </span>
-        <p>© 2023 Beyond Retro. Powered by Shopify</p>
+        <span className="final_part">
+          <p>© 2023 Beyond Retro. Powered by Shopify</p>
+        </span>
       </footer>
     </>
   );
