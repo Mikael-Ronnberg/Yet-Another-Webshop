@@ -6,18 +6,20 @@ import "./Navbar.scss";
 export const Navbar = () => {
   return (
     <>
-      <header className="navbar">
-        <div className="blue_span"></div>
-        <span className="green_span">
-          {" "}
+      <nav className="navbar">
+        <div className="navbar__blue-span"></div>
+        <span className="navbar__green-span">
           PIECES FROM OUR PAST, TO SAVE OUR FUTURE 🌎
         </span>
-        <div className="white_span">
-          <div className="search_nav">
+        <div className="navbar__white-span">
+          <div className="navbar__white-span--search-nav">
             <Search></Search>
           </div>
-          <nav className="navigation_links">
-            <ul>
+
+          <div className="navbar__white-span--navigation-links">
+            <input type="checkbox" className="toggle-menu" />
+            <div className="hamburger"></div>
+            <ul className="menu">
               <li>NEW IN</li>
               <li>WOMEN</li>
               <li>MEN</li>
@@ -30,14 +32,14 @@ export const Navbar = () => {
               <li>ABOCE & BEYOND</li>
               <li>SWIPER</li>
             </ul>
-          </nav>
-          <div className="logo"></div>
-          <div className="login">
+          </div>
+          <div className="navbar__white-span--logo"></div>
+          <div className="navbar__white-span--login">
             <Login></Login>
             <Bag></Bag>
           </div>
         </div>
-      </header>
+      </nav>
     </>
   );
 };

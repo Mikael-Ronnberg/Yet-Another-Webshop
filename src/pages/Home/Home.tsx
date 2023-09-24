@@ -7,7 +7,7 @@ export const Home = () => {
     <>
       <Navbar />
       <main className="main_container">
-        <div className="hero_container">
+        <div className="main_container--hero">
           <button className="btn_blue">SHOP EDIT</button>
           <button className="btn_white">TO SWIPER</button>
         </div>

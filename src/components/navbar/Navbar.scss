@@ -3,6 +3,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -11,63 +12,115 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
 
-.blue_span {
-  width: 100vw;
-  height: 3rem;
-  background-color: var.$primary;
-}
-
-.green_span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 3rem;
-  width: 100vw;
-  background-color: var.$pentary;
-}
-
-.white_span {
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  .search_nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 5rem;
-    height: 5rem;
+  &__blue-span {
+    width: 100vw;
+    height: 3rem;
+    background-color: var.$primary;
   }
 
-  .navigation_links {
-    display: none;
-    @include var.tablet {
+  &__green-span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 100vw;
+    background-color: var.$pentary;
+  }
+
+  &__white-span {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--search_nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 5rem;
+      height: 5rem;
     }
-    @include var.desktop {
-      display: show;
-      ul {
-        display: flex;
-        justify-content: space-between;
+
+    &--navigation_links {
+      width: 10vw;
+      .menu {
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
         list-style: none;
       }
+
+      .hamburger {
+        position: relative;
+        width: 30px;
+        height: 4px;
+        background-color: var.$primary;
+        border-radius: 3px;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .hamburger:before,
+      .hamburger:after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        right: 0;
+      }
+
+      .hamburger::before {
+        top: -10px;
+      }
+      .hamburger::after {
+        top: 10px;
+      }
+
+      .toggle-menu {
+        position: absolute;
+        width: 30px;
+        height: 100%;
+        z-index: 3;
+        cursor: pointer;
+        opacity: 0;
+      }
+
+      input:checked ~ .hamburger {
+        background: transparent;
+      }
+
+      // @include var.tablet {
+      // }
+
+      @include var.desktop {
+        display: show;
+        ul {
+          display: flex;
+          justify-content: space-between;
+          list-style: none;
+        }
+
+        .hamburger,
+        .toggle-menu {
+          display: none;
+        }
+      }
     }
-  }
 
-  .logo {
-    width: 18rem;
-    height: 5rem;
-    background-size: cover;
-    background-image: url("../../assets/div.logo.png");
-    background-repeat: no-repeat;
-  }
+    &--logo {
+      width: 18rem;
+      height: 5rem;
+      background-size: cover;
+      background-image: url("../../assets/div.logo.png");
+      background-repeat: no-repeat;
+    }
 
-  .login {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 10rem;
+    &--login {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 10rem;
+    }
   }
 }
