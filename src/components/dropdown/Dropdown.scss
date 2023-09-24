@@ -1,0 +1,23 @@
+@use "../../scss/variables/index" as var;
+
+.dropdown {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 70%;
+  animation: slide 0.3s ease-in;
+  background-color: var.$secondary;
+  padding: 2rem;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-70%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+  0% {
+    transform: translate(-70%);
+  }
+}

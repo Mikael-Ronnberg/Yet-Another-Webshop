@@ -1,15 +1,21 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import "./Navitem.scss";
+import { Dropdown } from "../dropdown/Dropdown";
 
-interface navitemprops {
-  text: string;
+interface INavitemProps {
+  icon: JSX.Element;
 }
 
-export const Navitem = (props: navitemprops) => {
+export const Navitem = (props: INavitemProps) => {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <li className="nav-item">
-        <Link to="/products">{props.text}</Link>
+        <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
+          {props.icon}
+        </a>
       </li>
+      {open && <Dropdown close={() => setOpen(!open)} />}
     </>
   );
 };
