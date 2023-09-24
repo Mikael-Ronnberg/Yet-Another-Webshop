@@ -5,7 +5,7 @@ import "./Home.scss";
 export const Home = () => {
   return (
     <>
-      <Navbar />
+      <Navbar></Navbar>
       <main className="main_container">
         <div className="main_container--hero">
           <button className="btn_blue">SHOP EDIT</button>

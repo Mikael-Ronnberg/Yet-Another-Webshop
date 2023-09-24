@@ -1,9 +1,11 @@
-import { Bag } from "../../icons/Bag";
-import { Login } from "../../icons/Login";
-import { Search } from "../../icons/Search";
+// import { Bag } from "../../icons/Bag";
+// import { Login } from "../../icons/Login";
+// import { Search } from "../../icons/Search";
+import { Navitem } from "../navitem/Navitem";
 import "./Navbar.scss";
 
 export const Navbar = () => {
+  const insertTet = "products";
   return (
     <>
       <nav className="navbar">
@@ -12,32 +14,15 @@ export const Navbar = () => {
           PIECES FROM OUR PAST, TO SAVE OUR FUTURE 🌎
         </span>
         <div className="navbar__white-span">
-          <div className="navbar__white-span--search-nav">
-            <Search></Search>
-          </div>
+          <ul className="navbar__white-span--menu">
+            <Navitem text={insertTet}></Navitem>
+          </ul>
 
-          <div className="navbar__white-span--navigation-links">
-            <input type="checkbox" className="toggle-menu" />
-            <div className="hamburger"></div>
-            <ul className="menu">
-              <li>NEW IN</li>
-              <li>WOMEN</li>
-              <li>MEN</li>
-              <li>EVERYONE</li>
-              <li>BRANDS</li>
-              <li>SPORTS</li>
-              <li>DENIM</li>
-              <li>SUMMER</li>
-              <li>SALE & DEALS</li>
-              <li>ABOCE & BEYOND</li>
-              <li>SWIPER</li>
-            </ul>
-          </div>
-          <div className="navbar__white-span--logo"></div>
+          {/* <div className="navbar__white-span--logo"></div>
           <div className="navbar__white-span--login">
             <Login></Login>
             <Bag></Bag>
-          </div>
+          </div> */}
         </div>
       </nav>
     </>
