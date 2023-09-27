@@ -1,7 +1,9 @@
 .productContainer {
-  width: 10rem;
+  width: 15rem;
   height: 25rem;
+  margin: 2rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   outline: 1px solid black;

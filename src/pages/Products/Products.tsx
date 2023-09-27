@@ -1,3 +1,5 @@
+import "./Products.scss";
+
 import { Navbar } from "../../components/navbar/Navbar";
 import { ProductItem } from "../../components/productitem/ProductItem";
 import { IProductProps } from "../../models/IProductProps";

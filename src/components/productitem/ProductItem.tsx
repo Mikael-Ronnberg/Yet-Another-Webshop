@@ -1,3 +1,4 @@
+import "./ProductItem.scss";
 import { IProductProps } from "../../models/IProductProps";
 
 export const ProductItem = ({ product }: { product: IProductProps }) => {
