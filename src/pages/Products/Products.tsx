@@ -33,14 +33,7 @@ export const Products = () => {
       <main className="mainContainer">
         <div className="mainContainer__products">
           {products.map((p, i) => (
-            <ProductItem
-              productTitel={p.productTitel}
-              productDescription={p.productDescription}
-              price={p.price}
-              expireDate={p.expireDate}
-              quantity={p.quantity}
-              key={i}
-            ></ProductItem>
+            <ProductItem product={p} key={i}></ProductItem>
           ))}
         </div>
       </main>

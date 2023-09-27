@@ -1,8 +1,6 @@
 import { IProductProps } from "../../models/IProductProps";
 
-export const ProductItem = (product: IProductProps) => {
-  // const { productTitel, productDescription, price, expireDate } = product;
-
+export const ProductItem = ({ product }: { product: IProductProps }) => {
   return (
     <>
       <div className="productContainer">
