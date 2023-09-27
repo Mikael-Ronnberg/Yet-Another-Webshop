@@ -32,9 +32,16 @@ export const Products = () => {
       <Navbar></Navbar>
       <main className="mainContainer">
         <div className="mainContainer__products">
-          {/* {products.map(p, i) => {
-            <ProductItem key={i} product={p}></ProductItem>;
-          })} */}
+          {products.map((p, i) => (
+            <ProductItem
+              productTitel={p.productTitel}
+              productDescription={p.productDescription}
+              price={p.price}
+              expireDate={p.expireDate}
+              quantity={p.quantity}
+              key={i}
+            ></ProductItem>
+          ))}
         </div>
       </main>
     </>
