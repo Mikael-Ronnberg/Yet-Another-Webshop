@@ -13,7 +13,7 @@ export enum ActionType {
 export const CartReducer = (cart: IProduct[], action: IAction): IProduct[] => {
   switch (action.type) {
     case ActionType.ADD_ITEM: {
-      return [action.payload];
+      return [...cart, action.payload];
     }
     default:
       break;
