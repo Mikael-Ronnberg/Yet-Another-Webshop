@@ -9,6 +9,7 @@ export const ProductItem = ({ product }: { product: IProductProps }) => {
         <p>{product.productDescription}</p>
         <h5>{product.price}</h5>
         <p>{product.expireDate}</p>
+        <button>Add To Cart</button>
       </div>
     </>
   );

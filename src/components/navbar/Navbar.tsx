@@ -4,6 +4,7 @@ import { Search } from "../../icons/Search";
 import { Navitem } from "../navitem/Navitem";
 import "./Navbar.scss";
 import { Hamburger } from "../../icons/Hamburger";
+import { Cart } from "../cart/Cart";
 
 export const Navbar = () => {
   // const [open, isOpen] = useState(false);
@@ -26,7 +27,7 @@ export const Navbar = () => {
           <div className="navbar__white-span--logo"></div>
           <div className="navbar__white-span--login">
             <Login></Login>
-            <Bag></Bag>
+            <Cart></Cart>
           </div>
         </div>
       </nav>
