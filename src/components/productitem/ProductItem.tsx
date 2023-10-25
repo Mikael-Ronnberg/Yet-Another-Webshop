@@ -1,7 +1,17 @@
 import "./ProductItem.scss";
 import { IProductProps } from "../../models/IProductProps";
+import { CartDispatchContext } from "../../context/CartDispatchContext";
+import { useContext } from "react";
+import { ActionType } from "../../reducers/CartReducer";
+import { IProduct } from "../../models/Interfaces";
 
-export const ProductItem = ({ product, handleAdd }: IProductProps) => {
+export const ProductItem = ({ product }: IProductProps) => {
+  const dispatch = useContext(CartDispatchContext);
+
+  const handleAdd = (item: IProduct) => {
+    dispatch({ type: ActionType.ADD_ITEM, payload: item });
+  };
+
   return (
     <>
       <div className="productContainer">

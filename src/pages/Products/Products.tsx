@@ -2,8 +2,10 @@ import "./Products.scss";
 
 import { Navbar } from "../../components/navbar/Navbar";
 import { ProductItem } from "../../components/productitem/ProductItem";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { IProduct } from "../../models/Interfaces";
+import { CartContext } from "../../context/CartContext";
+import { CartDispatchContext } from "../../context/CartDispatchContext";
 
 export const Products = () => {
   const products: IProduct[] = [
@@ -30,12 +32,10 @@ export const Products = () => {
     },
   ];
 
-  const [cart, setCart] = useState<IProduct[]>([]);
+  const shoppingCart = useContext(CartContext);
+  // const dispatch = useContext(CartDispatchContext);
 
-  const handleAdd = (item: IProduct) => {
-    setCart((prevCart) => [...prevCart, item]);
-  };
-  console.log(cart);
+  console.log(shoppingCart);
 
   return (
     <>
@@ -43,11 +43,7 @@ export const Products = () => {
       <main className="mainContainer">
         <div className="mainContainer__products">
           {products.map((p, i) => (
-            <ProductItem
-              product={p}
-              key={i}
-              handleAdd={handleAdd}
-            ></ProductItem>
+            <ProductItem product={p} key={i}></ProductItem>
           ))}
         </div>
       </main>
