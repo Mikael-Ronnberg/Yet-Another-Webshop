@@ -1,3 +1,7 @@
 export const ViewCart = () => {
-  return <></>;
+  return (
+    <>
+      <p>Looking in cart</p>
+    </>
+  );
 };

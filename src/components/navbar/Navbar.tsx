@@ -4,6 +4,7 @@ import { Navitem } from "../navitem/Navitem";
 import "./Navbar.scss";
 import { Hamburger } from "../../icons/Hamburger";
 import { Cart } from "../cart/Cart";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   // const [open, isOpen] = useState(false);
@@ -26,7 +27,9 @@ export const Navbar = () => {
           <div className="navbar__white-span--logo"></div>
           <div className="navbar__white-span--login">
             <Login></Login>
-            <Cart></Cart>
+            <Link to="/viewcart">
+              <Cart></Cart>
+            </Link>
           </div>
         </div>
       </nav>
