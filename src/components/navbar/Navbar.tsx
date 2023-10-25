@@ -1,4 +1,3 @@
-import { Bag } from "../../icons/Bag";
 import { Login } from "../../icons/Login";
 import { Search } from "../../icons/Search";
 import { Navitem } from "../navitem/Navitem";

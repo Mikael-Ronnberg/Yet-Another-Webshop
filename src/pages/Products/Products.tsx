@@ -2,10 +2,11 @@ import "./Products.scss";
 
 import { Navbar } from "../../components/navbar/Navbar";
 import { ProductItem } from "../../components/productitem/ProductItem";
-import { IProductProps } from "../../models/IProductProps";
+import { useState } from "react";
+import { IProduct } from "../../models/Interfaces";
 
 export const Products = () => {
-  const products: IProductProps[] = [
+  const products: IProduct[] = [
     {
       productTitel: "Fiskmås",
       productDescription: "Gott med fiskmås",
@@ -29,13 +30,24 @@ export const Products = () => {
     },
   ];
 
+  const [cart, setCart] = useState<IProduct[]>([]);
+
+  const handleAdd = (item: IProduct) => {
+    setCart((prevCart) => [...prevCart, item]);
+  };
+  console.log(cart);
+
   return (
     <>
       <Navbar></Navbar>
       <main className="mainContainer">
         <div className="mainContainer__products">
           {products.map((p, i) => (
-            <ProductItem product={p} key={i}></ProductItem>
+            <ProductItem
+              product={p}
+              key={i}
+              handleAdd={handleAdd}
+            ></ProductItem>
           ))}
         </div>
       </main>

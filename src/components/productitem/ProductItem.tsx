@@ -1,7 +1,7 @@
 import "./ProductItem.scss";
 import { IProductProps } from "../../models/IProductProps";
 
-export const ProductItem = ({ product }: { product: IProductProps }) => {
+export const ProductItem = ({ product, handleAdd }: IProductProps) => {
   return (
     <>
       <div className="productContainer">
@@ -9,7 +9,7 @@ export const ProductItem = ({ product }: { product: IProductProps }) => {
         <p>{product.productDescription}</p>
         <h5>{product.price}</h5>
         <p>{product.expireDate}</p>
-        <button>Add To Cart</button>
+        <button onClick={() => handleAdd(product)}>Add To Cart</button>
       </div>
     </>
   );

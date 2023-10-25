@@ -1,7 +1,6 @@
+import { IProduct } from "./Interfaces";
+
 export interface IProductProps {
-  productTitel: string;
-  productDescription: string;
-  price: number;
-  expireDate: number;
-  quantity: number;
+  handleAdd: (item: IProduct) => void;
+  product: IProduct;
 }
