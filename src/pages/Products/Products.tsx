@@ -2,10 +2,9 @@ import "./Products.scss";
 
 import { Navbar } from "../../components/navbar/Navbar";
 import { ProductItem } from "../../components/productitem/ProductItem";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { IProduct } from "../../models/Interfaces";
 import { CartContext } from "../../context/CartContext";
-import { CartDispatchContext } from "../../context/CartDispatchContext";
 
 export const Products = () => {
   const products: IProduct[] = [

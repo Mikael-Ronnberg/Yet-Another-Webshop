@@ -1,74 +1,121 @@
-import "./Footer.scss";
-import { Airplane } from "../../icons/Airplane";
-import { Gift } from "../../icons/Gift";
-import { Leaf } from "../../icons/Leaf";
-import { Visit } from "../../icons/Visit";
+import {
+  Box,
+  chakra,
+  Container,
+  IconButton,
+  Input,
+  Link,
+  SimpleGrid,
+  Stack,
+  Text,
+  VisuallyHidden,
+} from "@chakra-ui/react";
+import { ReactNode } from "react";
+import { BiMailSend } from "react-icons/bi";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Logo } from "../navitem/Logo";
+
+const SocialButton = ({
+  children,
+  label,
+  href,
+}: {
+  children: ReactNode;
+  label: string;
+  href: string;
+}) => {
+  return (
+    <chakra.button
+      bg="blackAlpha.100"
+      rounded="full"
+      w={8}
+      h={8}
+      cursor="pointer"
+      as="a"
+      href={href}
+      display={"inline-flex"}
+      alignItems={"center"}
+      justifyContent={"center"}
+      transition={"background 0.3s ease"}
+      _hover={{
+        bg: "blackAlpha.200",
+      }}
+    >
+      <VisuallyHidden>{label}</VisuallyHidden>
+      {children}
+    </chakra.button>
+  );
+};
+
+const ListHeader = ({ children }: { children: ReactNode }) => {
+  return (
+    <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
+      {children}
+    </Text>
+  );
+};
 
 export const Footer = () => {
   return (
-    <>
-      <footer>
-        <section className="blue_bar">
-          <div>
-            <Visit></Visit>
-            <p>VISIT OUR STORES</p>
-          </div>
-          <div>
-            <Airplane></Airplane>
-            <p>GLOBAL DELIVERY</p>
-          </div>
-          <div>
-            <Gift></Gift>
-            <p>GIFT CARDS</p>
-          </div>
-          <div>
-            <Leaf></Leaf>
-            <p>CIRCULARITY</p>
-          </div>
-        </section>
-        <article className="grey_bar">
-          <h4>ABOUT US</h4>
-          <ul>
-            <li>Blog</li>
-            <li>Store Finder</li>
-            <li>Careers</li>
-            <li>About Us</li>
-            <li>Our Vintage</li>
-          </ul>
-        </article>
-        <article className="grey_bar">
-          <h4>HELP</h4>
-          <ul>
-            <li>Delivery</li>
-            <li>Returns Policy</li>
-            <li>Contact Us</li>
-            <li>FAQs</li>
-            <li>Terms of Service</li>
-          </ul>
-        </article>
-        <article className="grey_bar">
-          <h4>SIGN UP!</h4>
-          <p>
-            Sign up to be the first to hear about our newest drops, exclusive
-            promos and more!
-          </p>
-          <input type="text" placeholder="Enter email" />
-          <button className="blue_btn">SIGN UP</button>
-        </article>
-        <span className="socialmedia_container">
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </span>
-        <span className="currency_container">
-          <p>SEK</p>
-        </span>
-        <span className="final_part">
-          <p>© 2023 Beyond Retro. Powered by Shopify</p>
-        </span>
-      </footer>
-    </>
+    <Box bg="white.50" color="gray.700" mt="2rem">
+      <Container as={Stack} maxW={"6xl"} py={10}>
+        <SimpleGrid
+          templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 2fr" }}
+          spacing={8}
+        >
+          <Stack spacing={6}>
+            <Box>
+              <Logo />
+            </Box>
+            <Text fontSize="sm">© 2023 True Hype. All rights reserved</Text>
+            <Stack direction="row" spacing={6}>
+              <SocialButton label="Twitter" href={"#"}>
+                <FaTwitter />
+              </SocialButton>
+              <SocialButton label="Facebook" href={"#"}>
+                <FaFacebook />
+              </SocialButton>
+              <SocialButton label="Instagram" href={"#"}>
+                <FaInstagram />
+              </SocialButton>
+            </Stack>
+          </Stack>
+          <Stack align="flex-start">
+            <ListHeader>Company</ListHeader>
+            <Link href={"#"}>About us</Link>
+            <Link href={"#"}>Contact us</Link>
+            <Link href={"#"}>Testimonials</Link>
+          </Stack>
+          <Stack align="flex-start">
+            <ListHeader>Support</ListHeader>
+            <Link href={"#"}>Help Center</Link>
+            <Link href={"#"}>Terms of Service</Link>
+            <Link href={"#"}>Privacy Policy</Link>
+          </Stack>
+          <Stack align="flex-start">
+            <ListHeader>Sign up for 10% discount!</ListHeader>
+            <Stack direction={"row"}>
+              <Input
+                placeholder="Your email address"
+                bg="blackAlpha.100"
+                border={0}
+                _focus={{
+                  bg: "whiteAlpha.300",
+                }}
+              />
+              <IconButton
+                bg="brand.primary"
+                color="white"
+                _hover={{
+                  bg: "brand.primaryDark",
+                }}
+                aria-label="Subscribe"
+                icon={<BiMailSend />}
+              />
+            </Stack>
+          </Stack>
+        </SimpleGrid>
+      </Container>
+    </Box>
   );
 };

@@ -5,3 +5,8 @@ export interface IProduct {
   expireDate: number;
   quantity: number;
 }
+
+export interface INavItem {
+  label: string;
+  href: string;
+}

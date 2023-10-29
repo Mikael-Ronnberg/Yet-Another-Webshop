@@ -1,17 +1,17 @@
 import { Footer } from "../../components/footer/Footer";
 import { Navbar } from "../../components/navbar/Navbar";
-import "./Home.scss";
+import { Categories } from "../../features/categories/Categories";
+import { Banner } from "../../features/home/Banner";
+import { FeatProd } from "../../features/home/FeatProd";
 
 export const Home = () => {
   return (
     <>
-      <Navbar></Navbar>
-      <main className="main_container">
-        <div className="main_container--hero">
-          <button className="btn_blue">SHOP EDIT</button>
-          <button className="btn_white">TO SWIPER</button>
-        </div>
-      </main>
+      <Navbar />
+      <Banner />
+      <Categories />
+
+      <FeatProd title="New Arrivals" />
       <Footer />
     </>
   );
