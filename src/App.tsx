@@ -12,10 +12,9 @@ function App() {
     <>
       <CartContext.Provider value={shoppingCart}>
         <CartDispatchContext.Provider value={dispatch}>
-          <RouterProvider router={router}></RouterProvider>;
+          <RouterProvider router={router} />
         </CartDispatchContext.Provider>
       </CartContext.Provider>
-      ;
     </>
   );
 }
