@@ -8,8 +8,13 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { SectionHeading } from "../../components/sectionheading/SectionHeading";
+import { ICategory } from "../../models/Interfaces";
 
-export const Categories = () => {
+interface ICategoriesProps {
+  categories: ICategory[];
+}
+
+export const Categories = ({ categories }: ICategoriesProps) => {
   return (
     <Box w={{ base: "100%", lg: "90%" }} mx="auto" py="3rem" px="2rem">
       <SectionHeading title="Show categires :P " />
@@ -21,24 +26,21 @@ export const Categories = () => {
         }}
         gap="4"
       >
-        <GridItem>
-          <CategoryCard />
-        </GridItem>
-        <GridItem>
-          <CategoryCard />
-        </GridItem>
-        <GridItem>
-          <CategoryCard />
-        </GridItem>
-        <GridItem>
-          <CategoryCard />
-        </GridItem>
+        {categories.map((category) => (
+          <GridItem key={category.id}>
+            <CategoryCard category={category} />
+          </GridItem>
+        ))}
       </Grid>
     </Box>
   );
 };
 
-export const CategoryCard = () => {
+interface ICategoryCardProps {
+  category: ICategory;
+}
+
+export const CategoryCard = ({ category }: ICategoryCardProps) => {
   return (
     <Card
       direction="row"
@@ -49,9 +51,9 @@ export const CategoryCard = () => {
       h="100%"
       p="10px"
     >
-      <Image src="" alt="" w={100} h={100} />
+      <Image src={category.image} alt={category.slug} w={100} h={100} />
       <CardBody>
-        <Heading size={{ base: "sm", lg: "md" }}>Skor</Heading>
+        <Heading size={{ base: "sm", lg: "md" }}>{category.name}</Heading>
       </CardBody>
     </Card>
   );

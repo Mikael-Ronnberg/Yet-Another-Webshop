@@ -1,4 +1,5 @@
 import {
+  Box,
   Card,
   CardBody,
   Flex,
@@ -7,24 +8,35 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { Rating } from "../rating/Rating";
-import { AddToCartButton } from "../buttons/AddToCartButton";
 
-export const ProductCard = () => {
+interface IProductCardPropss {
+  product: IProduct;
+}
+
+import { AddToCartButton } from "../buttons/AddToCartButton";
+import { IProduct } from "../../models/Interfaces";
+import { getSubstring } from "../helpers";
+
+export const ProductCard = ({ product }: IProductCardPropss) => {
   return (
     <Card w="xs" pos="relative" m="0.5rem">
       <CardBody>
-        <Image />
+        <Box
+          boxSize="200px"
+          bg={`center / contain no-repeat url(${product.image})`}
+          mx="auto"
+          borderRadius="lg"
+        />
+        <Image src={product.image} alt={getSubstring(product.name, 20)} />
         <Stack mt="6" spacing="3">
           <Flex justify="space-between" align="center">
-            <Heading size="md">Nånting</Heading>
+            <Heading size="sm">{product.name}</Heading>
             <Flex fontWeight="bold">
-              <Text>Pris: </Text>
-              <Text>2000</Text>
+              <Text>Price: </Text>
+              <Text>{product.price}</Text>
             </Flex>
           </Flex>
-          <Text>Some Descriptive text</Text>
-          <Rating />
+          <Text> {getSubstring(product.description, 30)}</Text>
           <AddToCartButton />
         </Stack>
       </CardBody>

@@ -1,12 +1,28 @@
 export interface IProduct {
-  productTitel: string;
-  productDescription: string;
+  id: string;
+  name: string;
+  description: string;
   price: number;
-  expireDate: number;
-  quantity: number;
+  slug: string;
+  image: string;
+  category: ICategory;
+  gallery: string[];
+  // quantity: number;
 }
 
 export interface INavItem {
   label: string;
   href: string;
+}
+
+export interface ICategory {
+  id: string;
+  name: string;
+  image: string;
+  slug: string;
+}
+
+export interface IFeatItems {
+  mostPopular: ICategory[];
+  onSale: IProduct[];
 }
