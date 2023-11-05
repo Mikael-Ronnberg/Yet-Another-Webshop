@@ -6,7 +6,7 @@ export interface IProduct {
   slug: string;
   image: string;
   category: ICategory;
-  gallery: string[];
+  // gallery: string[];
   // quantity: number;
 }
 
@@ -23,6 +23,11 @@ export interface ICategory {
 }
 
 export interface IFeatItems {
-  mostPopular: ICategory[];
-  onSale: IProduct[];
+  mostPopular: IProduct[];
+  // onSale: IProduct[];
+}
+
+export interface IBreadCrumbItems {
+  name: string;
+  link: string;
 }
