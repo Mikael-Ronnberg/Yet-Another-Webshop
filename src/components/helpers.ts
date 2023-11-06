@@ -1,4 +1,4 @@
-import { INavItem } from "../models/Interfaces";
+import { IBreadCrumbItems, INavItem } from "../models/Interfaces";
 
 export const navItems: INavItem[] = [
   {
@@ -8,6 +8,17 @@ export const navItems: INavItem[] = [
   {
     label: "Categories",
     href: "/categories",
+  },
+];
+
+export const defaultBreadItems: IBreadCrumbItems[] = [
+  {
+    name: "Products",
+    link: "/products",
+  },
+  {
+    name: "Categories",
+    link: "/categories",
   },
 ];
 
