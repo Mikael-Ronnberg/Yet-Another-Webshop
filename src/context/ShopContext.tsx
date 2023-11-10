@@ -1,7 +1,19 @@
 import { ReactNode, createContext, useState } from "react";
 import { IContext, IProduct, IState, ItemKey } from "../models/Interfaces";
 
-export const ShopContext = createContext<IContext>(null as any);
+export const ShopContext = createContext<IContext>({
+  state: {
+    cart: [],
+    favourite: [],
+    checkout: [],
+  },
+  addItem: () => {},
+  removeItem: () => {},
+  increaseCount: () => {},
+  decreaseCount: () => {},
+  resetItems: () => {},
+  isAdded: () => false,
+});
 
 interface IShopContextProviderProps {
   children: ReactNode;
@@ -9,7 +21,7 @@ interface IShopContextProviderProps {
 
 const initialState: IState = {
   cart: [],
-  favorite: [],
+  favourite: [],
   checkout: [],
 };
 
@@ -33,7 +45,7 @@ export const ShopContextProvider = ({
   const increaseCount = (key: ItemKey, productId: string) => {
     const items = [...state[key]];
     const index = items.findIndex((item) => item.id === productId);
-    if (index === -1) {
+    if (index !== -1) {
       items[index].count += 1;
       setState((prev) => ({ ...prev, [key]: items }));
     }
@@ -41,14 +53,19 @@ export const ShopContextProvider = ({
   const decreaseCount = (key: ItemKey, productId: string) => {
     const items = [...state[key]];
     const index = items.findIndex((item) => item.id === productId);
-    if (index === -1 && items[index].count > 1) {
+    if (index !== -1 && items[index].count > 1) {
       items[index].count -= 1;
 
       setState((prev) => ({ ...prev, [key]: items }));
     }
   };
+
   const resetItems = (key: ItemKey) => {
     setState((prev) => ({ ...prev, [key]: [] }));
+  };
+
+  const isAdded = (key: ItemKey, productId: string): boolean => {
+    return state[key].some((item) => item.id === productId);
   };
 
   return (
@@ -60,6 +77,7 @@ export const ShopContextProvider = ({
         decreaseCount,
         increaseCount,
         resetItems,
+        isAdded,
       }}
     >
       {children}

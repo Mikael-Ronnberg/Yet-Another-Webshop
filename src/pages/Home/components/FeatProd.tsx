@@ -1,11 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { ProductCard } from "../../components/productcard/ProductCard";
+import { ProductCard } from "../../../components/cards/ProductCard";
 import "swiper/css";
 import { slideSettings, slideStyles } from "./style";
-import { SwiperNavButtons } from "../../components/buttons/SwiperNavButtons";
-import { SectionHeading } from "../../components/sectionheading/SectionHeading";
+import { SwiperNavButtons } from "../../../components/buttons/SwiperNavButtons";
+import { SectionHeading } from "../../../components/sectionheading/SectionHeading";
 import { Box } from "@chakra-ui/react";
-import { IProduct } from "../../models/Interfaces";
+import { IProduct } from "../../../models/Interfaces";
 
 interface IFeatProdProps {
   title: string;

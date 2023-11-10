@@ -1,12 +1,14 @@
 import { BreadCrumbs } from "../../components/breadcrumbs/BreadCrumbs";
 import { defaultBreadItems } from "../../components/helpers";
 import { Hero } from "../../components/hero/Hero";
-import { AllProducts } from "../../features/products/AllProducts";
+import { Navbar } from "../../components/navbar/Navbar";
+import { AllProducts } from "../Products/components/AllProducts";
 import { products } from "../../mocks/products";
 
-export const CategoryPage = () => {
+export const CategoryView = () => {
   return (
     <>
+      <Navbar></Navbar>
       <Hero
         heading={products[0].category.name}
         description={`Awesome ${products[0].category.name}`}

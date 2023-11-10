@@ -1,9 +1,9 @@
 import { Box } from "@chakra-ui/react";
 import { Footer } from "../../components/footer/Footer";
 import { Navbar } from "../../components/navbar/Navbar";
-import { Categories } from "../../features/categories/Categories";
-import { Banner } from "../../features/home/Banner";
-import { FeatProd } from "../../features/home/FeatProd";
+import { Categories } from "../Categories/components/Categories";
+import { Banner } from "./components/Banner";
+import { FeatProd } from "./components/FeatProd";
 import { featItems } from "../../mocks/feat";
 import { categories } from "../../mocks/categories";
 

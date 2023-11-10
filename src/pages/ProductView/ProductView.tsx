@@ -1,5 +1,5 @@
-import { ProductInfo } from "../../features/products/ProductInfo";
 import { products } from "../../mocks/products";
+import { ProductInfo } from "./ProductInfo";
 
 export const ProductView = () => {
   return (

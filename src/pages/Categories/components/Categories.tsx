@@ -7,8 +7,8 @@ import {
   Heading,
   Image,
 } from "@chakra-ui/react";
-import { SectionHeading } from "../../components/sectionheading/SectionHeading";
-import { ICategory } from "../../models/Interfaces";
+import { SectionHeading } from "../../../components/sectionheading/SectionHeading";
+import { ICategory } from "../../../models/Interfaces";
 
 interface ICategoriesProps {
   categories: ICategory[];

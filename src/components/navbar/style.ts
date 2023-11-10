@@ -3,7 +3,7 @@ import { BoxProps, FlexProps, StackProps } from "@chakra-ui/react";
 export const navbarStyles: BoxProps = {
   pos: "fixed",
   w: "100%",
-  // bgColor: "#fff222",
+  bgColor: "brand.primaryLight",
   mb: "1rem",
   zIndex: 10,
 };

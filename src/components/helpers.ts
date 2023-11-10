@@ -3,7 +3,7 @@ import { IBreadCrumbItems, INavItem } from "../models/Interfaces";
 export const navItems: INavItem[] = [
   {
     label: "All Products",
-    href: "/producs",
+    href: "/products",
   },
   {
     label: "Categories",

@@ -2,8 +2,8 @@
 
 // import { useState } from "react";
 // import { usePagination } from "@mantine/hooks";
-import { IProduct } from "../../models/Interfaces";
-import { ProductCard } from "../../components/productcard/ProductCard";
+import { IProduct } from "../../../models/Interfaces";
+import { ProductCard } from "../../../components/cards/ProductCard";
 import { Flex } from "@chakra-ui/react";
 
 interface IAllProductsProps {

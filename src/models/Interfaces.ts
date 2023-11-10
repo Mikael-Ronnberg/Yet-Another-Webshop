@@ -1,4 +1,4 @@
-export type ItemKey = "cart" | "favorite" | "checkout";
+export type ItemKey = "cart" | "favourite" | "checkout";
 
 export interface IProduct {
   id: string;
@@ -36,7 +36,7 @@ export interface IBreadCrumbItems {
 
 export interface IState {
   cart: IItem[];
-  favorite: IItem[];
+  favourite: IItem[];
   checkout: IItem[];
 }
 export interface IItem extends IProduct {
@@ -50,4 +50,5 @@ export interface IContext {
   increaseCount: (key: ItemKey, productId: string) => void;
   decreaseCount: (key: ItemKey, productId: string) => void;
   resetItems: (key: ItemKey) => void;
+  isAdded: (key: ItemKey, productId: string) => boolean;
 }

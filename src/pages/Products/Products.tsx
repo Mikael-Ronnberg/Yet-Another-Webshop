@@ -2,7 +2,7 @@ import "./Products.scss";
 
 import { Navbar } from "../../components/navbar/Navbar";
 import { Hero } from "../../components/hero/Hero";
-import { AllProducts } from "../../features/products/AllProducts";
+import { AllProducts } from "./components/AllProducts";
 import { products } from "../../mocks/products";
 
 export const Products = () => {

@@ -10,12 +10,13 @@ import {
   Stack,
   Link,
 } from "@chakra-ui/react";
-import { IBreadCrumbItems, IProduct } from "../../models/Interfaces";
+import { IProduct } from "../../models/Interfaces";
 import { Quantity } from "../../components/quantity/Quantity";
 // import { Link } from "react-router-dom";
 import { AddToCartButton } from "../../components/buttons/AddToCartButton";
 import { BreadCrumbs } from "../../components/breadcrumbs/BreadCrumbs";
 import { defaultBreadItems, getSubstring } from "../../components/helpers";
+import { Navbar } from "../../components/navbar/Navbar";
 
 interface IProductInfoProps {
   product: IProduct;
@@ -24,6 +25,7 @@ interface IProductInfoProps {
 export const ProductInfo = ({ product }: IProductInfoProps) => {
   return (
     <>
+      <Navbar></Navbar>
       <BreadCrumbs
         items={[
           ...defaultBreadItems,
@@ -33,7 +35,7 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
           },
           {
             name: getSubstring(product.name, 20),
-            link: `/products/${product.category?.id}`,
+            link: `/products/${product.id}`,
           },
         ]}
       />
@@ -72,7 +74,7 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
                 Buy Now
               </Button>
             </Link>
-            <AddToCartButton />
+            <AddToCartButton product={product} />
           </Box>
           <Stack py="2rem">
             <Box borderWidth={1} borderColor="brand.whiteCream" p="1rem">

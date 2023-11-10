@@ -1,7 +1,7 @@
 import { Hero } from "../../components/hero/Hero";
 import { Navbar } from "../../components/navbar/Navbar";
-import { AllCategories } from "../../features/categories";
 import { categories } from "../../mocks/categories";
+import { AllCategories } from "./components/AllCategories";
 
 export const Categories = () => {
   return (
