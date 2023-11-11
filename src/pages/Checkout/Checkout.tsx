@@ -2,10 +2,12 @@ import { Box, Flex, Stack } from "@chakra-ui/react";
 import { CurrentItems } from "./components/CurrentItems";
 import { DeliveryForm } from "./components/DeliveryForm";
 import { PaymentForm } from "./components/PaymentForm";
+import { Navbar } from "../../components/navbar/Navbar";
 
 export const Checkout = () => {
   return (
     <>
+      <Navbar></Navbar>
       <Flex
         w={{ base: "100%", lg: "90%" }}
         mx="auto"

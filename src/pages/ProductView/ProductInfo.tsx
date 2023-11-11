@@ -14,10 +14,16 @@ import { IProduct } from "../../models/Interfaces";
 import { Quantity } from "../../components/quantity/Quantity";
 import { AddToCartButton } from "../../components/buttons/AddToCartButton";
 import { BreadCrumbs } from "../../components/breadcrumbs/BreadCrumbs";
-import { defaultBreadItems, getSubstring } from "../../components/helpers";
+import {
+  defaultBreadItems,
+  getSubstring,
+  isItemAdded,
+} from "../../components/helpers";
 import { Navbar } from "../../components/navbar/Navbar";
-import { ShopContext } from "../../context/ShopContext";
 import { useState, useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import { CartDispatchContext } from "../../context/CartDispatchContext";
+import { ActionType } from "../../reducers/CartReducer";
 
 interface IProductInfoProps {
   product: IProduct;
@@ -25,7 +31,36 @@ interface IProductInfoProps {
 
 export const ProductInfo = ({ product }: IProductInfoProps) => {
   const [quantity, setQuantity] = useState(1);
-  const { isAdded, addItem, resetItems } = useContext(ShopContext);
+  const dispatch = useContext(CartDispatchContext);
+  const state = useContext(CartContext);
+
+  // const cart = state.cart;
+
+  const handleCheckout = () => {
+    dispatch({ type: ActionType.RESET_ITEMS, payload: { key: "checkout" } });
+
+    dispatch({
+      type: ActionType.ADD_ITEM,
+      payload: {
+        key: "checkout",
+        product: product,
+        count: quantity,
+      },
+    });
+
+    // if (cart.length > 0) {
+    //   cart.forEach((cartItem) => {
+    //     dispatch({
+    //       type: ActionType.ADD_ITEM,
+    //       payload: {
+    //         key: "checkout",
+    //         product: cartItem,
+    //         count: cartItem.count,
+    //       },
+    //     });
+    //   });
+    // }
+  };
 
   return (
     <>
@@ -64,7 +99,7 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
             setQuantity={(_valueAsString, valueAsNumber) =>
               setQuantity(valueAsNumber)
             }
-            disabled={isAdded("cart", product.id)}
+            disabled={isItemAdded(state, "cart", product.id)}
           />
           <Divider my="1rem" />
           <Box>
@@ -79,10 +114,7 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
                 mr="1rem"
                 my="0.5rem"
                 _hover={{ bgColor: "none" }}
-                onClick={() => {
-                  resetItems("checkout");
-                  addItem("checkout", product, quantity);
-                }}
+                onClick={handleCheckout}
               >
                 Buy Now
               </Button>

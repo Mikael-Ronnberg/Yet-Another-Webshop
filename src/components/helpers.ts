@@ -33,6 +33,14 @@ export const defaultBreadItems: IBreadCrumbItems[] = [
   },
 ];
 
+export const isItemAdded = (
+  state: IState,
+  key: keyof IState,
+  productId: string
+): boolean => {
+  return state[key].some((item) => item.id === productId);
+};
+
 export const getSubstring = (text: string, substringEnd: number): string => {
   return text.length > substringEnd
     ? `${text.substring(0, substringEnd)}...`

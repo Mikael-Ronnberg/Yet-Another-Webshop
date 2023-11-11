@@ -10,19 +10,19 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { getSubstring, formatPrice } from "../../../components/helpers";
-import { ShopContext } from "../../../context/ShopContext";
 import { useContext } from "react";
+import { CartContext } from "../../../context/CartContext";
 
 export const CurrentItems = () => {
-  const {
-    state: { checkout },
-  } = useContext(ShopContext);
+  const state = useContext(CartContext);
+
+  const checkout = state.checkout;
 
   return (
     <>
       <Card borderWidth="1px" borderColor="gray.200" shadow="none">
         <CardHeader>
-          <Heading size="md">Review Items</Heading>
+          <Heading size="md">Your Items</Heading>
         </CardHeader>
 
         <CardBody>

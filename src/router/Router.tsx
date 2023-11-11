@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Home } from "../pages/Home/Home";
 import { Products } from "../pages/Products/Products";
-import { ViewCart } from "../components/viewcart/ViewCart";
 import { Contact } from "../pages/Contact/Contact";
 import { Categories } from "../pages/Categories/Categories";
 import { ProductView } from "../pages/ProductView/ProductView";
@@ -29,10 +28,10 @@ export const router = createBrowserRouter([
     path: "/categories/:categoryId",
     element: <CategoryView></CategoryView>,
   },
-  {
-    path: "/viewcart",
-    element: <ViewCart></ViewCart>,
-  },
+  // {
+  //   path: "/viewcart",
+  //   element: <ViewCart></ViewCart>,
+  // },
   {
     path: "/checkout",
     element: <Checkout></Checkout>,

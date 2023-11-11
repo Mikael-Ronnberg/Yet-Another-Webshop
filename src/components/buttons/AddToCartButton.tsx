@@ -1,22 +1,15 @@
 import { Button } from "@chakra-ui/react";
-import { IProduct, IState } from "../../models/Interfaces";
+import { IProduct } from "../../models/Interfaces";
 import { useContext } from "react";
 import { CartDispatchContext } from "../../context/CartDispatchContext";
 import { ActionType } from "../../reducers/CartReducer";
 import { CartContext } from "../../context/CartContext";
+import { isItemAdded } from "../helpers";
 
 interface IAddToCartButtonProps {
   product: IProduct;
   count?: number;
 }
-
-const isItemAdded = (
-  state: IState,
-  key: keyof IState,
-  productId: string
-): boolean => {
-  return state[key].some((item) => item.id === productId);
-};
 
 export const AddToCartButton = ({ product, count }: IAddToCartButtonProps) => {
   const dispatch = useContext(CartDispatchContext);
@@ -53,7 +46,7 @@ export const AddToCartButton = ({ product, count }: IAddToCartButtonProps) => {
           onClick={() =>
             dispatch({
               type: ActionType.ADD_ITEM,
-              payload: { key: "cart", product, count },
+              payload: { key: "cart", product: product, count },
             })
           }
         >

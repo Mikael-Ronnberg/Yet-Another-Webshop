@@ -10,6 +10,7 @@ import { initialState } from "./components/helpers";
 function App() {
   const [state, dispatch] = useReducer(CartReducer, initialState);
 
+  console.log(state);
   return (
     <>
       <CartContext.Provider value={state}>
