@@ -12,17 +12,21 @@ import {
 } from "@chakra-ui/react";
 import { IProduct } from "../../models/Interfaces";
 import { Quantity } from "../../components/quantity/Quantity";
-// import { Link } from "react-router-dom";
 import { AddToCartButton } from "../../components/buttons/AddToCartButton";
 import { BreadCrumbs } from "../../components/breadcrumbs/BreadCrumbs";
 import { defaultBreadItems, getSubstring } from "../../components/helpers";
 import { Navbar } from "../../components/navbar/Navbar";
+import { ShopContext } from "../../context/ShopContext";
+import { useState, useContext } from "react";
 
 interface IProductInfoProps {
   product: IProduct;
 }
 
 export const ProductInfo = ({ product }: IProductInfoProps) => {
+  const [quantity, setQuantity] = useState(1);
+  const { isAdded, addItem, resetItems } = useContext(ShopContext);
+
   return (
     <>
       <Navbar></Navbar>
@@ -56,7 +60,12 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
             {product.price}
           </Text>
           <Divider my="1rem" />
-          <Quantity />
+          <Quantity
+            setQuantity={(_valueAsString, valueAsNumber) =>
+              setQuantity(valueAsNumber)
+            }
+            disabled={isAdded("cart", product.id)}
+          />
           <Divider my="1rem" />
           <Box>
             <Link href="/checkout">
@@ -70,11 +79,15 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
                 mr="1rem"
                 my="0.5rem"
                 _hover={{ bgColor: "none" }}
+                onClick={() => {
+                  resetItems("checkout");
+                  addItem("checkout", product, quantity);
+                }}
               >
                 Buy Now
               </Button>
             </Link>
-            <AddToCartButton product={product} />
+            <AddToCartButton product={product} count={quantity} />
           </Box>
           <Stack py="2rem">
             <Box borderWidth={1} borderColor="brand.whiteCream" p="1rem">

@@ -5,12 +5,14 @@ import { CartReducer } from "./reducers/CartReducer";
 import { CartContext } from "./context/CartContext";
 import { CartDispatchContext } from "./context/CartDispatchContext";
 import { useReducer } from "react";
+import { initialState } from "./components/helpers";
 
 function App() {
-  const [shoppingCart, dispatch] = useReducer(CartReducer, []);
+  const [state, dispatch] = useReducer(CartReducer, initialState);
+
   return (
     <>
-      <CartContext.Provider value={shoppingCart}>
+      <CartContext.Provider value={state}>
         <CartDispatchContext.Provider value={dispatch}>
           <RouterProvider router={router} />
         </CartDispatchContext.Provider>

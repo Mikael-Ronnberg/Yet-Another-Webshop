@@ -1,4 +1,15 @@
-import { IBreadCrumbItems, INavItem } from "../models/Interfaces";
+import {
+  IBreadCrumbItems,
+  IItem,
+  INavItem,
+  IState,
+} from "../models/Interfaces";
+
+export const initialState: IState = {
+  cart: [],
+  favourite: [],
+  checkout: [],
+};
 
 export const navItems: INavItem[] = [
   {
@@ -26,4 +37,18 @@ export const getSubstring = (text: string, substringEnd: number): string => {
   return text.length > substringEnd
     ? `${text.substring(0, substringEnd)}...`
     : text;
+};
+
+export const calculateItemsTotal = (items: IItem[]): number => {
+  return items
+    .map((item) => ({ price: item.price, count: item.count }))
+    .reduce(
+      (previousValue, currentValue) =>
+        previousValue + currentValue.price * currentValue.count,
+      0
+    );
+};
+
+export const formatPrice = (value: number): string => {
+  return value.toFixed(2);
 };

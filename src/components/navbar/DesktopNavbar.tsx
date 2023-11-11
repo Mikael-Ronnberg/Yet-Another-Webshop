@@ -1,3 +1,4 @@
+import { Cart } from "../cart/Cart";
 import { navItems } from "../helpers";
 import { Logo } from "../navitem/Logo";
 import { Search } from "../search/Search";
@@ -27,8 +28,7 @@ export const DesktopNavbar = () => {
         </Stack>
 
         <Stack {...cartSectionStyles}>
-          <Box>Wshlist</Box>
-          <Box>Cart</Box>
+          <Cart />
         </Stack>
       </Flex>
     </>

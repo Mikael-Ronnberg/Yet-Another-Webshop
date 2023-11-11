@@ -6,6 +6,7 @@ import { Contact } from "../pages/Contact/Contact";
 import { Categories } from "../pages/Categories/Categories";
 import { ProductView } from "../pages/ProductView/ProductView";
 import { CategoryView } from "../pages/CategoryView/CategoryView";
+import { Checkout } from "../pages/Checkout/Checkout";
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
   {
     path: "/viewcart",
     element: <ViewCart></ViewCart>,
+  },
+  {
+    path: "/checkout",
+    element: <Checkout></Checkout>,
   },
   {
     path: "/contact",

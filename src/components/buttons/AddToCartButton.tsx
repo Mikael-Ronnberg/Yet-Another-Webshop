@@ -1,18 +1,30 @@
 import { Button } from "@chakra-ui/react";
-import { IProduct } from "../../models/Interfaces";
+import { IProduct, IState } from "../../models/Interfaces";
 import { useContext } from "react";
-import { ShopContext } from "../../context/ShopContext";
+import { CartDispatchContext } from "../../context/CartDispatchContext";
+import { ActionType } from "../../reducers/CartReducer";
+import { CartContext } from "../../context/CartContext";
 
 interface IAddToCartButtonProps {
   product: IProduct;
   count?: number;
 }
+
+const isItemAdded = (
+  state: IState,
+  key: keyof IState,
+  productId: string
+): boolean => {
+  return state[key].some((item) => item.id === productId);
+};
+
 export const AddToCartButton = ({ product, count }: IAddToCartButtonProps) => {
-  const { addItem, removeItem, isAdded } = useContext(ShopContext);
+  const dispatch = useContext(CartDispatchContext);
+  const state = useContext(CartContext);
 
   return (
     <>
-      {isAdded("cart", product?.id) ? (
+      {isItemAdded(state, "cart", product.id) ? (
         <Button
           variant="outline"
           bgColor="blue.300"
@@ -21,7 +33,12 @@ export const AddToCartButton = ({ product, count }: IAddToCartButtonProps) => {
           rounded="full"
           size="sm"
           w="150px"
-          onClick={() => removeItem("cart", product.id)}
+          onClick={() =>
+            dispatch({
+              type: ActionType.REMOVE_ITEM,
+              payload: { key: "cart", productId: product.id },
+            })
+          }
         >
           Remove From Cart
         </Button>
@@ -33,7 +50,12 @@ export const AddToCartButton = ({ product, count }: IAddToCartButtonProps) => {
           rounded="full"
           size="sm"
           w="150px"
-          onClick={() => addItem("cart", product, count)}
+          onClick={() =>
+            dispatch({
+              type: ActionType.ADD_ITEM,
+              payload: { key: "cart", product, count },
+            })
+          }
         >
           Add to Cart
         </Button>

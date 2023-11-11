@@ -36,12 +36,14 @@ export const ShopContextProvider = ({
       [key]: [...prev[key], { ...product, count: count || 1 }],
     }));
   };
+
   const removeItem = (key: ItemKey, productId: string) => {
     setState((prev) => ({
       ...prev,
       [key]: prev[key].filter((item) => item.id !== productId),
     }));
   };
+
   const increaseCount = (key: ItemKey, productId: string) => {
     const items = [...state[key]];
     const index = items.findIndex((item) => item.id === productId);
@@ -50,6 +52,7 @@ export const ShopContextProvider = ({
       setState((prev) => ({ ...prev, [key]: items }));
     }
   };
+
   const decreaseCount = (key: ItemKey, productId: string) => {
     const items = [...state[key]];
     const index = items.findIndex((item) => item.id === productId);

@@ -14,7 +14,7 @@ export const Banner = () => {
             mx="2rem"
             w={{ base: "300px", lg: "600px" }}
             h={{ base: "300px", lg: "500px" }}
-            bg="center/ cover no-repeat url(pick.png)"
+            bg="center/ cover no-repeat url()"
           ></Box>
         </Box>
       </Flex>
