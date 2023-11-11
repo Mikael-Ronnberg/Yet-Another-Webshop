@@ -49,7 +49,7 @@ export const Cart = () => {
         ref={btnRef}
         onClick={onOpen}
         variant="ghost"
-        color="brand.primary"
+        color="brand.whiteCream"
         _hover={{
           bgColor: "transparent",
         }}

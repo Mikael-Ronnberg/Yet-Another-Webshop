@@ -13,7 +13,7 @@ import {
 import { ReactNode } from "react";
 import { BiMailSend } from "react-icons/bi";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import { Logo } from "../navitem/Logo";
+import { NavLogo } from "../navitem/NavLogo";
 
 const SocialButton = ({
   children,
@@ -57,7 +57,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 
 export const Footer = () => {
   return (
-    <Box bg="white.50" color="gray.700" mt="2rem">
+    <Box bg="brand.whiteCream" color="brand.primaryDarker" mt="2rem">
       <Container as={Stack} maxW={"6xl"} py={10}>
         <SimpleGrid
           templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 2fr" }}
@@ -65,7 +65,7 @@ export const Footer = () => {
         >
           <Stack spacing={6}>
             <Box>
-              <Logo />
+              <NavLogo />
             </Box>
             <Text fontSize="sm">© 2023 True Hype. All rights reserved</Text>
             <Stack direction="row" spacing={6}>

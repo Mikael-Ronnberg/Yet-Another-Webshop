@@ -4,7 +4,6 @@ import {
   CardBody,
   Flex,
   Heading,
-  Image,
   Stack,
   Text,
 } from "@chakra-ui/react";
@@ -20,7 +19,13 @@ import { Link } from "react-router-dom";
 
 export const ProductCard = ({ product }: IProductCardPropss) => {
   return (
-    <Card w="xs" pos="relative" m="0.5rem">
+    <Card
+      w="xs"
+      pos="relative"
+      m="0.5rem"
+      borderRadius="sm"
+      bgColor="brand.whiteCream"
+    >
       <CardBody>
         <Link to={`/products/${product.id}`}>
           <Box
@@ -30,12 +35,12 @@ export const ProductCard = ({ product }: IProductCardPropss) => {
             borderRadius="lg"
           />
         </Link>
-        <Image src={product.image} alt={getSubstring(product.name, 20)} />
         <Stack mt="6" spacing="3">
           <Flex justify="space-between" align="center">
             <Heading size="sm">{product.name}</Heading>
             <Flex fontWeight="bold">
               <Text>Price: </Text>
+              &nbsp;
               <Text>{product.price}</Text>
             </Flex>
           </Flex>

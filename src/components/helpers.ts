@@ -13,7 +13,7 @@ export const initialState: IState = {
 
 export const navItems: INavItem[] = [
   {
-    label: "All Products",
+    label: "Products",
     href: "/products",
   },
   {

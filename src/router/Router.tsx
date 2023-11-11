@@ -3,9 +3,9 @@ import { Home } from "../pages/Home/Home";
 import { Products } from "../pages/Products/Products";
 import { Contact } from "../pages/Contact/Contact";
 import { Categories } from "../pages/Categories/Categories";
-import { ProductView } from "../pages/ProductView/ProductView";
 import { CategoryView } from "../pages/CategoryView/CategoryView";
 import { Checkout } from "../pages/Checkout/Checkout";
+import { ProductRoute } from "../pages/ProductView/ProductRoute";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
   },
   {
     path: "/products/:productId",
-    element: <ProductView></ProductView>,
+    element: <ProductRoute></ProductRoute>,
   },
   {
     path: "/categories",

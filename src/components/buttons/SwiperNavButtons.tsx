@@ -4,25 +4,25 @@ import { useSwiper } from "swiper/react";
 export const SwiperNavButtons = () => {
   const swiper = useSwiper();
   return (
-    <Box>
+    <Box pl="0.16rem">
       <IconButton
-        rounded="lg"
+        rounded="sm"
         icon={<FaChevronLeft />}
-        borderColor="blue.400"
+        borderColor="brand.primary"
         borderWidth="1px"
-        color="grey"
-        bgColor="white"
+        color="brand.primary"
+        bgColor="brand.whiteCream"
         aria-label="Prev"
         onClick={() => swiper.slidePrev()}
         mx="1"
       />
       <IconButton
-        rounded="lg"
+        rounded="sm"
         icon={<FaChevronRight />}
-        borderColor="blue.400"
+        borderColor="brand.primary"
         borderWidth="1px"
-        color="grey"
-        bgColor="white"
+        color="brand.primary"
+        bgColor="brand.whiteCream"
         aria-label="Prev"
         onClick={() => swiper.slideNext()}
         mx="1"

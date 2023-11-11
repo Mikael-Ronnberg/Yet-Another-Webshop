@@ -20,12 +20,17 @@ export const AddToCartButton = ({ product, count }: IAddToCartButtonProps) => {
       {isItemAdded(state, "cart", product.id) ? (
         <Button
           variant="outline"
-          bgColor="blue.300"
-          borderColor="blue.200"
-          color="white"
-          rounded="full"
+          bgColor="brand.whiteCream"
+          borderColor="brand.primary"
+          color="brand.primary"
+          rounded="sm"
           size="sm"
           w="150px"
+          _hover={{
+            bgColor: "brand.primary",
+            color: "brand.whiteCream",
+            borderColor: "brand.whiteCream",
+          }}
           onClick={() =>
             dispatch({
               type: ActionType.REMOVE_ITEM,
@@ -38,11 +43,17 @@ export const AddToCartButton = ({ product, count }: IAddToCartButtonProps) => {
       ) : (
         <Button
           variant="outline"
-          borderColor="brand.primary"
-          color="white"
-          rounded="full"
+          borderColor="brand.whiteCream"
+          color="brand.whiteCream"
+          rounded="sm"
+          bgColor="brand.primary"
           size="sm"
           w="150px"
+          _hover={{
+            bgColor: "brand.whiteCream",
+            color: "brand.primary",
+            borderColor: "brand.primary",
+          }}
           onClick={() =>
             dispatch({
               type: ActionType.ADD_ITEM,

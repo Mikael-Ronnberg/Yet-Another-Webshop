@@ -92,7 +92,7 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
           <Heading>{product.name}</Heading>
           <Text my="1rem">{product.description}</Text>
           <Text fontWeight="bold" fontSize="2rem">
-            {product.price}
+            {product.price} kr
           </Text>
           <Divider my="1rem" />
           <Quantity

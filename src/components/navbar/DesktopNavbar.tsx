@@ -1,6 +1,6 @@
 import { Cart } from "../cart/Cart";
 import { navItems } from "../helpers";
-import { Logo } from "../navitem/Logo";
+import { NavLogo } from "../navitem/NavLogo";
 import { Search } from "../search/Search";
 import {
   cartSectionStyles,
@@ -15,7 +15,7 @@ export const DesktopNavbar = () => {
       <Flex {...desktopNavStyles}>
         <Stack {...logoSectionStyles}>
           <Box>
-            <Logo></Logo>
+            <NavLogo></NavLogo>
           </Box>
           {navItems.map((navItem) => (
             <Box key={navItem.label}>

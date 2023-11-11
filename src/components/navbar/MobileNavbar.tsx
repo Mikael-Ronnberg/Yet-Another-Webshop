@@ -1,8 +1,9 @@
-import { Box, Flex, Stack, Text } from "@chakra-ui/react";
-import { Logo } from "../navitem/Logo";
+import { Box, Flex, Stack } from "@chakra-ui/react";
+import { NavLogo } from "../navitem/NavLogo";
 import { mobileNavContainerStyles, mobileSearchWrapper } from "./style";
 import { Search } from "../search/Search";
 import { MobileMenu } from "./MobileMenu";
+import { Cart } from "../cart/Cart";
 
 export const MobileNavbar = () => {
   return (
@@ -11,10 +12,9 @@ export const MobileNavbar = () => {
         <Box>
           <MobileMenu />
         </Box>
-        <Logo></Logo>
+        <NavLogo></NavLogo>
         <Stack direction="row" spacing={1}>
-          <Text>WixhList</Text>
-          <Text>Cart</Text>
+          <Cart />
         </Stack>
       </Flex>
       <Box {...mobileSearchWrapper}>

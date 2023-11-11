@@ -6,23 +6,22 @@ import { SwiperOptions } from "swiper/types";
 export const bannerStyles: FlexProps = {
   justify: "center",
   align: "center",
-  gap: 2,
-  flexDir: { base: "column", lg: "row" },
-  w: { base: "100%", lg: "90%" },
   mx: "auto",
-  p: "2rem",
+  flexDir: "column",
 };
 
 export const bannerHeadingStyles: HeadingProps = {
   size: { base: "xl", lg: "3xl" },
+  textAlign: "center",
   lineHeight: "4rem",
-  color: "black",
+  color: "brand.whiteCream",
+  p: "2rem",
 };
 
 export const bannerTextStyles: TextProps = {
   fontSize: { base: "3xl", lg: "4lg" },
-  py: "1rem",
-  maxW: "600px",
+  textAlign: "center",
+  color: "brand.whiteCream",
 };
 
 export const slideSettings: SwiperOptions = {

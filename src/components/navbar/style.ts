@@ -4,6 +4,7 @@ export const navbarStyles: BoxProps = {
   pos: "fixed",
   w: "100%",
   bgColor: "brand.primaryLight",
+  color: "brand.whiteCream",
   mb: "1rem",
   zIndex: 10,
 };
@@ -14,7 +15,7 @@ export const desktopNavStyles: FlexProps = {
   px: "2rem",
   py: "1rem",
   borderBottomWidth: "1px",
-  borderColor: "Black",
+  borderColor: "brand.whiteCream",
   display: { base: "none", lg: "flex" },
 };
 

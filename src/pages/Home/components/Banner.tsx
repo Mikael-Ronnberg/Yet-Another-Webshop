@@ -1,22 +1,19 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 import { bannerHeadingStyles, bannerStyles, bannerTextStyles } from "./style";
+import { Logo } from "../../../components/navitem/Logo";
 
 export const Banner = () => {
   return (
     <>
-      <Flex {...bannerStyles}>
-        <Box w={{ base: "100%", lg: "50%" }}>
-          <Heading {...bannerHeadingStyles}></Heading>
-          <Text {...bannerTextStyles}>HEJSAN</Text>
-        </Box>
-        <Box w={{ base: "100%", lg: "50%" }}>
-          <Box
-            mx="2rem"
-            w={{ base: "300px", lg: "600px" }}
-            h={{ base: "300px", lg: "500px" }}
-            bg="center/ cover no-repeat url()"
-          ></Box>
-        </Box>
+      <Flex
+        {...bannerStyles}
+        bg="center / cover no-repeat url(/src/assets/hero/hero.png)"
+        w="100vw"
+        h={{ base: "300px", lg: "80vh" }}
+      >
+        <Heading {...bannerHeadingStyles}>Plant Dad Dispensary</Heading>
+        <Logo />
+        <Text {...bannerTextStyles}>Your Plant Paradise</Text>
       </Flex>
     </>
   );
