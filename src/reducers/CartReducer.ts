@@ -13,6 +13,9 @@ export interface IAction {
 export enum ActionType {
   ADD_ITEM,
   REMOVE_ITEM,
+  RESET_ITEMS,
+  INCREASE_COUNT,
+  DECREASE_COUNT,
 }
 
 export const CartReducer = (state: IState, action: IAction): IState => {
@@ -37,6 +40,40 @@ export const CartReducer = (state: IState, action: IAction): IState => {
         [key]: updatedCart,
       };
     }
+
+    case ActionType.RESET_ITEMS: {
+      const { key } = action.payload;
+
+      return {
+        ...state,
+        [key]: [],
+      };
+    }
+
+    case ActionType.INCREASE_COUNT: {
+      const { key, productId } = action.payload;
+
+      return {
+        ...state,
+        [key]: state[key].map((item) =>
+          item.id === productId ? { ...item, count: item.count + 1 } : item
+        ),
+      };
+    }
+
+    case ActionType.DECREASE_COUNT: {
+      const { key, productId } = action.payload;
+
+      return {
+        ...state,
+        [key]: state[key].map((item) =>
+          item.id === productId && item.count > 1
+            ? { ...item, count: item.count - 1 }
+            : item
+        ),
+      };
+    }
+
     default:
       break;
   }

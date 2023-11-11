@@ -10,15 +10,16 @@ import {
 import { useContext } from "react";
 import { BsTrash } from "react-icons/bs";
 import { IItem } from "../../models/Interfaces";
-import { ShopContext } from "../../context/ShopContext";
 import { Link } from "react-router-dom";
+import { CartDispatchContext } from "../../context/CartDispatchContext";
+import { ActionType } from "../../reducers/CartReducer";
 
 export interface CartItemProps {
   item: IItem;
 }
 
 export const CartItem = ({ item }: CartItemProps) => {
-  const { increaseCount, decreaseCount, removeItem } = useContext(ShopContext);
+  const dispatch = useContext(CartDispatchContext);
 
   return (
     <Grid
@@ -46,7 +47,16 @@ export const CartItem = ({ item }: CartItemProps) => {
       </GridItem>
       <GridItem colSpan={{ base: 3, lg: 2 }} justifyContent="flex-end">
         <HStack my="0.5rem" justifyContent="flex-end">
-          <Button onClick={() => decreaseCount("cart", item.id)}>-</Button>
+          <Button
+            onClick={() =>
+              dispatch({
+                type: ActionType.INCREASE_COUNT,
+                payload: { key: "cart", productId: item.id },
+              })
+            }
+          >
+            -
+          </Button>
           <Input
             type="number"
             value={item.count}
@@ -56,7 +66,16 @@ export const CartItem = ({ item }: CartItemProps) => {
             min="1"
             max="20"
           />
-          <Button onClick={() => increaseCount("cart", item.id)}>+</Button>
+          <Button
+            onClick={() =>
+              dispatch({
+                type: ActionType.DECREASE_COUNT,
+                payload: { key: "cart", productId: item.id },
+              })
+            }
+          >
+            +
+          </Button>
         </HStack>
       </GridItem>
       <GridItem textAlign="right" colSpan={{ base: 2, lg: 1 }}>
@@ -66,7 +85,12 @@ export const CartItem = ({ item }: CartItemProps) => {
         <Button
           variant="ghost"
           colorScheme="red"
-          onClick={() => removeItem("cart", item.id)}
+          onClick={() =>
+            dispatch({
+              type: ActionType.REMOVE_ITEM,
+              payload: { key: "cart", productId: item.id },
+            })
+          }
         >
           <BsTrash />
         </Button>

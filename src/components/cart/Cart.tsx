@@ -15,25 +15,29 @@ import {
 import { useContext } from "react";
 import { BsCart4 } from "react-icons/bs";
 import { CartItem } from "./CartItem";
-import { ShopContext } from "../../context/ShopContext";
 import { calculateItemsTotal } from "../helpers";
 import { Link } from "react-router-dom";
 import React from "react";
+import { CartDispatchContext } from "../../context/CartDispatchContext";
+import { CartContext } from "../../context/CartContext";
+import { ActionType } from "../../reducers/CartReducer";
 
 export const Cart = () => {
-  const {
-    state: { cart },
-    resetItems,
-    addItem,
-  } = useContext(ShopContext);
-
+  const dispatch = useContext(CartDispatchContext);
+  const state = useContext(CartContext);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef<HTMLButtonElement>(null);
 
+  const cart = state.cart;
+
   const handleCheckout = () => {
-    resetItems("checkout");
+    dispatch({ type: ActionType.RESET_ITEMS, payload: { key: "checkout" } });
+
     cart.forEach((cartItem) => {
-      addItem("checkout", cartItem, cartItem.count);
+      dispatch({
+        type: ActionType.ADD_ITEM,
+        payload: { key: "checkout", product: cartItem, count: cartItem.count },
+      });
     });
 
     onClose();
@@ -95,7 +99,12 @@ export const Cart = () => {
                 <Button
                   variant="outline"
                   mr={3}
-                  onClick={() => resetItems("cart")}
+                  onClick={() =>
+                    dispatch({
+                      type: ActionType.RESET_ITEMS,
+                      payload: { key: "cart" },
+                    })
+                  }
                 >
                   Clear Cart
                 </Button>
