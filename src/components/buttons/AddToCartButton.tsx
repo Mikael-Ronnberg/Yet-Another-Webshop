@@ -27,9 +27,9 @@ export const AddToCartButton = ({ product, count }: IAddToCartButtonProps) => {
           size="sm"
           w="150px"
           _hover={{
-            bgColor: "brand.primary",
-            color: "brand.whiteCream",
-            borderColor: "brand.whiteCream",
+            bgColor: "brand.whiteGreen",
+            color: "brand.primary",
+            borderColor: "brand.primary",
           }}
           onClick={() =>
             dispatch({
@@ -50,9 +50,9 @@ export const AddToCartButton = ({ product, count }: IAddToCartButtonProps) => {
           size="sm"
           w="150px"
           _hover={{
-            bgColor: "brand.whiteCream",
-            color: "brand.primary",
-            borderColor: "brand.primary",
+            bgColor: "brand.primaryDark",
+            color: "brand.whiteCream",
+            borderColor: "brand.whiteCream",
           }}
           onClick={() =>
             dispatch({

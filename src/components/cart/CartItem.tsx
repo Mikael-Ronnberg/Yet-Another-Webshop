@@ -42,15 +42,21 @@ export const CartItem = ({ item }: CartItemProps) => {
       </GridItem>
       <GridItem colSpan={{ base: 5, lg: 3 }}>
         <Link to={`/products/${item.id}`}>
-          <Text>{item.name}</Text>
+          <Text color="brand.primaryDarker">{item.name}</Text>
         </Link>
       </GridItem>
       <GridItem colSpan={{ base: 3, lg: 2 }} justifyContent="flex-end">
         <HStack my="0.5rem" justifyContent="flex-end">
           <Button
+            variant="outline"
+            bgColor="brand.whiteCream"
+            borderColor="brand.primary"
+            color="brand.primary"
+            rounded="sm"
+            size="sm"
             onClick={() =>
               dispatch({
-                type: ActionType.INCREASE_COUNT,
+                type: ActionType.DECREASE_COUNT,
                 payload: { key: "cart", productId: item.id },
               })
             }
@@ -58,6 +64,7 @@ export const CartItem = ({ item }: CartItemProps) => {
             -
           </Button>
           <Input
+            color="brand.primaryDarker"
             type="number"
             value={item.count}
             readOnly={true}
@@ -67,9 +74,20 @@ export const CartItem = ({ item }: CartItemProps) => {
             max="20"
           />
           <Button
+            variant="outline"
+            bgColor="brand.whiteCream"
+            borderColor="brand.primary"
+            color="brand.primary"
+            rounded="sm"
+            size="sm"
+            _hover={{
+              bgColor: "brand.whiteGreen",
+              color: "brand.primary",
+              borderColor: "brand.primary",
+            }}
             onClick={() =>
               dispatch({
-                type: ActionType.DECREASE_COUNT,
+                type: ActionType.INCREASE_COUNT,
                 payload: { key: "cart", productId: item.id },
               })
             }
@@ -79,7 +97,9 @@ export const CartItem = ({ item }: CartItemProps) => {
         </HStack>
       </GridItem>
       <GridItem textAlign="right" colSpan={{ base: 2, lg: 1 }}>
-        <Text fontWeight="bold">$ {item.price * item.count}</Text>
+        <Text fontWeight="bold" color="brand.primaryDarker">
+          $ {item.price * item.count}
+        </Text>
       </GridItem>
       <GridItem textAlign="right">
         <Button

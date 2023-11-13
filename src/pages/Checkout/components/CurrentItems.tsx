@@ -20,7 +20,14 @@ export const CurrentItems = () => {
 
   return (
     <>
-      <Card borderWidth="1px" borderColor="gray.200" shadow="none">
+      <Card
+        borderWidth="1px"
+        borderColor="gray.200"
+        shadow="none"
+        rounded="sm"
+        bgColor="brand.whiteCream"
+        pt={{ base: "3rem", lg: "0" }}
+      >
         <CardHeader>
           <Heading size="md">Your Items</Heading>
         </CardHeader>

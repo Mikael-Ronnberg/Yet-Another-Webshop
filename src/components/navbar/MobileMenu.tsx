@@ -22,7 +22,17 @@ export const MobileMenu = () => {
 
   return (
     <>
-      <Button ref={btnRef} onClick={onOpen}>
+      <Button
+        ref={btnRef}
+        onClick={onOpen}
+        variant="ghost"
+        _hover={{
+          bgColor: "transparent",
+        }}
+        color="brand.whiteCream"
+        fontSize="1.5rem"
+        pt="1rem"
+      >
         <VscListFlat />
       </Button>
       <Drawer
@@ -55,7 +65,7 @@ export const MobileMenu = () => {
           </DrawerBody>
 
           <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
+            <Button variant="outline" mr={3} onClick={onClose} rounded="sm">
               Close
             </Button>
           </DrawerFooter>

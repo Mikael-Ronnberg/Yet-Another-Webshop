@@ -9,7 +9,6 @@ import {
   DrawerHeader,
   DrawerOverlay,
   Flex,
-  Text,
   useDisclosure,
 } from "@chakra-ui/react";
 import { useContext } from "react";
@@ -53,9 +52,11 @@ export const Cart = () => {
         _hover={{
           bgColor: "transparent",
         }}
+        fontSize="1.2rem"
+        pt="1rem"
         pos="relative"
       >
-        <BsCart4 /> <Text mx="1">Cart</Text>
+        <BsCart4 />
         {cart.length !== 0 && (
           <Flex
             pos="absolute"
@@ -64,7 +65,7 @@ export const Cart = () => {
             bgColor="brand.primaryLight"
             boxSize="15px"
             rounded="full"
-            color="white"
+            color="brand.whiteCream"
             fontSize="0.6rem"
             align="center"
             justify="center"
@@ -81,7 +82,7 @@ export const Cart = () => {
         size="lg"
       >
         <DrawerOverlay />
-        <DrawerContent>
+        <DrawerContent bgColor="brand.whiteCream">
           <DrawerCloseButton />
           <DrawerHeader color="brand.primary">
             Cart ( {cart.length} Items )
@@ -98,6 +99,17 @@ export const Cart = () => {
               <Box>
                 <Button
                   variant="outline"
+                  bgColor="brand.whiteCream"
+                  borderColor="brand.primary"
+                  color="brand.primary"
+                  rounded="sm"
+                  size="sm"
+                  w="150px"
+                  _hover={{
+                    bgColor: "brand.whiteGreen",
+                    color: "brand.primary",
+                    borderColor: "brand.primary",
+                  }}
                   mr={3}
                   onClick={() =>
                     dispatch({
@@ -110,13 +122,17 @@ export const Cart = () => {
                 </Button>
                 <Link to="/checkout">
                   <Button
+                    variant="outline"
+                    borderColor="brand.whiteCream"
+                    color="brand.whiteCream"
+                    rounded="sm"
                     bgColor="brand.primary"
-                    color="white"
+                    size="sm"
+                    w="150px"
                     _hover={{
-                      bgColor: "brand.primaryLight",
-                    }}
-                    _active={{
-                      bgColor: "brand.primaryLight",
+                      bgColor: "brand.primaryDark",
+                      color: "brand.whiteCream",
+                      borderColor: "brand.whiteCream",
                     }}
                     onClick={handleCheckout}
                   >
@@ -124,7 +140,9 @@ export const Cart = () => {
                   </Button>
                 </Link>
               </Box>
-              <Box fontWeight="bold">Total: $ {calculateItemsTotal(cart)}</Box>
+              <Box fontWeight="bold" color="brand.primaryDarker">
+                Total: $ {calculateItemsTotal(cart)}
+              </Box>
             </DrawerFooter>
           )}
         </DrawerContent>

@@ -34,7 +34,14 @@ export const PaymentForm = () => {
 
   return (
     <>
-      <Card borderWidth="1px" borderColor="gray.200" shadow="none" p="2rem">
+      <Card
+        borderWidth="1px"
+        borderColor="gray.200"
+        shadow="none"
+        p="2rem"
+        rounded="sm"
+        bgColor="brand.whiteCream"
+      >
         <CardHeader>
           <Heading size="md">Payment Details</Heading>
         </CardHeader>
@@ -45,12 +52,15 @@ export const PaymentForm = () => {
               <Input
                 type="text"
                 placeholder="Enter Coupon Code"
-                rounded="full"
+                rounded="sm"
+                borderColor="brand.primary"
+                focusBorderColor="brand.primary"
+                _focus={{ boxShadow: "none" }}
               />
               <Button
                 bgColor="brand.primary"
                 color="white"
-                rounded="full"
+                rounded="sm"
                 ml="-40px"
                 px="2rem"
                 _hover={{
@@ -71,9 +81,15 @@ export const PaymentForm = () => {
               </Heading>
               <RadioGroup>
                 <Stack>
-                  <Radio value="cashOnDelivery">Cash On Delivery</Radio>
-                  <Radio value="momo">Mobile Money Payment</Radio>
-                  <Radio value="3">Credit Card (Master/Visa)</Radio>
+                  <Radio borderColor="brand.primary" value="cashOnDelivery">
+                    Cash On Delivery
+                  </Radio>
+                  <Radio borderColor="brand.primary" value="momo">
+                    Mobile Money Payment
+                  </Radio>
+                  <Radio borderColor="brand.primary" value="3">
+                    Credit Card (Master/Visa)
+                  </Radio>
                 </Stack>
               </RadioGroup>
             </Box>
@@ -111,7 +127,7 @@ export const PaymentForm = () => {
             bgColor="brand.primary"
             color="white"
             w="100%"
-            rounded="full"
+            rounded="sm"
             _hover={{
               bgColor: "brand.primaryDark",
             }}
