@@ -6,6 +6,7 @@ import { CartContext } from "./context/CartContext";
 import { CartDispatchContext } from "./context/CartDispatchContext";
 import { useReducer } from "react";
 import { initialState } from "./components/helpers";
+import { Box } from "@chakra-ui/react";
 
 function App() {
   const [state, dispatch] = useReducer(CartReducer, initialState);
@@ -13,11 +14,13 @@ function App() {
   console.log(state);
   return (
     <>
-      <CartContext.Provider value={state}>
-        <CartDispatchContext.Provider value={dispatch}>
-          <RouterProvider router={router} />
-        </CartDispatchContext.Provider>
-      </CartContext.Provider>
+      <Box bgGradient="linear(to-t, brand.primaryDark, brand.primaryLight)">
+        <CartContext.Provider value={state}>
+          <CartDispatchContext.Provider value={dispatch}>
+            <RouterProvider router={router} />
+          </CartDispatchContext.Provider>
+        </CartContext.Provider>
+      </Box>
     </>
   );
 }

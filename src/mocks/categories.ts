@@ -19,4 +19,10 @@ export const categories: ICategory[] = [
     name: "Leafy Plants",
     slug: "leaf",
   },
+  {
+    id: "e147c3b5-1d8b-4c06-8bbc-fa860f92954a",
+    image: "/src/assets/hero/mostPopularBanner.png",
+    name: "Popular Plants",
+    slug: "popular",
+  },
 ];

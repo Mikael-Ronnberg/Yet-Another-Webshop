@@ -14,11 +14,12 @@ export const CategoryCard = ({ category }: ICategoryCardProps) => {
           direction="column"
           align="center"
           overflow="hidden"
-          variant="outline"
+          bgColor="brand.whiteCream"
+          rounded="sm"
           w="100%"
           h="100%"
           p="10px"
-          _hover={{ bgColor: "gray.100", cursor: "pointer" }}
+          _hover={{ bgColor: "brand.whiteGreen", cursor: "pointer" }}
         >
           <Image
             src={category.image}
