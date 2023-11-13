@@ -3,9 +3,9 @@ import { Home } from "../pages/Home/Home";
 import { Products } from "../pages/Products/Products";
 import { Contact } from "../pages/Contact/Contact";
 import { Categories } from "../pages/Categories/Categories";
-import { CategoryView } from "../pages/CategoryView/CategoryView";
 import { Checkout } from "../pages/Checkout/Checkout";
 import { ProductRoute } from "../pages/ProductView/ProductRoute";
+import { CategoryRoute } from "../pages/CategoryView/CategoryRoute";
 
 export const router = createBrowserRouter([
   {
@@ -26,12 +26,8 @@ export const router = createBrowserRouter([
   },
   {
     path: "/categories/:categoryId",
-    element: <CategoryView></CategoryView>,
+    element: <CategoryRoute></CategoryRoute>,
   },
-  // {
-  //   path: "/viewcart",
-  //   element: <ViewCart></ViewCart>,
-  // },
   {
     path: "/checkout",
     element: <Checkout></Checkout>,

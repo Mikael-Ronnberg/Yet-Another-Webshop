@@ -11,7 +11,7 @@ export const products: IProduct[] = [
     image: "/src/assets/leafygreen/Peperomia_obtusifolia.png",
     category: {
       id: "e147c3b5-1d8b-4c06-8bbc-fa860f92954a",
-      image: "",
+      image: "/src/assets/hero/leadyBanner2.png",
       name: "Leafy Plants",
       slug: "leaf",
     },
@@ -26,7 +26,7 @@ export const products: IProduct[] = [
     image: "/src/assets/leafygreen/monstera_delic.png",
     category: {
       id: "e147c3b5-1d8b-4c06-8bbc-fa860f92954a",
-      image: "",
+      image: "src/assets/hero/leadyBanner2.png",
       name: "Leafy Plants",
       slug: "leaf",
     },

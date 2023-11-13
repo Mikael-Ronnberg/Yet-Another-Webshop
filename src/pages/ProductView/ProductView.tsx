@@ -3,7 +3,7 @@ import { products } from "../../mocks/products";
 import { ProductInfo } from "./ProductInfo";
 
 interface IProductViewProps {
-  id: string;
+  id?: string;
 }
 
 export const ProductView = ({ id }: IProductViewProps) => {

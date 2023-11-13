@@ -5,24 +5,39 @@ import { Navbar } from "../../components/navbar/Navbar";
 import { AllProducts } from "../Products/components/AllProducts";
 import { products } from "../../mocks/products";
 
-export const CategoryView = () => {
-  return (
-    <>
-      <Navbar></Navbar>
-      <Hero
-        heading={products[0].category.name}
-        description={`Awesome ${products[0].category.name}`}
-        image={products[0].category.image}
-        btnLabel="View the Categories"
-        btnLink="/categories"
-      />
-      <BreadCrumbs
-        items={[
-          ...defaultBreadItems,
-          { name: products[0].category.name, link: "#" },
-        ]}
-      />
-      <AllProducts products={products} />
-    </>
-  );
+interface ICategoryViewProps {
+  id?: string;
+}
+
+export const CategoryView = ({ id }: ICategoryViewProps) => {
+  const displayProduct = products.find((product) => product.category.id === id);
+
+  if (!displayProduct) {
+    return (
+      <>
+        <Navbar></Navbar>
+        <div>Category not found</div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Navbar></Navbar>
+        <Hero
+          heading={displayProduct.category.name}
+          description={`Awesome ${displayProduct.category.name}`}
+          image={displayProduct.category.image}
+          btnLabel="View the Categories"
+          btnLink="/categories"
+        />
+        <BreadCrumbs
+          items={[
+            ...defaultBreadItems,
+            { name: displayProduct.category.name, link: "#" },
+          ]}
+        />
+        <AllProducts products={products} />
+      </>
+    );
+  }
 };
