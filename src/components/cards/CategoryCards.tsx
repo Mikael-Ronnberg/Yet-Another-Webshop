@@ -28,7 +28,12 @@ export const CategoryCard = ({ category }: ICategoryCardProps) => {
             height={200}
           />
           <CardBody>
-            <Heading size={{ base: "sm", lg: "md" }}>{category.name}</Heading>
+            <Heading
+              size={{ base: "sm", lg: "md" }}
+              color="brand.primaryDarker"
+            >
+              {category.name}
+            </Heading>
           </CardBody>
         </Card>
       </Link>

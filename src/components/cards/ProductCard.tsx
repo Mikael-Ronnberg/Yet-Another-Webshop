@@ -32,19 +32,24 @@ export const ProductCard = ({ product }: IProductCardPropss) => {
             boxSize="200px"
             bg={`center / contain no-repeat url(${product.image})`}
             mx="auto"
-            borderRadius="lg"
+            borderRadius="sm"
           />
         </Link>
         <Stack mt="6" spacing="3">
           <Flex justify="space-between" align="center">
-            <Heading size="sm">{product.name}</Heading>
+            <Heading size="sm" color="brand.primaryDarker">
+              {product.name}
+            </Heading>
             <Flex fontWeight="bold">
-              <Text>Price: </Text>
+              <Text color="brand.primaryDarker">Price: </Text>
               &nbsp;
-              <Text>{product.price}</Text>
+              <Text color="brand.primaryDarker">{product.price}</Text>
             </Flex>
           </Flex>
-          <Text> {getSubstring(product.description, 30)}</Text>
+          <Text color="brand.primaryDarker">
+            {" "}
+            {getSubstring(product.description, 30)}
+          </Text>
           <AddToCartButton product={product} />
         </Stack>
       </CardBody>

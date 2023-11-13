@@ -44,14 +44,15 @@ export const MobileMenu = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>
+          <DrawerHeader bgColor="brand.whiteCream">
             <Logo />
           </DrawerHeader>
 
-          <DrawerBody>
+          <DrawerBody bgColor="brand.whiteCream">
             {navItems.map((navItem, i) => (
               <Link to={navItem.href} key={i}>
                 <Box
+                  color="brand.primaryDarker"
                   p="0.5rem"
                   _hover={{
                     bgColor: "brand.primary",
@@ -64,8 +65,17 @@ export const MobileMenu = () => {
             ))}
           </DrawerBody>
 
-          <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose} rounded="sm">
+          <DrawerFooter bgColor="brand.whiteCream">
+            <Button
+              variant="outline"
+              bgColor="brand.whiteCream"
+              borderColor="brand.primary"
+              color="brand.primary"
+              rounded="sm"
+              size="sm"
+              mr={3}
+              onClick={onClose}
+            >
               Close
             </Button>
           </DrawerFooter>

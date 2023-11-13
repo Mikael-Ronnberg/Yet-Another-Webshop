@@ -20,10 +20,27 @@ export const Hero = ({
   return (
     <Card {...heroCardStyles}>
       <Box mx="2rem" w={{ base: "100%", lg: "50%" }}>
-        <Heading size={{ base: "xl", lg: "2xl" }}>{heading}</Heading>
-        <Text py="1rem">{description}</Text>
+        <Heading color="brand.primaryDarker" size={{ base: "xl", lg: "2xl" }}>
+          {heading}
+        </Heading>
+        <Text color="brand.primaryDarker" py="1rem">
+          {description}
+        </Text>
         <Link to={btnLink}>
-          <Button variant="outline">{btnLabel}</Button>
+          <Button
+            variant="outline"
+            borderColor="brand.whiteCream"
+            color="brand.whiteCream"
+            rounded="sm"
+            bgColor="brand.primary"
+            _hover={{
+              bgColor: "brand.primaryDark",
+              color: "brand.whiteCream",
+              borderColor: "brand.whiteCream",
+            }}
+          >
+            {btnLabel}
+          </Button>
         </Link>
       </Box>
       <Box mx="2rem" w={{ base: "100%", lg: "50%" }} mt="1rem">

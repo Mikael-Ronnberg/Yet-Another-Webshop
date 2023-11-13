@@ -65,9 +65,12 @@ export const CartItem = ({ item }: CartItemProps) => {
           </Button>
           <Input
             color="brand.primaryDarker"
+            rounded="sm"
             type="number"
             value={item.count}
             readOnly={true}
+            focusBorderColor="brand.primaryDark"
+            size="sm"
             minW="52px"
             maxW="55px"
             min="1"
