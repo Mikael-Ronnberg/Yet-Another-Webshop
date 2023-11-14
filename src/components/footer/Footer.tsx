@@ -67,7 +67,9 @@ export const Footer = () => {
             <Box>
               <NavLogo />
             </Box>
-            <Text fontSize="sm">© 2023 True Hype. All rights reserved</Text>
+            <Text fontSize="sm">
+              © 2023 Plant Dad Dispensary (PPD). All rights reserved
+            </Text>
             <Stack direction="row" spacing={6}>
               <SocialButton label="Twitter" href={"#"}>
                 <FaTwitter />
@@ -98,6 +100,7 @@ export const Footer = () => {
               <Input
                 placeholder="Your email address"
                 bg="blackAlpha.100"
+                rounded="sm"
                 border={0}
                 _focus={{
                   bg: "whiteAlpha.300",
@@ -106,6 +109,7 @@ export const Footer = () => {
               <IconButton
                 bg="brand.primary"
                 color="white"
+                rounded="sm"
                 _hover={{
                   bg: "brand.primaryDark",
                 }}

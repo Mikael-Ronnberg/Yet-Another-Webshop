@@ -1,4 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
+import "@fontsource-variable/raleway";
 
 export const colors = {
   brand: {
@@ -11,4 +12,10 @@ export const colors = {
   },
 };
 
-export const theme = extendTheme({ colors });
+export const theme = extendTheme({
+  colors,
+  fonts: {
+    heading: `'Raleway', sans-serif`,
+    body: `'Raleway', sans-serif`,
+  },
+});

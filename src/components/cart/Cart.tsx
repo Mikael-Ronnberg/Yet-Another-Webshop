@@ -52,8 +52,8 @@ export const Cart = () => {
         _hover={{
           bgColor: "transparent",
         }}
-        fontSize="1.2rem"
-        pt="1rem"
+        fontSize="1.5rem"
+        pt="0.3rem"
         pos="relative"
       >
         <BsCart4 />
@@ -101,13 +101,13 @@ export const Cart = () => {
                   variant="outline"
                   bgColor="brand.whiteCream"
                   borderColor="brand.primary"
-                  color="brand.primary"
+                  color="brand.primaryDark"
                   rounded="sm"
                   size="sm"
                   w="150px"
                   _hover={{
-                    bgColor: "brand.whiteGreen",
-                    color: "brand.primary",
+                    bgColor: "brand.primaryDark",
+                    color: "brand.whiteCream",
                     borderColor: "brand.primary",
                   }}
                   mr={3}
@@ -141,7 +141,7 @@ export const Cart = () => {
                 </Link>
               </Box>
               <Box fontWeight="bold" color="brand.primaryDarker">
-                Total: $ {calculateItemsTotal(cart)}
+                Total: {calculateItemsTotal(cart)} kr
               </Box>
             </DrawerFooter>
           )}

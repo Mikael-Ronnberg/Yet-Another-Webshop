@@ -18,7 +18,7 @@ export const DesktopNavbar = () => {
             <NavLogo></NavLogo>
           </Box>
           {navItems.map((navItem) => (
-            <Box key={navItem.label}>
+            <Box p="1rem" key={navItem.label}>
               <Link href={navItem.href}>{navItem.label}</Link>
             </Box>
           ))}

@@ -101,7 +101,7 @@ export const CartItem = ({ item }: CartItemProps) => {
       </GridItem>
       <GridItem textAlign="right" colSpan={{ base: 2, lg: 1 }}>
         <Text fontWeight="bold" color="brand.primaryDarker">
-          $ {item.price * item.count}
+          {item.price * item.count} kr
         </Text>
       </GridItem>
       <GridItem textAlign="right">

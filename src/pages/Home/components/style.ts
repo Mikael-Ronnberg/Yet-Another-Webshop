@@ -22,6 +22,7 @@ export const bannerTextStyles: TextProps = {
   fontSize: { base: "3xl", lg: "4lg" },
   textAlign: "center",
   color: "brand.whiteCream",
+  bgColor: "brand.primaryDark",
 };
 
 export const slideSettings: SwiperOptions = {

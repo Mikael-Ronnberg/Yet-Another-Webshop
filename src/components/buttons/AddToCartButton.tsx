@@ -22,12 +22,12 @@ export const AddToCartButton = ({ product, count }: IAddToCartButtonProps) => {
           variant="outline"
           bgColor="brand.whiteCream"
           borderColor="brand.primary"
-          color="brand.primary"
+          color="brand.primaryDark"
           rounded="sm"
           size="sm"
           w="150px"
           _hover={{
-            bgColor: "brand.whiteGreen",
+            bgColor: "brand.primaryDark",
             color: "brand.whiteCream",
             borderColor: "brand.primary",
           }}

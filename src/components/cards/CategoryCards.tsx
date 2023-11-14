@@ -11,8 +11,9 @@ export const CategoryCard = ({ category }: ICategoryCardProps) => {
     <>
       <Link to={`/categories/${category.id}`}>
         <Card
-          direction="column"
+          direction="row"
           align="center"
+          justify="center"
           overflow="hidden"
           bgColor="brand.whiteCream"
           rounded="sm"
