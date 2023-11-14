@@ -10,7 +10,7 @@ export const Checkout = () => {
       <Navbar></Navbar>
       <Flex
         w={{ base: "100%", lg: "90%" }}
-        h="100vh"
+        maxH="300vh"
         mx="auto"
         flexDir={{ base: "column", lg: "row" }}
         gap="2rem"

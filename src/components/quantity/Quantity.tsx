@@ -34,11 +34,37 @@ export const Quantity = ({
 
   return (
     <HStack maxW="140px" my="0.5rem">
-      <Button {...dec} disabled={disabled}>
+      <Button
+        {...dec}
+        disabled={disabled}
+        variant="outline"
+        bgColor="brand.whiteCream"
+        borderColor="brand.primary"
+        color="brand.primary"
+        rounded="sm"
+        size="md"
+      >
         -
       </Button>
-      <Input {...input} readOnly={true} minW="52px" />
-      <Button {...inc} disabled={disabled}>
+      <Input
+        {...input}
+        readOnly={true}
+        minW="52px"
+        color="brand.primaryDarker"
+        focusBorderColor="brand.primaryDark"
+        rounded="sm"
+        size="md"
+      />
+      <Button
+        {...inc}
+        disabled={disabled}
+        variant="outline"
+        bgColor="brand.whiteCream"
+        borderColor="brand.primary"
+        color="brand.primary"
+        rounded="sm"
+        size="md"
+      >
         +
       </Button>
     </HStack>

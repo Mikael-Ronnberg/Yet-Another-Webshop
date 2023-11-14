@@ -10,7 +10,7 @@ export const products: IProduct[] = [
     slug: "babyrubber",
     image: "/src/assets/leafygreen/Peperomia_obtusifolia.png",
     category: {
-      id: "e147c3b5-1d8b-4c06-8bbc-fa860f92954a",
+      id: "1a1bd33d-bbda-4ab2-b7a1-7fa38469f0f7",
       image: "/src/assets/hero/leadyBanner2.png",
       name: "Leafy Plants",
       slug: "leaf",
@@ -25,8 +25,8 @@ export const products: IProduct[] = [
     slug: "monstera",
     image: "/src/assets/leafygreen/monstera_delic.png",
     category: {
-      id: "e147c3b5-1d8b-4c06-8bbc-fa860f92954a",
-      image: "src/assets/hero/leadyBanner2.png",
+      id: "1a1bd33d-bbda-4ab2-b7a1-7fa38469f0f7",
+      image: "/src/assets/hero/leadyBanner2.png",
       name: "Leafy Plants",
       slug: "leaf",
     },
@@ -40,10 +40,10 @@ export const products: IProduct[] = [
     slug: "parlorpalm",
     image: "/src/assets/leafygreen/Chamaedorea_elegans.png",
     category: {
-      id: "e147c3b5-1d8b-4c06-8bbc-fa860f92954a",
-      image: "",
-      name: "Leafy Plants",
-      slug: "leaf",
+      id: "2e149e5b-514e-44ce-8c49-efbebf329fec",
+      image: "/src/assets/hero/leafyBanner.png",
+      name: "Easy To Handle",
+      slug: "easy",
     },
   },
   {
@@ -55,10 +55,10 @@ export const products: IProduct[] = [
     slug: "philosquami",
     image: "/src/assets/leafygreen/Red_Bristle_Philodendron_squamiferum.png",
     category: {
-      id: "e147c3b5-1d8b-4c06-8bbc-fa860f92954a",
-      image: "",
-      name: "Leafy Plants",
-      slug: "leaf",
+      id: "2e149e5b-514e-44ce-8c49-efbebf329fec",
+      image: "/src/assets/hero/leafyBanner.png",
+      name: "Easy To Handle",
+      slug: "easy",
     },
   },
   {
@@ -70,10 +70,10 @@ export const products: IProduct[] = [
     slug: "calatheawhitestar",
     image: "/src/assets/leafygreen/Calathea_White_Star_Calathea_majestica.png",
     category: {
-      id: "e147c3b5-1d8b-4c06-8bbc-fa860f92954a",
-      image: "",
-      name: "Leafy Plants",
-      slug: "leaf",
+      id: "2e149e5b-514e-44ce-8c49-efbebf329fec",
+      image: "/src/assets/hero/leafyBanner.png",
+      name: "Easy To Handle",
+      slug: "easy",
     },
   },
   {
@@ -85,10 +85,10 @@ export const products: IProduct[] = [
     slug: "dumbcane",
     image: "/src/assets/leafygreen/Dieffenbachia_plant.png",
     category: {
-      id: "e147c3b5-1d8b-4c06-8bbc-fa860f92954a",
-      image: "",
-      name: "Leafy Plants",
-      slug: "leaf",
+      id: "183e93cb-22fe-4f19-8631-107552b2fbb3",
+      image: "/src/assets/hero/mostPopularBanner.png",
+      name: "Popular Plants",
+      slug: "popular",
     },
   },
   {
@@ -100,10 +100,10 @@ export const products: IProduct[] = [
     slug: "goldenpothos",
     image: "/src/assets/leafygreen/Epipremnum_aureum_pothos_plant.png",
     category: {
-      id: "e147c3b5-1d8b-4c06-8bbc-fa860f92954a",
-      image: "",
-      name: "Leafy Plants",
-      slug: "leaf",
+      id: "183e93cb-22fe-4f19-8631-107552b2fbb3",
+      image: "/src/assets/hero/mostPopularBanner.png",
+      name: "Popular Plants",
+      slug: "popular",
     },
   },
   {
@@ -115,10 +115,10 @@ export const products: IProduct[] = [
     slug: "philomelan",
     image: "/src/assets/leafygreen/Philodendron_melanochrysum.png",
     category: {
-      id: "e147c3b5-1d8b-4c06-8bbc-fa860f92954a",
-      image: "",
-      name: "Leafy Plants",
-      slug: "leaf",
+      id: "d014nex2-5sle-9b5e-80kl-v4322c329fsp",
+      image: "/src/assets/hero/expertBanner.png",
+      name: "Expert Handler",
+      slug: "expert",
     },
   },
   {
@@ -130,8 +130,8 @@ export const products: IProduct[] = [
     slug: "birdnestfern",
     image: "/src/assets/leafygreen/Asplenium_nidus.png",
     category: {
-      id: "e147c3b5-1d8b-4c06-8bbc-fa860f92954a",
-      image: "",
+      id: "1a1bd33d-bbda-4ab2-b7a1-7fa38469f0f7",
+      image: "/src/assets/hero/leadyBanner2.png",
       name: "Leafy Plants",
       slug: "leaf",
     },
@@ -145,8 +145,38 @@ export const products: IProduct[] = [
     slug: "philosilversword",
     image: "/src/assets/leafygreen/Philodendron_hastatum_Silver_Sword.png",
     category: {
-      id: "e147c3b5-1d8b-4c06-8bbc-fa860f92954a",
-      image: "",
+      id: "d014nex2-5sle-9b5e-80kl-v4322c329fsp",
+      image: "/src/assets/hero/expertBanner.png",
+      name: "Expert Handler",
+      slug: "expert",
+    },
+  },
+  {
+    id: "c5490f23-bd58-4b97-9714-03c1f1558962",
+    name: "Spathiphyllum Domino Variegata",
+    description:
+      "Spathiphyllum Domino is a rarer variation of our classic Peace Lily. With its white variegated leaves, it's more dreamy than the dreamiest!",
+    price: 229,
+    slug: "spatophyllumdomino",
+    image: "/src/assets/leafygreen/Spathiphyllum_Domino_variegata.png",
+    category: {
+      id: "d014nex2-5sle-9b5e-80kl-v4322c329fsp",
+      image: "/src/assets/hero/expertBanner.png",
+      name: "Expert Handler",
+      slug: "expert",
+    },
+  },
+  {
+    id: "3dfebbb8-1ee7-4cac-9e89-ea1c7f4a1458",
+    name: "Snake Plant",
+    description:
+      "The Snake Plant has everything we desire in a potted plant – it's easy to care for, adaptable to various light conditions, rarely affected by pests, and serves as an efficient air purifier.",
+    price: 229,
+    slug: "snakeplant",
+    image: "/src/assets/leafygreen/sansevieria_trifasciata_plant.png",
+    category: {
+      id: "1a1bd33d-bbda-4ab2-b7a1-7fa38469f0f7",
+      image: "/src/assets/hero/leadyBanner2.png",
       name: "Leafy Plants",
       slug: "leaf",
     },

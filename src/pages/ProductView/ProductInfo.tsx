@@ -83,15 +83,17 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
         w={{ base: "100%", lg: "90%" }}
         mx="auto"
         p="2rem"
-        gap="20"
+        gap="10"
       >
-        <GridItem p="1rem">
+        <GridItem p="1rem" bgColor="brand.whiteCream" rounded="sm">
           <Image src={product.image} alt={product.name} mx="auto" />
         </GridItem>
-        <GridItem p="1rem">
-          <Heading>{product.name}</Heading>
-          <Text my="1rem">{product.description}</Text>
-          <Text fontWeight="bold" fontSize="2rem">
+        <GridItem p="1rem" bgColor="brand.whiteCream" rounded="sm">
+          <Heading color="brand.primaryDarker">{product.name}</Heading>
+          <Text my="1rem" color="brand.primaryDarker">
+            {product.description}
+          </Text>
+          <Text fontWeight="bold" fontSize="2rem" color="brand.primaryDarker">
             {product.price} kr
           </Text>
           <Divider my="1rem" />
@@ -108,12 +110,16 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
                 variant="outline"
                 bgColor="brand.primary"
                 color="brand.whiteCream"
-                borderRadius="50px"
+                borderRadius="sm"
                 size="sm"
                 w="160px"
                 mr="1rem"
                 my="0.5rem"
-                _hover={{ bgColor: "none" }}
+                _hover={{
+                  bgColor: "brand.primaryDark",
+                  color: "brand.whiteCream",
+                  borderColor: "brand.whiteCream",
+                }}
                 onClick={handleCheckout}
               >
                 Buy Now
@@ -122,16 +128,24 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
             <AddToCartButton product={product} count={quantity} />
           </Box>
           <Stack py="2rem">
-            <Box borderWidth={1} borderColor="brand.whiteCream" p="1rem">
-              <Text fontWeight="bold">Free Delivery Over 500 kr!</Text>
+            <Box borderWidth={1} borderColor="brand.primary" p="1rem">
+              <Text fontWeight="bold" color="brand.primaryDarker">
+                Free Delivery Over 500 kr!
+              </Text>
               <Link textDecor="underline" color="gray.500">
                 Details
               </Link>
             </Box>
-            <Box borderWidth={1} borderColor="brand.whiteCream" p="1rem">
-              <Text fontWeight="bold">Return Delivery?</Text>
-              <Text color="brand.primary">Free return within 14 days</Text>
-              <Link textDecor="underline">Details</Link>
+            <Box borderWidth={1} borderColor="brand.primary" p="1rem">
+              <Text fontWeight="bold" color="brand.primaryDarker">
+                Return Delivery?
+              </Text>
+              <Text color="brand.primaryDarker">
+                Free return within 14 days
+              </Text>
+              <Link textDecor="underline" color="brand.primaryDarker">
+                Details
+              </Link>
             </Box>
           </Stack>
         </GridItem>

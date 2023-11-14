@@ -14,13 +14,13 @@ export const categories: ICategory[] = [
     slug: "expert",
   },
   {
-    id: "e147c3b5-1d8b-4c06-8bbc-fa860f92954a",
+    id: "1a1bd33d-bbda-4ab2-b7a1-7fa38469f0f7",
     image: "/src/assets/hero/leadyBanner2.png",
     name: "Leafy Plants",
     slug: "leaf",
   },
   {
-    id: "e147c3b5-1d8b-4c06-8bbc-fa860f92954a",
+    id: "183e93cb-22fe-4f19-8631-107552b2fbb3",
     image: "/src/assets/hero/mostPopularBanner.png",
     name: "Popular Plants",
     slug: "popular",

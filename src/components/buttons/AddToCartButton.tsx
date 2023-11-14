@@ -28,7 +28,7 @@ export const AddToCartButton = ({ product, count }: IAddToCartButtonProps) => {
           w="150px"
           _hover={{
             bgColor: "brand.whiteGreen",
-            color: "brand.primary",
+            color: "brand.whiteCream",
             borderColor: "brand.primary",
           }}
           onClick={() =>

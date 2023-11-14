@@ -18,15 +18,18 @@ export const DeliveryForm = () => {
         shadow="none"
         rounded="sm"
         bgColor="brand.whiteCream"
+        mb="3rem"
       >
         <CardHeader>
-          <Heading size="md">Delivery Information</Heading>
+          <Heading size="md" color="brand.primaryDarker">
+            Delivery Information
+          </Heading>
         </CardHeader>
 
         <CardBody>
           <Stack spacing="2rem">
             <Box>
-              <FormLabel>Full Name</FormLabel>
+              <FormLabel color="brand.primaryDarker">Full Name</FormLabel>
               <Input
                 type="text"
                 placeholder="Full name"
@@ -36,7 +39,7 @@ export const DeliveryForm = () => {
             </Box>
 
             <Box>
-              <FormLabel>Address</FormLabel>
+              <FormLabel color="brand.primaryDarker">Address</FormLabel>
               <Input
                 type="text"
                 placeholder="address"
@@ -46,7 +49,7 @@ export const DeliveryForm = () => {
             </Box>
 
             <Box>
-              <FormLabel>Phone</FormLabel>
+              <FormLabel color="brand.primaryDarker">Phone</FormLabel>
               <Input
                 type="text"
                 placeholder="phone number"
@@ -56,7 +59,7 @@ export const DeliveryForm = () => {
             </Box>
 
             <Box>
-              <FormLabel>Email</FormLabel>
+              <FormLabel color="brand.primaryDarker">Email</FormLabel>
               <Input
                 type="email"
                 placeholder="email"

@@ -11,27 +11,10 @@ interface IAllProductsProps {
   // breadcrumbItems?: IBreadcrumbItem[];
 }
 
-// const itemsPerPage = 10;
-
 export const AllProducts = ({
   products,
 }: // breadcrumbItems,
 IAllProductsProps) => {
-  // const [visibleProducts, setVisibleProducts] = useState(
-  //   products.slice(0, itemsPerPage)
-  // );
-
-  // const total = Math.ceil(products.length / itemsPerPage);
-  // const pagination = usePagination({
-  //   total,
-  //   initialPage: 1,
-  //   onChange(page) {
-  //     const start = (page - 1) * itemsPerPage;
-  //     const end = start + itemsPerPage;
-  //     setVisibleProducts(products.slice(start, end));
-  //   },
-  // });
-
   return (
     <>
       {/* <CustomBreadcrumb items={breadcrumbItems} /> */}
@@ -39,7 +22,7 @@ IAllProductsProps) => {
         flexWrap="wrap"
         w={{ base: "100%", lg: "90%" }}
         mx="auto"
-        justify={{ base: "center", lg: "space-between" }}
+        justify={{ base: "center", lg: "space-around" }}
       >
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />

@@ -29,7 +29,9 @@ export const CurrentItems = () => {
         pt={{ base: "3rem", lg: "0" }}
       >
         <CardHeader>
-          <Heading size="md">Your Items</Heading>
+          <Heading size="md" color="brand.primaryDarker">
+            Your Items
+          </Heading>
         </CardHeader>
 
         <CardBody>
@@ -43,19 +45,27 @@ export const CurrentItems = () => {
                       fontWeight="bold"
                       fontSize={{ base: "sm", lg: "lg" }}
                       maxW="500px"
+                      color="brand.primaryDarker"
                     >
                       {item.name}
                     </Text>
-                    <Text color="gray.500">
+                    <Text color="brand.primaryDarker">
                       {getSubstring(item.description, 50)}
                     </Text>
                   </Box>
                 </Flex>
                 <Box textAlign="right">
-                  <Text fontWeight="bold" fontSize={{ base: "md", lg: "lg" }}>
+                  <Text
+                    fontWeight="bold"
+                    color="brand.primaryDarker"
+                    fontSize={{ base: "md", lg: "lg" }}
+                  >
                     ${formatPrice(item.price)}
                   </Text>
-                  <Text fontSize={{ base: "sm", lg: "md" }}>
+                  <Text
+                    fontSize={{ base: "sm", lg: "md" }}
+                    color="brand.primaryDarker"
+                  >
                     Quantity: {item.count}
                   </Text>
                 </Box>
