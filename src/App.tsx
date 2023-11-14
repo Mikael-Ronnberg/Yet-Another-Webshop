@@ -2,16 +2,31 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./router/Router";
 import "./App.scss";
 import { CartReducer } from "./reducers/CartReducer";
+
+import { useEffect, useReducer } from "react";
+import { initialState } from "./components/helpers";
+import { IState } from "./models/Interfaces";
 import { CartContext } from "./context/CartContext";
 import { CartDispatchContext } from "./context/CartDispatchContext";
-import { useReducer } from "react";
-import { initialState } from "./components/helpers";
 import { Box } from "@chakra-ui/react";
 
 function App() {
-  const [state, dispatch] = useReducer(CartReducer, initialState);
+  const loadStateFromLocalStorage = (startingState: IState) => {
+    const localStorageState = localStorage.getItem("tempState");
+    if (localStorageState === null) {
+      return startingState;
+    }
+    return JSON.parse(localStorageState) as IState;
+  };
+  const [state, dispatch] = useReducer(
+    CartReducer,
+    loadStateFromLocalStorage(initialState)
+  );
 
-  console.log(state);
+  useEffect(() => {
+    localStorage.setItem("tempState", JSON.stringify(state));
+  }, [state]);
+
   return (
     <>
       <Box bgGradient="linear(to-t, brand.primaryDark, brand.primaryLight)">

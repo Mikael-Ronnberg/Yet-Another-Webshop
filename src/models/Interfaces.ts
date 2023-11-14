@@ -43,12 +43,12 @@ export interface IItem extends IProduct {
   count: number;
 }
 
-export interface IContext {
-  state: IState;
-  addItem: (key: ItemKey, product: IProduct, count?: number) => void;
-  removeItem: (key: ItemKey, productId: string) => void;
-  increaseCount: (key: ItemKey, productId: string) => void;
-  decreaseCount: (key: ItemKey, productId: string) => void;
-  resetItems: (key: ItemKey) => void;
-  isAdded: (key: ItemKey, productId: string) => boolean;
-}
+// export interface IContext {
+//   state: IState;
+//   addItem: (key: ItemKey, product: IProduct, count?: number) => void;
+//   removeItem: (key: ItemKey, productId: string) => void;
+//   increaseCount: (key: ItemKey, productId: string) => void;
+//   decreaseCount: (key: ItemKey, productId: string) => void;
+//   resetItems: (key: ItemKey) => void;
+//   isAdded: (key: ItemKey, productId: string) => boolean;
+// }
