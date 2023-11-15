@@ -17,18 +17,18 @@ import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 import { ActionType } from "../../../reducers/CartReducer";
 import { CartDispatchContext } from "../../../context/CartDispatchContext";
+import { buttonIncDecStyle } from "../../../components/buttons/style";
+import { BsTrash } from "react-icons/bs";
 
 export const CurrentItems = () => {
   const state = useContext(CartContext);
   const dispatch = useContext(CartDispatchContext);
 
-  const checkout = state.checkout;
+  const checkout = state.cart;
 
   return (
     <>
       <Card
-        borderWidth="1px"
-        borderColor="gray.200"
         shadow="none"
         rounded="sm"
         bgColor="brand.whiteCream"
@@ -49,7 +49,10 @@ export const CurrentItems = () => {
                 justify="space-between"
                 flexWrap="wrap"
               >
-                <Flex align="center" flexBasis="70%">
+                <Flex
+                  align="center"
+                  flexBasis={{ base: "100%", md: "70%", lg: "50%" }}
+                >
                   <Image src={item.image} boxSize="100px" bgSize="contain" />
                   <Box mx="1rem">
                     <Text
@@ -65,7 +68,10 @@ export const CurrentItems = () => {
                     </Text>
                   </Box>
                 </Flex>
-                <Flex flexBasis="30%" justifyContent="space-between">
+                <Flex
+                  flexBasis={{ base: "100%", md: "30%", lg: "50%" }}
+                  justifyContent="space-between"
+                >
                   <HStack my="0.5rem">
                     <Button
                       variant="outline"
@@ -77,7 +83,7 @@ export const CurrentItems = () => {
                       onClick={() =>
                         dispatch({
                           type: ActionType.DECREASE_COUNT,
-                          payload: { key: "checkout", productId: item.id },
+                          payload: { key: "cart", productId: item.id },
                         })
                       }
                     >
@@ -86,9 +92,9 @@ export const CurrentItems = () => {
                     <Input
                       color="brand.primaryDarker"
                       rounded="sm"
-                      type="number"
                       focusBorderColor="brand.primaryDark"
                       size="sm"
+                      type="number"
                       value={item.count}
                       readOnly={true}
                       minW="52px"
@@ -97,42 +103,47 @@ export const CurrentItems = () => {
                       max="20"
                     />
                     <Button
-                      variant="outline"
-                      bgColor="brand.whiteCream"
-                      borderColor="brand.primary"
-                      color="brand.primary"
-                      rounded="sm"
-                      size="sm"
-                      _hover={{
-                        bgColor: "brand.whiteGreen",
-                        color: "brand.primary",
-                        borderColor: "brand.primary",
-                      }}
+                      {...buttonIncDecStyle}
                       onClick={() =>
                         dispatch({
                           type: ActionType.INCREASE_COUNT,
-                          payload: { key: "checkout", productId: item.id },
+                          payload: { key: "cart", productId: item.id },
                         })
                       }
                     >
                       +
                     </Button>
                   </HStack>
-                  <Box textAlign="right">
-                    <Text
-                      fontWeight="bold"
-                      color="brand.primaryDarker"
-                      fontSize={{ base: "md", lg: "lg" }}
+                  <Flex align="center">
+                    <Box textAlign="right">
+                      <Text
+                        fontWeight="bold"
+                        color="brand.primaryDarker"
+                        fontSize={{ base: "md", lg: "lg" }}
+                      >
+                        {formatPrice(item.price * item.count)} kr
+                      </Text>
+                      <Text
+                        fontSize={{ base: "sm", lg: "md" }}
+                        color="brand.primaryDarker"
+                      >
+                        Quantity: {item.count}
+                      </Text>
+                    </Box>
+                    <Button
+                      variant="ghost"
+                      colorScheme="red"
+                      rounded="sm"
+                      onClick={() =>
+                        dispatch({
+                          type: ActionType.REMOVE_ITEM,
+                          payload: { key: "cart", productId: item.id },
+                        })
+                      }
                     >
-                      ${formatPrice(item.price)}
-                    </Text>
-                    <Text
-                      fontSize={{ base: "sm", lg: "md" }}
-                      color="brand.primaryDarker"
-                    >
-                      Quantity: {item.count}
-                    </Text>
-                  </Box>
+                      <BsTrash />
+                    </Button>
+                  </Flex>
                 </Flex>
               </Flex>
             ))}

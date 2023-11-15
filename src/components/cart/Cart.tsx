@@ -30,19 +30,6 @@ export const Cart = () => {
 
   const cart = state.cart;
 
-  const handleCheckout = () => {
-    dispatch({ type: ActionType.RESET_ITEMS, payload: { key: "checkout" } });
-
-    cart.forEach((cartItem) => {
-      dispatch({
-        type: ActionType.ADD_ITEM,
-        payload: { key: "checkout", product: cartItem, count: cartItem.count },
-      });
-    });
-
-    onClose();
-  };
-
   return (
     <>
       <Button
@@ -111,7 +98,7 @@ export const Cart = () => {
                   Clear Cart
                 </Button>
                 <Link to="/checkout">
-                  <Button {...buttonPrimaryStyle} onClick={handleCheckout}>
+                  <Button {...buttonPrimaryStyle} onClick={onClose}>
                     Checkout
                   </Button>
                 </Link>

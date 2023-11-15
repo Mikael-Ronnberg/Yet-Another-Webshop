@@ -7,7 +7,7 @@ import { Navbar } from "../../components/navbar/Navbar";
 export const Checkout = () => {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <Flex
         w={{ base: "100%", lg: "90%" }}
         maxH="300vh"
@@ -19,7 +19,7 @@ export const Checkout = () => {
           <CurrentItems />
           <DeliveryForm />
         </Stack>
-        <Box w={{ base: "100%", lg: "40%" }}>
+        <Box w={{ base: "100%", lg: "40%" }} pb="3rem">
           <PaymentForm />
         </Box>
       </Flex>

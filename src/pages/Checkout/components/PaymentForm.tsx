@@ -15,15 +15,15 @@ import {
 } from "@chakra-ui/react";
 import { calculateItemsTotal, formatPrice } from "../../../components/helpers";
 import { useState, useContext, useEffect } from "react";
-import { ShopContext } from "../../../context/ShopContext";
+
+import { CartContext } from "../../../context/CartContext";
 
 export const PaymentForm = () => {
   const [subTotal, setSubTotal] = useState<number>(0);
   const [tax, setTax] = useState<number>(0);
+  const state = useContext(CartContext);
 
-  const {
-    state: { checkout },
-  } = useContext(ShopContext);
+  const checkout = state.cart;
 
   useEffect(() => {
     const subTotal = calculateItemsTotal(checkout);
@@ -116,7 +116,7 @@ export const PaymentForm = () => {
                 Sub Total
               </Text>
               <Text fontWeight="bold" color="brand.primaryDarker">
-                ${formatPrice(subTotal)}
+                {formatPrice(subTotal)} kr
               </Text>
             </Flex>
 
@@ -125,7 +125,7 @@ export const PaymentForm = () => {
                 Tax(10%)
               </Text>
               <Text fontWeight="bold" color="brand.primaryDarker">
-                ${formatPrice(tax)}
+                {formatPrice(tax)} kr
               </Text>
             </Flex>
 
@@ -134,7 +134,7 @@ export const PaymentForm = () => {
                 Coupon Discount
               </Text>
               <Text fontWeight="bold" color="brand.primaryDarker">
-                -${formatPrice(tax)}
+                - {formatPrice(tax)} kr
               </Text>
             </Flex>
 
@@ -143,7 +143,7 @@ export const PaymentForm = () => {
                 Shipping Cost
               </Text>
               <Text fontWeight="bold" color="brand.primaryDarker">
-                -${formatPrice(0)}
+                - {formatPrice(0)} kr
               </Text>
             </Flex>
             <Divider />
@@ -152,7 +152,7 @@ export const PaymentForm = () => {
                 Total
               </Text>
               <Text fontWeight="bold" color="brand.primaryDarker">
-                ${formatPrice(subTotal)}
+                {formatPrice(subTotal)} kr
               </Text>
             </Flex>
           </Box>
@@ -169,7 +169,7 @@ export const PaymentForm = () => {
               bgColor: "brand.primaryDark",
             }}
           >
-            Pay ${formatPrice(subTotal)}
+            {formatPrice(subTotal)} sek
           </Button>
         </CardBody>
       </Card>

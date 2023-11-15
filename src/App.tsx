@@ -26,6 +26,8 @@ function App() {
     localStorage.setItem("tempState", JSON.stringify(state));
   }, [state]);
 
+  console.log(state);
+
   return (
     <>
       <Box bgGradient="linear(to-t, brand.primaryDark, brand.primaryLight)">

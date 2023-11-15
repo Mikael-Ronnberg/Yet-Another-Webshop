@@ -29,3 +29,17 @@ export const buttonPrimaryStyle: ButtonProps = {
     borderColor: "brand.whiteCream",
   },
 };
+
+export const buttonIncDecStyle: ButtonProps = {
+  variant: "outline",
+  bgColor: "brand.whiteCream",
+  borderColor: "brand.primary",
+  color: "brand.primary",
+  rounded: "sm",
+  size: "sm",
+  _hover: {
+    bgColor: "brand.whiteGreen",
+    color: "brand.primary",
+    borderColor: "brand.primary",
+  },
+};
