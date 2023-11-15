@@ -11,8 +11,7 @@ export const CategoryCard = ({ category }: ICategoryCardProps) => {
     <>
       <Link to={`/categories/${category.id}`}>
         <Card
-          size="lg"
-          direction="row"
+          direction={{ base: "row", lg: "column" }}
           align="center"
           justify="center"
           overflow="hidden"
@@ -26,8 +25,8 @@ export const CategoryCard = ({ category }: ICategoryCardProps) => {
           <Image
             src={category.image}
             alt={category.name}
-            width={200}
-            height={200}
+            width={220}
+            height={220}
             p="1rem"
           />
           <CardBody>

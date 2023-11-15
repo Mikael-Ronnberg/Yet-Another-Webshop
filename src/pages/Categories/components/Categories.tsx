@@ -9,7 +9,7 @@ interface ICategoriesProps {
 
 export const Categories = ({ categories }: ICategoriesProps) => {
   return (
-    <Box w={{ base: "100%", lg: "90%" }} mx="auto" py="3rem" px="2rem">
+    <Box w={{ base: "100%", lg: "100%" }} m="auto" py="3rem" px="2rem">
       <SectionHeading title="Our Categories" />
       <Grid
         templateColumns={{

@@ -14,7 +14,7 @@ export const AllCategories = ({ categories }: IAllCategoriesProps) => {
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
         gap="20px"
         mx="auto"
-        p="2rem"
+        p="1rem"
       >
         {categories.map((category) => (
           <CategoryCard key={category.id} category={category} />
