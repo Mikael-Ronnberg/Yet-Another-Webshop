@@ -104,7 +104,7 @@ export const Cart = () => {
                 </Link>
               </Box>
               <Box fontWeight="bold" color="brand.primaryDarker">
-                Total: {calculateItemsTotal(cart)} kr
+                Total: {calculateItemsTotal(cart)} sek
               </Box>
             </DrawerFooter>
           )}

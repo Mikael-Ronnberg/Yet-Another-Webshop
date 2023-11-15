@@ -82,7 +82,7 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
             {product.description}
           </Text>
           <Text fontWeight="bold" fontSize="2rem" color="brand.primaryDarker">
-            {product.price} kr
+            {product.price} sek
           </Text>
           <Divider my="1rem" />
           <Quantity
@@ -108,7 +108,7 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
           <Stack py="2rem">
             <Box borderWidth={1} borderColor="brand.primary" p="1rem">
               <Text fontWeight="bold" color="brand.primaryDarker">
-                Free Delivery Over 500 kr!
+                Free Delivery Over 500 sek!
               </Text>
               <Link textDecor="underline" color="gray.500">
                 Details

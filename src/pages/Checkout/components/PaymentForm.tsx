@@ -116,7 +116,7 @@ export const PaymentForm = () => {
                 Sub Total
               </Text>
               <Text fontWeight="bold" color="brand.primaryDarker">
-                {formatPrice(subTotal)} kr
+                {formatPrice(subTotal)} sek
               </Text>
             </Flex>
 
@@ -125,7 +125,7 @@ export const PaymentForm = () => {
                 Tax(10%)
               </Text>
               <Text fontWeight="bold" color="brand.primaryDarker">
-                {formatPrice(tax)} kr
+                {formatPrice(tax)} sek
               </Text>
             </Flex>
 
@@ -134,7 +134,7 @@ export const PaymentForm = () => {
                 Coupon Discount
               </Text>
               <Text fontWeight="bold" color="brand.primaryDarker">
-                - {formatPrice(tax)} kr
+                - {formatPrice(tax)} sek
               </Text>
             </Flex>
 
@@ -143,7 +143,7 @@ export const PaymentForm = () => {
                 Shipping Cost
               </Text>
               <Text fontWeight="bold" color="brand.primaryDarker">
-                - {formatPrice(0)} kr
+                - {formatPrice(0)} sek
               </Text>
             </Flex>
             <Divider />
@@ -152,7 +152,7 @@ export const PaymentForm = () => {
                 Total
               </Text>
               <Text fontWeight="bold" color="brand.primaryDarker">
-                {formatPrice(subTotal)} kr
+                {formatPrice(subTotal)} sek
               </Text>
             </Flex>
           </Box>

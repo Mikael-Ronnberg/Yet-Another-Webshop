@@ -74,12 +74,7 @@ export const CurrentItems = () => {
                 >
                   <HStack my="0.5rem">
                     <Button
-                      variant="outline"
-                      bgColor="brand.whiteCream"
-                      borderColor="brand.primary"
-                      color="brand.primary"
-                      rounded="sm"
-                      size="sm"
+                      {...buttonIncDecStyle}
                       onClick={() =>
                         dispatch({
                           type: ActionType.DECREASE_COUNT,
@@ -121,7 +116,7 @@ export const CurrentItems = () => {
                         color="brand.primaryDarker"
                         fontSize={{ base: "md", lg: "lg" }}
                       >
-                        {formatPrice(item.price * item.count)} kr
+                        {formatPrice(item.price * item.count)} sek
                       </Text>
                       <Text
                         fontSize={{ base: "sm", lg: "md" }}

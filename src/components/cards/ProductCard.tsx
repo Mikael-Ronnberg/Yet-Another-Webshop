@@ -43,7 +43,7 @@ export const ProductCard = ({ product }: IProductCardPropss) => {
             <Flex fontWeight="bold">
               <Text color="brand.primaryDarker">Price: </Text>
               &nbsp;
-              <Text color="brand.primaryDarker">{product.price} kr</Text>
+              <Text color="brand.primaryDarker">{product.price} sek</Text>
             </Flex>
           </Flex>
           <Text color="brand.primaryDarker">

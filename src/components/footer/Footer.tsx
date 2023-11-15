@@ -68,7 +68,7 @@ export const Footer = () => {
               <LogoDark />
             </Box>
             <Text fontSize="sm">
-              © 2023 Plant Dad Dispensary (PPD). All rights reserved
+              © 2023 Plant Dad Depot (PPD). All rights reserved
             </Text>
             <Stack direction="row" spacing={6}>
               <SocialButton label="Twitter" href={"#"}>
