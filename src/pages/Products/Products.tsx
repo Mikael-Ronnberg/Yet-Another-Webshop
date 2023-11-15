@@ -11,7 +11,7 @@ export const Products = () => {
       <Hero
         heading="Green and Beatiful Plants"
         description="Dr. Greenthumb would be jealouse!"
-        image="/hero/hero_image.png"
+        image="/hero_image.png"
         btnLabel="View All Categories"
         btnLink="/categories"
       ></Hero>

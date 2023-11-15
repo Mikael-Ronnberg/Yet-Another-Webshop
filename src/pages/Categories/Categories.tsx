@@ -11,7 +11,7 @@ export const Categories = () => {
       <Hero
         heading="Plant Categories"
         description="Our different categories"
-        image="/hero/leafyBanner.png"
+        image="/leafyBanner.png"
         btnLabel="View All Products"
         btnLink="/products"
       ></Hero>
