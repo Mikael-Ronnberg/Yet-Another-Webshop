@@ -11,16 +11,20 @@ export const bannerStyles: FlexProps = {
 };
 
 export const bannerHeadingStyles: HeadingProps = {
-  size: { base: "xl", lg: "3xl" },
+  size: { base: "2xl", md: "3xl", lg: "4xl" },
   textAlign: "center",
   lineHeight: "4rem",
+  mt: { base: "2rem", md: "1.5rem", lg: "0" },
+  mb: { base: "0", md: "0", lg: "4rem" },
   color: "brand.whiteCream",
-  p: "2rem",
+  p: { base: "1rem", md: "1rem", lg: "2rem" },
 };
 
 export const bannerTextStyles: TextProps = {
-  fontSize: { base: "3xl", lg: "4lg" },
+  fontSize: { base: "1xl", md: "2xl", lg: "3xl" },
   textAlign: "center",
+  mb: { base: "2rem", lg: "0" },
+  mt: { base: "1rem", md: "0.5rem", lg: "4rem" },
   color: "brand.whiteCream",
   bgColor: "brand.primaryDark",
 };

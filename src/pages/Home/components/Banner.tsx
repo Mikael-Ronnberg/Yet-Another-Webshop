@@ -13,7 +13,7 @@ export const Banner = () => {
       >
         <Heading {...bannerHeadingStyles}>Plant Dad Dispensary</Heading>
         <Logo />
-        <Text {...bannerTextStyles}> Your Plant Paradise</Text>
+        <Text {...bannerTextStyles}>Where Greens Come True</Text>
       </Flex>
     </>
   );

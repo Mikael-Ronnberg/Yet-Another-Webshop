@@ -24,6 +24,7 @@ import { useState, useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { CartDispatchContext } from "../../context/CartDispatchContext";
 import { ActionType } from "../../reducers/CartReducer";
+import { buttonPrimaryStyle } from "../../components/buttons/style";
 
 interface IProductInfoProps {
   product: IProduct;
@@ -37,29 +38,16 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
   // const cart = state.cart;
 
   const handleCheckout = () => {
-    dispatch({ type: ActionType.RESET_ITEMS, payload: { key: "checkout" } });
+    // dispatch({ type: ActionType.RESET_ITEMS, payload: { key: "checkout" } });
 
     dispatch({
       type: ActionType.ADD_ITEM,
       payload: {
-        key: "checkout",
+        key: "cart",
         product: product,
         count: quantity,
       },
     });
-
-    // if (cart.length > 0) {
-    //   cart.forEach((cartItem) => {
-    //     dispatch({
-    //       type: ActionType.ADD_ITEM,
-    //       payload: {
-    //         key: "checkout",
-    //         product: cartItem,
-    //         count: cartItem.count,
-    //       },
-    //     });
-    //   });
-    // }
   };
 
   return (
@@ -107,20 +95,10 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
           <Box>
             <Link href="/checkout">
               <Button
-                variant="outline"
-                bgColor="brand.primary"
-                color="brand.whiteCream"
-                borderRadius="sm"
-                size="sm"
-                w="160px"
+                {...buttonPrimaryStyle}
+                onClick={handleCheckout}
                 mr="1rem"
                 my="0.5rem"
-                _hover={{
-                  bgColor: "brand.primaryDark",
-                  color: "brand.whiteCream",
-                  borderColor: "brand.whiteCream",
-                }}
-                onClick={handleCheckout}
               >
                 Buy Now
               </Button>
