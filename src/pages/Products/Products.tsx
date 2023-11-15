@@ -1,5 +1,3 @@
-import "./Products.scss";
-
 import { Navbar } from "../../components/navbar/Navbar";
 import { Hero } from "../../components/hero/Hero";
 import { AllProducts } from "./components/AllProducts";

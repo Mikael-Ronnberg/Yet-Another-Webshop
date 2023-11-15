@@ -8,13 +8,19 @@ import {
   Flex,
   Text,
   Image,
+  HStack,
+  Button,
+  Input,
 } from "@chakra-ui/react";
 import { getSubstring, formatPrice } from "../../../components/helpers";
 import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
+import { ActionType } from "../../../reducers/CartReducer";
+import { CartDispatchContext } from "../../../context/CartDispatchContext";
 
 export const CurrentItems = () => {
   const state = useContext(CartContext);
+  const dispatch = useContext(CartDispatchContext);
 
   const checkout = state.checkout;
 
@@ -37,8 +43,13 @@ export const CurrentItems = () => {
         <CardBody>
           <Stack spacing="2rem">
             {checkout.map((item) => (
-              <Flex key={item.id} align="center" justify="space-between">
-                <Flex align="center">
+              <Flex
+                key={item.id}
+                align="center"
+                justify="space-between"
+                flexWrap="wrap"
+              >
+                <Flex align="center" flexBasis="70%">
                   <Image src={item.image} boxSize="100px" bgSize="contain" />
                   <Box mx="1rem">
                     <Text
@@ -54,21 +65,75 @@ export const CurrentItems = () => {
                     </Text>
                   </Box>
                 </Flex>
-                <Box textAlign="right">
-                  <Text
-                    fontWeight="bold"
-                    color="brand.primaryDarker"
-                    fontSize={{ base: "md", lg: "lg" }}
-                  >
-                    ${formatPrice(item.price)}
-                  </Text>
-                  <Text
-                    fontSize={{ base: "sm", lg: "md" }}
-                    color="brand.primaryDarker"
-                  >
-                    Quantity: {item.count}
-                  </Text>
-                </Box>
+                <Flex flexBasis="30%" justifyContent="space-between">
+                  <HStack my="0.5rem">
+                    <Button
+                      variant="outline"
+                      bgColor="brand.whiteCream"
+                      borderColor="brand.primary"
+                      color="brand.primary"
+                      rounded="sm"
+                      size="sm"
+                      onClick={() =>
+                        dispatch({
+                          type: ActionType.DECREASE_COUNT,
+                          payload: { key: "checkout", productId: item.id },
+                        })
+                      }
+                    >
+                      -
+                    </Button>
+                    <Input
+                      color="brand.primaryDarker"
+                      rounded="sm"
+                      type="number"
+                      focusBorderColor="brand.primaryDark"
+                      size="sm"
+                      value={item.count}
+                      readOnly={true}
+                      minW="52px"
+                      maxW="55px"
+                      min="1"
+                      max="20"
+                    />
+                    <Button
+                      variant="outline"
+                      bgColor="brand.whiteCream"
+                      borderColor="brand.primary"
+                      color="brand.primary"
+                      rounded="sm"
+                      size="sm"
+                      _hover={{
+                        bgColor: "brand.whiteGreen",
+                        color: "brand.primary",
+                        borderColor: "brand.primary",
+                      }}
+                      onClick={() =>
+                        dispatch({
+                          type: ActionType.INCREASE_COUNT,
+                          payload: { key: "checkout", productId: item.id },
+                        })
+                      }
+                    >
+                      +
+                    </Button>
+                  </HStack>
+                  <Box textAlign="right">
+                    <Text
+                      fontWeight="bold"
+                      color="brand.primaryDarker"
+                      fontSize={{ base: "md", lg: "lg" }}
+                    >
+                      ${formatPrice(item.price)}
+                    </Text>
+                    <Text
+                      fontSize={{ base: "sm", lg: "md" }}
+                      color="brand.primaryDarker"
+                    >
+                      Quantity: {item.count}
+                    </Text>
+                  </Box>
+                </Flex>
               </Flex>
             ))}
           </Stack>

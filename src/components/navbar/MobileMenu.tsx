@@ -12,9 +12,9 @@ import {
 } from "@chakra-ui/react";
 import { VscListFlat } from "react-icons/vsc";
 import React from "react";
-import { Logo } from "../navitem/Logo";
 import { navItems } from "../helpers";
 import { Link } from "react-router-dom";
+import { LogoDark } from "../Icons/LogoDark";
 
 export const MobileMenu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -43,9 +43,9 @@ export const MobileMenu = () => {
       >
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader bgColor="brand.whiteCream">
-            <Logo />
+          <DrawerCloseButton color="brand.primaryDarker" rounded="sm" />
+          <DrawerHeader bgColor="brand.whiteCream" p="2rem">
+            <LogoDark />
           </DrawerHeader>
 
           <DrawerBody bgColor="brand.whiteCream">

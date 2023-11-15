@@ -1,6 +1,6 @@
 import { Cart } from "../cart/Cart";
 import { navItems } from "../helpers";
-import { NavLogo } from "../navitem/NavLogo";
+import { NavLogo } from "../Icons/NavLogo";
 import { Search } from "../search/Search";
 import {
   cartSectionStyles,

@@ -1,5 +1,5 @@
 import { Box, Flex, Stack } from "@chakra-ui/react";
-import { NavLogo } from "../navitem/NavLogo";
+import { NavLogo } from "../Icons/NavLogo";
 import { mobileNavContainerStyles, mobileSearchWrapper } from "./style";
 import { Search } from "../search/Search";
 import { MobileMenu } from "./MobileMenu";

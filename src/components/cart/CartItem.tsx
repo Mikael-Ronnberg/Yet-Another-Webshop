@@ -67,10 +67,10 @@ export const CartItem = ({ item }: CartItemProps) => {
             color="brand.primaryDarker"
             rounded="sm"
             type="number"
-            value={item.count}
-            readOnly={true}
             focusBorderColor="brand.primaryDark"
             size="sm"
+            value={item.count}
+            readOnly={true}
             minW="52px"
             maxW="55px"
             min="1"
@@ -108,6 +108,7 @@ export const CartItem = ({ item }: CartItemProps) => {
         <Button
           variant="ghost"
           colorScheme="red"
+          rounded="sm"
           onClick={() =>
             dispatch({
               type: ActionType.REMOVE_ITEM,

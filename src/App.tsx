@@ -1,6 +1,5 @@
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router/Router";
-import "./App.scss";
 import { CartReducer } from "./reducers/CartReducer";
 
 import { useEffect, useReducer } from "react";

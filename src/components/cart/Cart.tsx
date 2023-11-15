@@ -20,6 +20,7 @@ import React from "react";
 import { CartDispatchContext } from "../../context/CartDispatchContext";
 import { CartContext } from "../../context/CartContext";
 import { ActionType } from "../../reducers/CartReducer";
+import { buttonPrimaryStyle, buttonSecondaryStyle } from "../buttons/style";
 
 export const Cart = () => {
   const dispatch = useContext(CartDispatchContext);
@@ -83,7 +84,7 @@ export const Cart = () => {
       >
         <DrawerOverlay />
         <DrawerContent bgColor="brand.whiteCream">
-          <DrawerCloseButton />
+          <DrawerCloseButton color="brand.primaryDarker" rounded="sm" />
           <DrawerHeader color="brand.primary">
             Cart ( {cart.length} Items )
           </DrawerHeader>
@@ -98,18 +99,7 @@ export const Cart = () => {
             <DrawerFooter justifyContent="space-between">
               <Box>
                 <Button
-                  variant="outline"
-                  bgColor="brand.whiteCream"
-                  borderColor="brand.primary"
-                  color="brand.primaryDark"
-                  rounded="sm"
-                  size="sm"
-                  w="150px"
-                  _hover={{
-                    bgColor: "brand.primaryDark",
-                    color: "brand.whiteCream",
-                    borderColor: "brand.primary",
-                  }}
+                  {...buttonSecondaryStyle}
                   mr={3}
                   onClick={() =>
                     dispatch({
@@ -121,21 +111,7 @@ export const Cart = () => {
                   Clear Cart
                 </Button>
                 <Link to="/checkout">
-                  <Button
-                    variant="outline"
-                    borderColor="brand.whiteCream"
-                    color="brand.whiteCream"
-                    rounded="sm"
-                    bgColor="brand.primary"
-                    size="sm"
-                    w="150px"
-                    _hover={{
-                      bgColor: "brand.primaryDark",
-                      color: "brand.whiteCream",
-                      borderColor: "brand.whiteCream",
-                    }}
-                    onClick={handleCheckout}
-                  >
+                  <Button {...buttonPrimaryStyle} onClick={handleCheckout}>
                     Checkout
                   </Button>
                 </Link>

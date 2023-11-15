@@ -13,7 +13,7 @@ import {
 import { ReactNode } from "react";
 import { BiMailSend } from "react-icons/bi";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import { NavLogo } from "../navitem/NavLogo";
+import { LogoDark } from "../Icons/LogoDark";
 
 const SocialButton = ({
   children,
@@ -65,7 +65,7 @@ export const Footer = () => {
         >
           <Stack spacing={6}>
             <Box>
-              <NavLogo />
+              <LogoDark />
             </Box>
             <Text fontSize="sm">
               © 2023 Plant Dad Dispensary (PPD). All rights reserved
@@ -82,19 +82,24 @@ export const Footer = () => {
               </SocialButton>
             </Stack>
           </Stack>
-          <Stack align="flex-start">
-            <ListHeader>Company</ListHeader>
+
+          <Stack align="flex-start" py={{ base: "10", md: "5", lg: "2" }}>
+            <Box borderBottom="1px" borderColor="brand.primaryDarker" w="10rem">
+              <ListHeader>Company</ListHeader>
+            </Box>
             <Link href={"#"}>About us</Link>
             <Link href={"#"}>Contact us</Link>
             <Link href={"#"}>Testimonials</Link>
           </Stack>
-          <Stack align="flex-start">
-            <ListHeader>Support</ListHeader>
+          <Stack align="flex-start" py={{ base: "10", md: "5", lg: "2" }}>
+            <Box borderBottom="1px" borderColor="brand.primaryDarker" w="10rem">
+              <ListHeader>Support</ListHeader>
+            </Box>
             <Link href={"#"}>Help Center</Link>
             <Link href={"#"}>Terms of Service</Link>
             <Link href={"#"}>Privacy Policy</Link>
           </Stack>
-          <Stack align="flex-start">
+          <Stack align="flex-start" py={{ base: "6", md: "5", lg: "2" }}>
             <ListHeader>Sign up for 10% discount!</ListHeader>
             <Stack direction={"row"}>
               <Input

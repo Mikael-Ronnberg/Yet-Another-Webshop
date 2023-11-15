@@ -1,6 +1,6 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
 import { bannerHeadingStyles, bannerStyles, bannerTextStyles } from "./style";
-import { Logo } from "../../../components/navitem/Logo";
+import { Logo } from "../../../components/Icons/Logo";
 
 export const Banner = () => {
   return (

@@ -1,5 +1,3 @@
-import "./Navbar.scss";
-
 import { Box } from "@chakra-ui/react";
 import { navbarStyles } from "./style";
 import { DesktopNavbar } from "./DesktopNavbar";
