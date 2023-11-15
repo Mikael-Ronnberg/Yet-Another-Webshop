@@ -23,6 +23,7 @@ export const BreadCrumbs = ({ items = [] }: IBreadCrumbs) => {
           px="1rem"
           mx="auto"
           fontSize={{ base: "xs", md: "md" }}
+          mt={{ base: "3rem", lg: "0.5rem" }}
         >
           {items.map((item, index) =>
             index !== items.length - 1 ? (

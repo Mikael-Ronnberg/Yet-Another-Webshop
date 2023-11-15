@@ -15,6 +15,7 @@ import React from "react";
 import { navItems } from "../helpers";
 import { Link } from "react-router-dom";
 import { LogoDark } from "../Icons/LogoDark";
+import { Search } from "../search/Search";
 
 export const MobileMenu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -30,7 +31,7 @@ export const MobileMenu = () => {
           bgColor: "transparent",
         }}
         color="brand.whiteCream"
-        fontSize="1.5rem"
+        fontSize="2rem"
         pt="1rem"
       >
         <VscListFlat />
@@ -49,6 +50,9 @@ export const MobileMenu = () => {
           </DrawerHeader>
 
           <DrawerBody bgColor="brand.whiteCream">
+            <Box mb="2rem">
+              <Search />
+            </Box>
             {navItems.map((navItem, i) => (
               <Link to={navItem.href} key={i}>
                 <Box

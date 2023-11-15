@@ -13,6 +13,7 @@ export const heroCardStyles: CardProps = {
   shadow: "sm",
   p: "2rem",
   mb: "2rem",
+  mt: { base: "5rem", lg: "3rem" },
 };
 
 export const heroImageStyles: ImageProps = {

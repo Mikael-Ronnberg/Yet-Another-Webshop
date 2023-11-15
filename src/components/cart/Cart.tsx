@@ -40,21 +40,21 @@ export const Cart = () => {
         _hover={{
           bgColor: "transparent",
         }}
-        fontSize="1.5rem"
-        pt="0.3rem"
+        fontSize="1.8rem"
+        pt="1rem"
         pos="relative"
       >
         <BsCart4 />
         {cart.length !== 0 && (
           <Flex
             pos="absolute"
-            top="0px"
-            right="5px"
-            bgColor="brand.primaryLight"
+            top="6px"
+            right="3px"
             boxSize="15px"
+            bgColor="red.400"
             rounded="full"
             color="brand.whiteCream"
-            fontSize="0.6rem"
+            fontSize="0.8rem"
             align="center"
             justify="center"
           >

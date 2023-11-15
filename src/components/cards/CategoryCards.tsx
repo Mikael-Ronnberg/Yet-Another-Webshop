@@ -11,6 +11,7 @@ export const CategoryCard = ({ category }: ICategoryCardProps) => {
     <>
       <Link to={`/categories/${category.id}`}>
         <Card
+          size="lg"
           direction="row"
           align="center"
           justify="center"
@@ -19,7 +20,7 @@ export const CategoryCard = ({ category }: ICategoryCardProps) => {
           rounded="sm"
           w="100%"
           h="100%"
-          p="10px"
+          p="1rem"
           _hover={{ bgColor: "brand.whiteGreen", cursor: "pointer" }}
         >
           <Image
@@ -27,6 +28,7 @@ export const CategoryCard = ({ category }: ICategoryCardProps) => {
             alt={category.name}
             width={200}
             height={200}
+            p="1rem"
           />
           <CardBody>
             <Heading

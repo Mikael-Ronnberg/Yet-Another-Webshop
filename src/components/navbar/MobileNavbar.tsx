@@ -1,7 +1,6 @@
 import { Box, Flex, Stack } from "@chakra-ui/react";
 import { NavLogo } from "../Icons/NavLogo";
-import { mobileNavContainerStyles, mobileSearchWrapper } from "./style";
-import { Search } from "../search/Search";
+import { mobileNavContainerStyles } from "./style";
 import { MobileMenu } from "./MobileMenu";
 import { Cart } from "../cart/Cart";
 
@@ -17,9 +16,6 @@ export const MobileNavbar = () => {
           <Cart />
         </Stack>
       </Flex>
-      <Box {...mobileSearchWrapper}>
-        <Search></Search>
-      </Box>
     </>
   );
 };

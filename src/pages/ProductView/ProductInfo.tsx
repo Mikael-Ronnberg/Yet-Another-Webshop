@@ -25,6 +25,7 @@ import { CartContext } from "../../context/CartContext";
 import { CartDispatchContext } from "../../context/CartDispatchContext";
 import { ActionType } from "../../reducers/CartReducer";
 import { buttonPrimaryStyle } from "../../components/buttons/style";
+import { Footer } from "../../components/footer/Footer";
 
 interface IProductInfoProps {
   product: IProduct;
@@ -128,6 +129,7 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
           </Stack>
         </GridItem>
       </Grid>
+      <Footer />
     </>
   );
 };

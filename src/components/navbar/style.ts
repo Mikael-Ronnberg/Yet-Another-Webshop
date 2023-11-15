@@ -36,14 +36,7 @@ export const mobileNavContainerStyles: FlexProps = {
   align: "center",
   px: "2rem",
   py: "1rem",
-  // borderBottom: "1px",
-  // borderColor: "gray.400",
+  borderBottom: "1px",
+  borderColor: "brand.whiteCream",
   display: { base: "flex", lg: "none" },
-};
-
-export const mobileSearchWrapper: BoxProps = {
-  px: "2rem",
-  py: "0.5rem",
-  mb: "1rem",
-  display: { base: "block", lg: "none" },
 };
