@@ -8,19 +8,15 @@ import { Flex } from "@chakra-ui/react";
 
 interface IAllProductsProps {
   products: IProduct[];
-  // breadcrumbItems?: IBreadcrumbItem[];
 }
 
-export const AllProducts = ({
-  products,
-}: // breadcrumbItems,
-IAllProductsProps) => {
+export const AllProducts = ({ products }: IAllProductsProps) => {
   return (
     <>
-      {/* <CustomBreadcrumb items={breadcrumbItems} /> */}
       <Flex
         flexWrap="wrap"
-        w={{ base: "100%", lg: "90%" }}
+        w="90%"
+        // {{ base: "100%", lg: "90%" }}
         mx="auto"
         justify={{ base: "center", lg: "space-around" }}
       >

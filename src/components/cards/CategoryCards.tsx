@@ -9,7 +9,7 @@ interface ICategoryCardProps {
 export const CategoryCard = ({ category }: ICategoryCardProps) => {
   return (
     <>
-      <Link to={`/categories/${category.id}`}>
+      <Link to={`/category/${category.id}`}>
         <Card
           direction={{ base: "row", lg: "column" }}
           align="center"
