@@ -4,7 +4,7 @@ import { Navbar } from "../../components/navbar/Navbar";
 // import { products } from "../../mocks/products";
 import { Footer } from "../../components/footer/Footer";
 
-export const Products = () => {
+export const ProductsPage = () => {
   return (
     <>
       <Navbar></Navbar>

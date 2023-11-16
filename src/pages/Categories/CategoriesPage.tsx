@@ -4,7 +4,7 @@ import { Navbar } from "../../components/navbar/Navbar";
 // import { categories } from "../../mocks/categories";
 // import { AllCategories } from "./components/AllCategories";
 
-export const Categories = () => {
+export const CategoriesPage = () => {
   return (
     <>
       <Navbar></Navbar>

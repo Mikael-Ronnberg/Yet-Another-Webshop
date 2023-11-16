@@ -1,11 +1,10 @@
 import { createHashRouter } from "react-router-dom";
 import { Home } from "../pages/Home/Home";
-import { Products } from "../pages/Products/Products";
-import { Contact } from "../pages/Contact/Contact";
-import { Categories } from "../pages/Categories/Categories";
 import { Checkout } from "../pages/Checkout/Checkout";
 import { ProductRoute } from "../pages/ProductView/ProductRoute";
 import { CategoryRoute } from "../pages/CategoryView/CategoryRoute";
+import { CategoriesPage } from "../pages/Categories/CategoriesPage";
+import { ProductsPage } from "../pages/Products/ProductsPage";
 
 export const router = createHashRouter([
   {
@@ -14,7 +13,7 @@ export const router = createHashRouter([
   },
   {
     path: "/products",
-    element: <Products></Products>,
+    element: <ProductsPage></ProductsPage>,
   },
   {
     path: "/products/:productId",
@@ -22,7 +21,7 @@ export const router = createHashRouter([
   },
   {
     path: "/categories",
-    element: <Categories></Categories>,
+    element: <CategoriesPage></CategoriesPage>,
   },
   {
     path: "/categories/:categoryId",
@@ -31,9 +30,5 @@ export const router = createHashRouter([
   {
     path: "/checkout",
     element: <Checkout></Checkout>,
-  },
-  {
-    path: "/contact",
-    element: <Contact></Contact>,
   },
 ]);
