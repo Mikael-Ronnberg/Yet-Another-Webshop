@@ -37,7 +37,7 @@ export const featItems = {
         "One of the world's best-selling potted palms, popular since the Victorian era and incredibly easy to care for – this palm is a perfect way to bring a tropical ambiance into your home or office.",
       price: 189,
       slug: "parlorpalm",
-      image: "/Chamaedorea_elegans.png",
+      image: "/leafygreen/Chamaedorea_elegans.png",
       category: {
         id: "183e93cb-22fe-4f19-8631-107552b2fbb3",
         image: "/hero/mostPopularBanner.png",

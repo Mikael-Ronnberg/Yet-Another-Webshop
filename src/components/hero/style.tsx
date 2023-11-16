@@ -19,5 +19,5 @@ export const heroCardStyles: CardProps = {
 export const heroImageStyles: ImageProps = {
   objectFit: "cover",
   maxW: "100%",
-  rounded: "mg",
+  rounded: "sm",
 };

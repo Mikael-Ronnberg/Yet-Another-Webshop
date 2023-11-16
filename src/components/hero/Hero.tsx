@@ -1,6 +1,7 @@
 import { Box, Button, Card, Heading, Text, Image } from "@chakra-ui/react";
 import { heroCardStyles, heroImageStyles } from "./style";
 import { Link } from "react-router-dom";
+import { buttonPrimaryStyle } from "../buttons/style";
 
 interface IHeroProps {
   heading: string;
@@ -19,7 +20,7 @@ export const Hero = ({
 }: IHeroProps) => {
   return (
     <Card {...heroCardStyles}>
-      <Box mx="2rem" w={{ base: "100%", lg: "50%" }}>
+      <Box p="2rem" w="90%">
         <Heading color="brand.primaryDarker" size={{ base: "xl", lg: "2xl" }}>
           {heading}
         </Heading>
@@ -27,23 +28,10 @@ export const Hero = ({
           {description}
         </Text>
         <Link to={btnLink}>
-          <Button
-            variant="outline"
-            borderColor="brand.whiteCream"
-            color="brand.whiteCream"
-            rounded="sm"
-            bgColor="brand.primary"
-            _hover={{
-              bgColor: "brand.primaryDark",
-              color: "brand.whiteCream",
-              borderColor: "brand.whiteCream",
-            }}
-          >
-            {btnLabel}
-          </Button>
+          <Button {...buttonPrimaryStyle}>{btnLabel}</Button>
         </Link>
       </Box>
-      <Box mx="2rem" w={{ base: "100%", lg: "50%" }} mt="1rem">
+      <Box mx="2rem" w={{ base: "80%", lg: "50%" }} mt="1rem">
         <Image {...heroImageStyles} src={image} alt={heading} />
       </Box>
     </Card>
