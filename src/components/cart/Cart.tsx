@@ -40,8 +40,8 @@ export const Cart = () => {
         _hover={{
           bgColor: "transparent",
         }}
-        fontSize="1.8rem"
-        pt="1rem"
+        fontSize={{ base: "1.8rem", lg: "1.5rem" }}
+        pt={{ base: "1rem", lg: "0.1rem" }}
         pos="relative"
       >
         <BsCart4 />

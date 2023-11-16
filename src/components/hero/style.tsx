@@ -7,13 +7,13 @@ export const heroCardStyles: CardProps = {
   overflow: "hidden",
   variant: "outline",
   rounded: "sm",
-  w: "90%",
+  w: { base: "97%", lg: "90%" },
   mx: "auto",
   bgColor: "brand.whiteCream",
   shadow: "sm",
   p: "2rem",
   mb: "2rem",
-  mt: { base: "5rem", lg: "3rem" },
+  mt: "2rem",
 };
 
 export const heroImageStyles: ImageProps = {

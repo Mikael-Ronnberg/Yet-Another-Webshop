@@ -9,6 +9,7 @@ export const Banner = () => {
         {...bannerStyles}
         bg="center / cover no-repeat url(https://images.pexels.com/photos/2873479/pexels-photo-2873479.jpeg)"
         w="100vw"
+        mt="2rem"
         h={{ base: "300px", lg: "80vh" }}
       >
         <Box
