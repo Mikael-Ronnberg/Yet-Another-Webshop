@@ -8,6 +8,7 @@ import {
   Text,
   Button,
   Stack,
+  Link as ChakraLink,
 } from "@chakra-ui/react";
 import { IProduct } from "../../models/Interfaces";
 import { Quantity } from "../../components/quantity/Quantity";
@@ -111,9 +112,9 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
               <Text fontWeight="bold" color="brand.primaryDarker">
                 Free Delivery Over 500 sek!
               </Text>
-              <Link textDecor="underline" color="gray.500">
+              <ChakraLink textDecor="underline" color="gray.500">
                 Details
-              </Link>
+              </ChakraLink>
             </Box>
             <Box borderWidth={1} borderColor="brand.primary" p="1rem">
               <Text fontWeight="bold" color="brand.primaryDarker">
@@ -122,9 +123,9 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
               <Text color="brand.primaryDarker">
                 Free return within 14 days
               </Text>
-              <Link textDecor="underline" color="brand.primaryDarker">
+              <ChakraLink textDecor="underline" color="brand.primaryDarker">
                 Details
-              </Link>
+              </ChakraLink>
             </Box>
           </Stack>
         </GridItem>

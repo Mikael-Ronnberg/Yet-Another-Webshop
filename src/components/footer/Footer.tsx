@@ -4,7 +4,6 @@ import {
   Container,
   IconButton,
   Input,
-  Link,
   SimpleGrid,
   Stack,
   Text,
@@ -14,6 +13,7 @@ import { ReactNode } from "react";
 import { BiMailSend } from "react-icons/bi";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { LogoDark } from "../Icons/LogoDark";
+import { Link } from "react-router-dom";
 
 const SocialButton = ({
   children,
@@ -87,17 +87,17 @@ export const Footer = () => {
             <Box borderBottom="1px" borderColor="brand.primaryDarker" w="10rem">
               <ListHeader>Company</ListHeader>
             </Box>
-            <Link href={"#"}>About us</Link>
-            <Link href={"#"}>Contact us</Link>
-            <Link href={"#"}>Testimonials</Link>
+            <Link to={"#"}>About us</Link>
+            <Link to={"#"}>Contact us</Link>
+            <Link to={"#"}>Testimonials</Link>
           </Stack>
           <Stack align="flex-start" py={{ base: "10", md: "5", lg: "2" }}>
             <Box borderBottom="1px" borderColor="brand.primaryDarker" w="10rem">
               <ListHeader>Support</ListHeader>
             </Box>
-            <Link href={"#"}>Help Center</Link>
-            <Link href={"#"}>Terms of Service</Link>
-            <Link href={"#"}>Privacy Policy</Link>
+            <Link to={"#"}>Help Center</Link>
+            <Link to={"#"}>Terms of Service</Link>
+            <Link to={"#"}>Privacy Policy</Link>
           </Stack>
           <Stack align="flex-start" py={{ base: "6", md: "5", lg: "2" }}>
             <ListHeader>Sign up for 10% discount!</ListHeader>

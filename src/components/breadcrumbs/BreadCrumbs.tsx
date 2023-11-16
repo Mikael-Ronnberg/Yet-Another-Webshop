@@ -1,11 +1,7 @@
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  Text,
-} from "@chakra-ui/react";
+import { Breadcrumb, BreadcrumbItem, Text } from "@chakra-ui/react";
 import { IBreadCrumbItems } from "../../models/Interfaces";
 import { ChevronRightIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 
 interface IBreadCrumbs {
   items?: IBreadCrumbItems[];
@@ -28,7 +24,7 @@ export const BreadCrumbs = ({ items = [] }: IBreadCrumbs) => {
           {items.map((item, index) =>
             index !== items.length - 1 ? (
               <BreadcrumbItem key={index}>
-                <BreadcrumbLink href={item.link}>{item.name}</BreadcrumbLink>
+                <Link to={item.link}>{item.name}</Link>
               </BreadcrumbItem>
             ) : (
               <BreadcrumbItem key={index}>
