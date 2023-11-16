@@ -8,7 +8,6 @@ import {
   Text,
   Button,
   Stack,
-  Link,
 } from "@chakra-ui/react";
 import { IProduct } from "../../models/Interfaces";
 import { Quantity } from "../../components/quantity/Quantity";
@@ -26,6 +25,7 @@ import { CartDispatchContext } from "../../context/CartDispatchContext";
 import { ActionType } from "../../reducers/CartReducer";
 import { buttonPrimaryStyle } from "../../components/buttons/style";
 import { Footer } from "../../components/footer/Footer";
+import { Link } from "react-router-dom";
 
 interface IProductInfoProps {
   product: IProduct;
@@ -94,7 +94,7 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
           />
           <Divider my="1rem" />
           <Box>
-            <Link href="/checkout">
+            <Link to="/checkout">
               <Button
                 {...buttonPrimaryStyle}
                 onClick={handleCheckout}
