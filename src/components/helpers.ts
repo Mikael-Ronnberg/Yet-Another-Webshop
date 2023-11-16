@@ -7,7 +7,7 @@ import {
 
 export const initialState: IState = {
   cart: [],
-  favourite: [],
+  // favourite: [],
   checkout: [],
 };
 

@@ -36,7 +36,7 @@ export interface IBreadCrumbItems {
 
 export interface IState {
   cart: IItem[];
-  favourite: IItem[];
+  // favourite: IItem[];
   checkout: IItem[];
 }
 export interface IItem extends IProduct {
