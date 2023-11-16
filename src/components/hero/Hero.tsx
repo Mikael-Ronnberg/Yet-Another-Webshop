@@ -20,7 +20,7 @@ export const Hero = ({
 }: IHeroProps) => {
   return (
     <Card {...heroCardStyles}>
-      <Box p="2rem" w="90%">
+      <Box p="2rem">
         <Heading color="brand.primaryDarker" size={{ base: "xl", lg: "2xl" }}>
           {heading}
         </Heading>
