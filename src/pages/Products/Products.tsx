@@ -8,13 +8,13 @@ export const Products = () => {
   return (
     <>
       <Navbar></Navbar>
-      <Hero
+      {/* <Hero
         heading="Green and Beatiful Plants"
         description="Dr. Greenthumb would be jealouse!"
         image="/hero_image.png"
         btnLabel="View All Categories"
         btnLink="/categories"
-      ></Hero>
+      ></Hero> */}
       <AllProducts products={products}></AllProducts>
       <Footer></Footer>
     </>

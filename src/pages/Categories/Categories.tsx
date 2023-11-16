@@ -8,13 +8,13 @@ export const Categories = () => {
   return (
     <>
       <Navbar></Navbar>
-      <Hero
+      {/* <Hero
         heading="Plant Categories"
         description="Our different categories"
         image="/leafyBanner.png"
         btnLabel="View All Products"
         btnLink="/products"
-      ></Hero>
+      ></Hero> */}
 
       <AllCategories categories={categories}></AllCategories>
       <Footer></Footer>
