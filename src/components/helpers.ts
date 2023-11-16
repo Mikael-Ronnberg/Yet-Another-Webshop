@@ -25,11 +25,11 @@ export const navItems: INavItem[] = [
 export const defaultBreadItems: IBreadCrumbItems[] = [
   {
     name: "Products",
-    link: "/product",
+    link: "/products",
   },
   {
     name: "Categories",
-    link: "/category",
+    link: "/categories",
   },
 ];
 

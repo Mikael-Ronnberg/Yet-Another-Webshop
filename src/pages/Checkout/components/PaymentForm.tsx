@@ -57,7 +57,7 @@ export const PaymentForm = () => {
             <Flex>
               <Input
                 type="text"
-                placeholder="Enter Coupon Code"
+                placeholder="PDD10"
                 rounded="sm"
                 borderColor="brand.primary"
                 focusBorderColor="brand.primary"

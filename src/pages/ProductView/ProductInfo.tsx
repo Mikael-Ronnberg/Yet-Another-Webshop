@@ -37,8 +37,6 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
   const dispatch = useContext(CartDispatchContext);
   const state = useContext(CartContext);
 
-  // const cart = state.cart;
-
   const handleCheckout = () => {
     // dispatch({ type: ActionType.RESET_ITEMS, payload: { key: "checkout" } });
 
