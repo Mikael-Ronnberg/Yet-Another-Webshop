@@ -1,14 +1,14 @@
 import { Footer } from "../../components/footer/Footer";
-import { Hero } from "../../components/hero/Hero";
+// import { Hero } from "../../components/hero/Hero";
 import { Navbar } from "../../components/navbar/Navbar";
-import { categories } from "../../mocks/categories";
-import { AllCategories } from "./components/AllCategories";
+// import { categories } from "../../mocks/categories";
+// import { AllCategories } from "./components/AllCategories";
 
 export const Categories = () => {
   return (
     <>
       <Navbar></Navbar>
-      <Hero
+      {/* <Hero
         heading="Plant Categories"
         description="Our different categories"
         image="/hero/leafyBanner.png"
@@ -16,7 +16,7 @@ export const Categories = () => {
         btnLink="/products"
       ></Hero>
 
-      <AllCategories categories={categories}></AllCategories>
+      <AllCategories categories={categories}></AllCategories> */}
       <Footer></Footer>
     </>
   );
