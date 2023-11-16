@@ -7,7 +7,7 @@ export const buttonSecondaryStyle: ButtonProps = {
   color: "brand.primaryDark",
   rounded: "sm",
   size: "sm",
-  w: { base: "120px", lg: "150px" },
+  w: "150px",
   _hover: {
     bgColor: "brand.primaryDark",
     color: "brand.whiteCream",
@@ -22,7 +22,7 @@ export const buttonPrimaryStyle: ButtonProps = {
   color: "brand.whiteCream",
   rounded: "sm",
   size: "sm",
-  w: { base: "120px", lg: "150px" },
+  w: "150px",
   _hover: {
     bgColor: "brand.primaryDark",
     color: "brand.whiteCream",
