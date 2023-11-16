@@ -15,7 +15,11 @@ interface IFeatProdProps {
 export const FeatProd = ({ title, products }: IFeatProdProps) => {
   return (
     <>
-      <Box w={{ base: "100%", lg: "100%" }} mx="auto" p="2rem">
+      <Box
+        w={{ base: "100%", lg: "100%" }}
+        mx="auto"
+        p={{ base: "1rem", lg: "2rem" }}
+      >
         <SectionHeading title={title} />
         <Swiper {...slideSettings}>
           {products.map((product) => (

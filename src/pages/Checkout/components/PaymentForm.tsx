@@ -17,11 +17,15 @@ import { calculateItemsTotal, formatPrice } from "../../../components/helpers";
 import { useState, useContext, useEffect } from "react";
 
 import { CartContext } from "../../../context/CartContext";
+import { Link } from "react-router-dom";
+import { CartDispatchContext } from "../../../context/CartDispatchContext";
+import { ActionType } from "../../../reducers/CartReducer";
 
 export const PaymentForm = () => {
   const [subTotal, setSubTotal] = useState<number>(0);
   const [tax, setTax] = useState<number>(0);
   const state = useContext(CartContext);
+  const dispatch = useContext(CartDispatchContext);
 
   const checkout = state.cart;
 
@@ -157,20 +161,28 @@ export const PaymentForm = () => {
             </Flex>
           </Box>
 
-          <Button
-            bgColor="brand.primary"
-            color="white"
-            w="100%"
-            rounded="sm"
-            _hover={{
-              bgColor: "brand.primaryDark",
-            }}
-            _active={{
-              bgColor: "brand.primaryDark",
-            }}
-          >
-            {formatPrice(subTotal)} sek
-          </Button>
+          <Link to="/confirmation">
+            <Button
+              bgColor="brand.primary"
+              color="white"
+              w="100%"
+              rounded="sm"
+              _hover={{
+                bgColor: "brand.primaryDark",
+              }}
+              _active={{
+                bgColor: "brand.primaryDark",
+              }}
+              onClick={() =>
+                dispatch({
+                  type: ActionType.RESET_ITEMS,
+                  payload: { key: "cart" },
+                })
+              }
+            >
+              Pay {formatPrice(subTotal)} sek
+            </Button>
+          </Link>
         </CardBody>
       </Card>
     </>

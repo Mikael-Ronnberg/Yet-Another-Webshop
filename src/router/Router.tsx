@@ -5,6 +5,7 @@ import { ProductRoute } from "../pages/ProductView/ProductRoute";
 import { CategoryRoute } from "../pages/CategoryView/CategoryRoute";
 import { CategoriesPage } from "../pages/Categories/CategoriesPage";
 import { ProductsPage } from "../pages/Products/ProductsPage";
+import { Confirmation } from "../pages/Confirmation/Confirmation";
 
 export const router = createHashRouter([
   {
@@ -30,5 +31,9 @@ export const router = createHashRouter([
   {
     path: "/checkout",
     element: <Checkout></Checkout>,
+  },
+  {
+    path: "/confirmation",
+    element: <Confirmation></Confirmation>,
   },
 ]);

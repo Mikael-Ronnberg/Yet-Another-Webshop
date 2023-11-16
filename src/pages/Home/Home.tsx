@@ -15,7 +15,7 @@ export const Home = () => {
       <Box
         borderBottom="1px"
         borderColor="brand.whiteCream"
-        pt="7rem"
+        pt={{ base: "3rem", lg: "7rem" }}
         ml="3rem"
         mr="3rem"
       ></Box>
@@ -23,7 +23,8 @@ export const Home = () => {
       <Box
         borderBottom="1px"
         borderColor="brand.whiteCream"
-        pt="4rem"
+        pt={{ base: "2rem", lg: "4rem" }}
+        pb={{ base: "0rem" }}
         ml="3rem"
         mr="3rem"
       ></Box>
