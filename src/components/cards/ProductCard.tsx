@@ -27,7 +27,7 @@ export const ProductCard = ({ product }: IProductCardPropss) => {
       bgColor="brand.whiteCream"
     >
       <CardBody>
-        <Link to={`/products/${product.id}`}>
+        <Link to={`/product/${product.id}`}>
           <Box
             boxSize="200px"
             bg={`center / contain no-repeat url(${product.image})`}

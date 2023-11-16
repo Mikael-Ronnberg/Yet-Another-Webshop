@@ -16,7 +16,7 @@ export const router = createHashRouter([
     element: <ProductsPage></ProductsPage>,
   },
   {
-    path: "/products/:productId",
+    path: "/product/:productId",
     element: <ProductRoute></ProductRoute>,
   },
   {
@@ -24,7 +24,7 @@ export const router = createHashRouter([
     element: <CategoriesPage></CategoriesPage>,
   },
   {
-    path: "/categories/:categoryId",
+    path: "/category/:categoryId",
     element: <CategoryRoute></CategoryRoute>,
   },
   {

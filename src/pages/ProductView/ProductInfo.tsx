@@ -59,11 +59,11 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
           ...defaultBreadItems,
           {
             name: product.category.name,
-            link: `/categories/${product.category?.id}`,
+            link: `/category/${product.category?.id}`,
           },
           {
             name: getSubstring(product.name, 20),
-            link: `/products/${product.id}`,
+            link: `/product/${product.id}`,
           },
         ]}
       />

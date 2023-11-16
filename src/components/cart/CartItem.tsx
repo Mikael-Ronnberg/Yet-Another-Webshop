@@ -30,7 +30,7 @@ export const CartItem = ({ item }: CartItemProps) => {
       my="2"
     >
       <GridItem>
-        <Link to={`/products/${item.slug}`}>
+        <Link to={`/product/${item.slug}`}>
           <Image
             src={item.image}
             boxSize="40px"
@@ -41,7 +41,7 @@ export const CartItem = ({ item }: CartItemProps) => {
         </Link>
       </GridItem>
       <GridItem colSpan={{ base: 5, lg: 3 }}>
-        <Link to={`/products/${item.id}`}>
+        <Link to={`/product/${item.id}`}>
           <Text color="brand.primaryDarker">{item.name}</Text>
         </Link>
       </GridItem>
