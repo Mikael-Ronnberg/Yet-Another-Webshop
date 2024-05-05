@@ -3,8 +3,8 @@ import { BoxProps, FlexProps, StackProps } from "@chakra-ui/react";
 export const navbarStyles: BoxProps = {
   pos: "fixed",
   w: "100%",
-  bgColor: "brand.primaryLight",
-  color: "brand.whiteCream",
+  bgColor: "brand.whiteCream",
+  color: "brand.darkText",
   mb: "1rem",
   zIndex: 10,
 };
@@ -19,16 +19,14 @@ export const desktopNavStyles: FlexProps = {
   display: { base: "none", lg: "flex" },
 };
 
-export const logoSectionStyles: StackProps = {
+export const textSectionStyles: StackProps = {
   direction: "row",
-  gap: 6,
-  flex: 1,
   alignItems: "center",
-};
-
-export const cartSectionStyles: StackProps = {
-  direction: "row",
-  spacing: 2,
+  justifyContent: "space-around",
+  borderTop: "1px",
+  borderColor: "brand.lightText",
+  marginLeft: "2rem",
+  marginRight: "2rem",
 };
 
 export const mobileNavContainerStyles: FlexProps = {

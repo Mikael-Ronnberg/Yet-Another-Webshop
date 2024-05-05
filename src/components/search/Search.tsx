@@ -5,12 +5,12 @@ import { searchInputStyles } from "./styles";
 export const Search = () => {
   return (
     <Box>
-      <InputGroup size="sm" w={{ base: "100%", lg: "32rem" }}>
+      <InputGroup size="sm">
         <InputLeftElement
           pointerEvents="none"
           color="brand.whiteCream"
           fontSize="1.2em"
-          children={<SearchIcon color="grey.400" />}
+          children={<SearchIcon color="brand.darkText" />}
         />
         <Input {...searchInputStyles}></Input>
       </InputGroup>

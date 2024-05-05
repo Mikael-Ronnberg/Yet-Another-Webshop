@@ -10,10 +10,11 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
-import { BiMailSend } from "react-icons/bi";
+import { BiRightArrowAlt } from "react-icons/bi";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { LogoDark } from "../Icons/LogoDark";
 import { Link } from "react-router-dom";
+import { colors } from "../../theme";
 
 const SocialButton = ({
   children,
@@ -57,7 +58,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 
 export const Footer = () => {
   return (
-    <Box bg="brand.whiteCream" color="brand.primaryDarker" mt="2rem">
+    <Box bg="brand.brownLight" color="brand.darkText" mt="2rem">
       <Container as={Stack} maxW={"6xl"} py={10}>
         <SimpleGrid
           templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 2fr" }}
@@ -67,10 +68,7 @@ export const Footer = () => {
             <Box>
               <LogoDark />
             </Box>
-            <Text fontSize="sm">
-              © 2023 Plant Dad Depot (PPD). All rights reserved
-            </Text>
-            <Stack direction="row" spacing={6}>
+            <Stack direction="row" spacing={6} pl={7}>
               <SocialButton label="Twitter" href={"#"}>
                 <FaTwitter />
               </SocialButton>
@@ -81,45 +79,74 @@ export const Footer = () => {
                 <FaInstagram />
               </SocialButton>
             </Stack>
+            <Text fontSize="sm">
+              © 2023 Plant Dad Depot (PPD). All rights reserved
+            </Text>
           </Stack>
 
           <Stack align="flex-start" py={{ base: "10", md: "5", lg: "2" }}>
-            <Box borderBottom="1px" borderColor="brand.primaryDarker" w="10rem">
-              <ListHeader>Company</ListHeader>
+            <Box>
+              <ListHeader>Information</ListHeader>
             </Box>
+
             <Link to={"#"}>About us</Link>
-            <Link to={"#"}>Contact us</Link>
-            <Link to={"#"}>Testimonials</Link>
+            <Link to={"#"}>Contact</Link>
+            <Link to={"#"}>What others say about PPD</Link>
           </Stack>
+
           <Stack align="flex-start" py={{ base: "10", md: "5", lg: "2" }}>
-            <Box borderBottom="1px" borderColor="brand.primaryDarker" w="10rem">
+            <Box>
               <ListHeader>Support</ListHeader>
             </Box>
             <Link to={"#"}>Help Center</Link>
             <Link to={"#"}>Terms of Service</Link>
             <Link to={"#"}>Privacy Policy</Link>
+            <Link to={"#"}>Cookies</Link>
           </Stack>
+
           <Stack align="flex-start" py={{ base: "6", md: "5", lg: "2" }}>
-            <ListHeader>Sign up for 10% discount!</ListHeader>
-            <Stack direction={"row"}>
+            <ListHeader>Sign up for our news letter!</ListHeader>
+            <Box>
+              <Text fontSize="sm">
+                Sign up and get the latest information from your favorite Plant
+                Depot! Don't miss out on exclusive offers.
+              </Text>
+            </Box>
+            <Stack direction={"row"} gap={0}>
               <Input
                 placeholder="Your email address"
-                bg="blackAlpha.100"
+                bg="brand.brownLight"
                 rounded="sm"
-                border={0}
+                border={`1px solid ${colors.brand.borderLight}`}
+                _hover={{
+                  border: `1px solid ${colors.brand.darkText}`,
+                }}
                 _focus={{
-                  bg: "whiteAlpha.300",
+                  bg: colors.brand.whiteCream,
+                  border: `1px solid ${colors.brand.borderLight}`,
+                  outline: "none",
+                }}
+                sx={{
+                  "&::placeholder": {
+                    color: colors.brand.borderLight,
+                  },
                 }}
               />
               <IconButton
-                bg="brand.primary"
-                color="white"
+                bg="brand.browLight"
                 rounded="sm"
+                color="brand.darkText"
+                border={`1px solid ${colors.brand.borderLight}`}
                 _hover={{
-                  bg: "brand.primaryDark",
+                  border: `1px solid ${colors.brand.darkText}`,
+                }}
+                _focus={{
+                  bg: colors.brand.whiteCream,
+                  border: `1px solid ${colors.brand.borderLight}`,
+                  outline: "none",
                 }}
                 aria-label="Subscribe"
-                icon={<BiMailSend />}
+                icon={<BiRightArrowAlt />}
               />
             </Stack>
           </Stack>

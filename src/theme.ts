@@ -9,6 +9,11 @@ export const colors = {
     primaryDarker: "#55633d",
     whiteCream: "#EEEAE0",
     whiteGreen: "#CDD5C4",
+    brownLight: "#EDC39F",
+    darkText: "#3A3A3A",
+    lightText: "#939393",
+
+    borderLight: "#998068",
   },
 };
 
