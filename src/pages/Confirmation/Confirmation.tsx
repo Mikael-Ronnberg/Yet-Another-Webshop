@@ -21,10 +21,10 @@ export const Confirmation = () => {
           rounded="sm"
           mb="10rem"
         >
-          <Heading color="brand.primaryDarker" p="3rem">
+          <Heading color="brand.darkText" p="3rem">
             Thank you for your order!
           </Heading>
-          <Text color="brand.primaryDarker" p="4rem">
+          <Text color="brand.darkText" p="4rem">
             An email will arrive with further details on order #101232
           </Text>
           <Flex justifyContent="space-between" gap="15">

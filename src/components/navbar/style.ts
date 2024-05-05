@@ -27,6 +27,7 @@ export const textSectionStyles: StackProps = {
   borderColor: "brand.lightText",
   marginLeft: "2rem",
   marginRight: "2rem",
+  display: { base: "none", lg: "flex" },
 };
 
 export const mobileNavContainerStyles: FlexProps = {

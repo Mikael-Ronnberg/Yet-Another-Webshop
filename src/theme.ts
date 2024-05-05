@@ -1,5 +1,4 @@
 import { extendTheme } from "@chakra-ui/react";
-import "@fontsource-variable/raleway";
 
 export const colors = {
   brand: {
@@ -7,7 +6,7 @@ export const colors = {
     primaryLight: "#B2C6AA",
     primaryDark: "#90A865",
     primaryDarker: "#55633d",
-    whiteCream: "#EEEAE0",
+    whiteCream: "#FFFCF6",
     whiteGreen: "#CDD5C4",
     brownLight: "#EDC39F",
     darkText: "#3A3A3A",
@@ -20,7 +19,7 @@ export const colors = {
 export const theme = extendTheme({
   colors,
   fonts: {
-    heading: `'Raleway', sans-serif`,
-    body: `'Raleway', sans-serif`,
+    heading: `"Merriweather", serif`,
+    body: `"Work Sans", sans-serif`,
   },
 });

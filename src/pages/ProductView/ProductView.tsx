@@ -12,14 +12,14 @@ export const ProductView = ({ id }: IProductViewProps) => {
   if (!displayProduct) {
     return (
       <>
-        <Navbar></Navbar>
+        <Navbar />
         <div>Product not found</div>
       </>
     );
   } else {
     return (
       <>
-        <ProductInfo product={displayProduct}></ProductInfo>
+        <ProductInfo product={displayProduct} />
       </>
     );
   }

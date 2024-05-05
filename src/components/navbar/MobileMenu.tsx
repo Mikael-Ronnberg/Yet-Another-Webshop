@@ -30,7 +30,7 @@ export const MobileMenu = () => {
         _hover={{
           bgColor: "transparent",
         }}
-        color="brand.whiteCream"
+        color="brand.darkText"
         fontSize="2rem"
         pt="1rem"
       >

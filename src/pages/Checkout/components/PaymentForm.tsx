@@ -44,10 +44,10 @@ export const PaymentForm = () => {
         shadow="none"
         p="2rem"
         rounded="sm"
-        bgColor="brand.whiteCream"
+        bgColor="white"
       >
         <CardHeader>
-          <Heading size="md" color="brand.primaryDarker">
+          <Heading size="md" color="brand.darkText">
             Payment Details
           </Heading>
         </CardHeader>
@@ -82,7 +82,7 @@ export const PaymentForm = () => {
             <Divider mt="1rem" />
 
             <Box>
-              <Heading size="xs" my="1rem" color="brand.primaryDarker">
+              <Heading size="xs" my="1rem" color="brand.darkText">
                 Payment Option
               </Heading>
               <RadioGroup>
@@ -90,21 +90,21 @@ export const PaymentForm = () => {
                   <Radio
                     borderColor="brand.primary"
                     value="cashOnDelivery"
-                    color="brand.primaryDarker"
+                    color="brand.darkText"
                   >
                     Cash On Delivery
                   </Radio>
                   <Radio
                     borderColor="brand.primary"
                     value="momo"
-                    color="brand.primaryDarker"
+                    color="brand.darkText"
                   >
                     Swish
                   </Radio>
                   <Radio
                     borderColor="brand.primary"
                     value="3"
-                    color="brand.primaryDarker"
+                    color="brand.darkText"
                   >
                     Credit Card (Master/Visa)
                   </Radio>
@@ -116,46 +116,46 @@ export const PaymentForm = () => {
 
           <Box>
             <Flex justify="space-between" align="center" my="1rem">
-              <Text fontWeight="bold" color="brand.primaryDarker">
+              <Text fontWeight="bold" color="brand.darkText">
                 Sub Total
               </Text>
-              <Text fontWeight="bold" color="brand.primaryDarker">
+              <Text fontWeight="bold" color="brand.darkText">
                 {formatPrice(subTotal)} sek
               </Text>
             </Flex>
 
             <Flex justify="space-between" align="center" my="1rem">
-              <Text fontWeight="bold" color="brand.primaryDarker">
+              <Text fontWeight="bold" color="brand.darkText">
                 Tax(10%)
               </Text>
-              <Text fontWeight="bold" color="brand.primaryDarker">
+              <Text fontWeight="bold" color="brand.darkText">
                 {formatPrice(tax)} sek
               </Text>
             </Flex>
 
             <Flex justify="space-between" align="center" my="1rem">
-              <Text fontWeight="bold" color="brand.primaryDarker">
+              <Text fontWeight="bold" color="brand.darkText">
                 Coupon Discount
               </Text>
-              <Text fontWeight="bold" color="brand.primaryDarker">
+              <Text fontWeight="bold" color="brand.darkText">
                 - {formatPrice(tax)} sek
               </Text>
             </Flex>
 
             <Flex justify="space-between" align="center" my="1rem">
-              <Text fontWeight="bold" color="brand.primaryDarker">
+              <Text fontWeight="bold" color="brand.darkText">
                 Shipping Cost
               </Text>
-              <Text fontWeight="bold" color="brand.primaryDarker">
+              <Text fontWeight="bold" color="brand.darkText">
                 - {formatPrice(0)} sek
               </Text>
             </Flex>
             <Divider />
             <Flex justify="space-between" align="center" my="1rem">
-              <Text fontWeight="bold" color="brand.primaryDarker">
+              <Text fontWeight="bold" color="brand.darkText">
                 Total
               </Text>
-              <Text fontWeight="bold" color="brand.primaryDarker">
+              <Text fontWeight="bold" color="brand.darkText">
                 {formatPrice(subTotal)} sek
               </Text>
             </Flex>

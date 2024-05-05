@@ -32,7 +32,7 @@ export const buttonPrimaryStyle: ButtonProps = {
 
 export const buttonIncDecStyle: ButtonProps = {
   variant: "outline",
-  bgColor: "brand.whiteCream",
+  bgColor: "white",
   borderColor: "brand.primary",
   color: "brand.primary",
   rounded: "sm",

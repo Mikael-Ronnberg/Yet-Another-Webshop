@@ -21,10 +21,10 @@ export const Hero = ({
   return (
     <Card {...heroCardStyles}>
       <Box p="2rem">
-        <Heading color="brand.primaryDarker" size={{ base: "xl", lg: "2xl" }}>
+        <Heading color="brand.darkText" size={{ base: "xl", lg: "2xl" }}>
           {heading}
         </Heading>
-        <Text color="brand.primaryDarker" py="1rem">
+        <Text color="brand.darkText" py="1rem">
           {description}
         </Text>
         <Link to={btnLink}>

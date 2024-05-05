@@ -11,7 +11,7 @@ export const SwiperNavButtons = () => {
         borderColor="brand.primary"
         borderWidth="1px"
         color="brand.primary"
-        bgColor="brand.whiteCream"
+        bgColor="white"
         aria-label="Prev"
         onClick={() => swiper.slidePrev()}
         mx="1"
@@ -22,7 +22,7 @@ export const SwiperNavButtons = () => {
         borderColor="brand.primary"
         borderWidth="1px"
         color="brand.primary"
-        bgColor="brand.whiteCream"
+        bgColor="white"
         aria-label="Prev"
         onClick={() => swiper.slideNext()}
         mx="1"

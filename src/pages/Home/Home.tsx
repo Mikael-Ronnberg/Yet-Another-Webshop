@@ -14,7 +14,7 @@ export const Home = () => {
       <Banner />
       <Box
         borderBottom="1px"
-        borderColor="brand.whiteCream"
+        borderColor="brand.primaryLight"
         pt={{ base: "3rem", lg: "7rem" }}
         ml="3rem"
         mr="3rem"
@@ -22,7 +22,7 @@ export const Home = () => {
       <Categories categories={categories} />
       <Box
         borderBottom="1px"
-        borderColor="brand.whiteCream"
+        borderColor="brand.primaryLight"
         pt={{ base: "2rem", lg: "4rem" }}
         pb={{ base: "0rem" }}
         ml="3rem"

@@ -12,15 +12,13 @@ export const bannerStyles: FlexProps = {
 
 export const bannerHeadingStyles: HeadingProps = {
   size: { base: "2xl", md: "3xl", lg: "4xl" },
-  textAlign: "center",
   lineHeight: "4rem",
-  color: "brand.whiteCream",
+  color: "brand.darkText",
 };
 
 export const bannerTextStyles: TextProps = {
   fontSize: { base: "1xl", md: "2xl", lg: "3xl" },
-  textAlign: "center",
-  color: "brand.whiteCream",
+  color: "brand.darkText",
 };
 
 export const slideSettings: SwiperOptions = {

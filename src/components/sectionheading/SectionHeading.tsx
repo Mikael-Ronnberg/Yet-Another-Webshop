@@ -6,7 +6,7 @@ interface ISectionHeadingProps {
 
 export const SectionHeading = ({ title }: ISectionHeadingProps) => {
   return (
-    <Heading size="md" my="1.5rem" color="brand.primaryDarker">
+    <Heading size="md" my="1.5rem" color="brand.darkText">
       {title}
     </Heading>
   );

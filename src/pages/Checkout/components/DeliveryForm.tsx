@@ -17,11 +17,11 @@ export const DeliveryForm = () => {
         borderColor="gray.200"
         shadow="none"
         rounded="sm"
-        bgColor="brand.whiteCream"
+        bgColor="white"
         mb="3rem"
       >
         <CardHeader>
-          <Heading size="md" color="brand.primaryDarker">
+          <Heading size="md" color="brand.darkText">
             Delivery Information
           </Heading>
         </CardHeader>
@@ -29,7 +29,7 @@ export const DeliveryForm = () => {
         <CardBody>
           <Stack spacing="2rem">
             <Box>
-              <FormLabel color="brand.primaryDarker">Full Name</FormLabel>
+              <FormLabel color="brand.darkText">Full Name</FormLabel>
               <Input
                 type="text"
                 placeholder="Full name"
@@ -39,7 +39,7 @@ export const DeliveryForm = () => {
             </Box>
 
             <Box>
-              <FormLabel color="brand.primaryDarker">Address</FormLabel>
+              <FormLabel color="brand.darkText">Address</FormLabel>
               <Input
                 type="text"
                 placeholder="address"
@@ -49,7 +49,7 @@ export const DeliveryForm = () => {
             </Box>
 
             <Box>
-              <FormLabel color="brand.primaryDarker">Phone</FormLabel>
+              <FormLabel color="brand.darkText">Phone</FormLabel>
               <Input
                 type="text"
                 placeholder="phone number"
@@ -59,7 +59,7 @@ export const DeliveryForm = () => {
             </Box>
 
             <Box>
-              <FormLabel color="brand.primaryDarker">Email</FormLabel>
+              <FormLabel color="brand.darkText">Email</FormLabel>
               <Input
                 type="email"
                 placeholder="email"

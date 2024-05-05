@@ -9,7 +9,7 @@ export const heroCardStyles: CardProps = {
   rounded: "sm",
   w: { base: "97%", lg: "90%" },
   mx: "auto",
-  bgColor: "brand.whiteCream",
+  bgColor: "white",
   shadow: "sm",
   p: "2rem",
   mb: "2rem",

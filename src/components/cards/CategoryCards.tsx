@@ -15,12 +15,12 @@ export const CategoryCard = ({ category }: ICategoryCardProps) => {
           align="center"
           justify="center"
           overflow="hidden"
-          bgColor="brand.whiteCream"
+          bgColor="white"
           rounded="sm"
           w="100%"
           h="100%"
           p="1rem"
-          _hover={{ bgColor: "brand.whiteGreen", cursor: "pointer" }}
+          _hover={{ cursor: "pointer" }}
         >
           <Image
             src={category.image}
@@ -30,10 +30,7 @@ export const CategoryCard = ({ category }: ICategoryCardProps) => {
             p="1rem"
           />
           <CardBody>
-            <Heading
-              size={{ base: "sm", lg: "md" }}
-              color="brand.primaryDarker"
-            >
+            <Heading size={{ base: "sm", lg: "md" }} color="brand.darkText">
               {category.name}
             </Heading>
           </CardBody>

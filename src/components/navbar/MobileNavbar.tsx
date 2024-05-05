@@ -11,7 +11,7 @@ export const MobileNavbar = () => {
         <Box>
           <MobileMenu />
         </Box>
-        <NavLogo></NavLogo>
+        <NavLogo />
         <Stack direction="row" spacing={1}>
           <Cart />
         </Stack>

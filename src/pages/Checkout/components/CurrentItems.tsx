@@ -31,11 +31,13 @@ export const CurrentItems = () => {
       <Card
         shadow="none"
         rounded="sm"
-        bgColor="brand.whiteCream"
+        borderWidth="1px"
+        borderColor="gray.200"
+        bgColor="white"
         pt={{ base: "3rem", lg: "0" }}
       >
         <CardHeader>
-          <Heading size="md" color="brand.primaryDarker">
+          <Heading size="md" color="brand.darkText">
             Your Items
           </Heading>
         </CardHeader>
@@ -59,11 +61,11 @@ export const CurrentItems = () => {
                       fontWeight="bold"
                       fontSize={{ base: "sm", lg: "lg" }}
                       maxW="500px"
-                      color="brand.primaryDarker"
+                      color="brand.darkText"
                     >
                       {item.name}
                     </Text>
-                    <Text color="brand.primaryDarker">
+                    <Text color="brand.darkText">
                       {getSubstring(item.description, 50)}
                     </Text>
                   </Box>
@@ -85,7 +87,7 @@ export const CurrentItems = () => {
                       -
                     </Button>
                     <Input
-                      color="brand.primaryDarker"
+                      color="brand.darkText"
                       rounded="sm"
                       focusBorderColor="brand.primaryDark"
                       size="sm"
@@ -113,14 +115,14 @@ export const CurrentItems = () => {
                     <Box textAlign="right">
                       <Text
                         fontWeight="bold"
-                        color="brand.primaryDarker"
+                        color="brand.darkText"
                         fontSize={{ base: "md", lg: "lg" }}
                       >
                         {formatPrice(item.price * item.count)} sek
                       </Text>
                       <Text
                         fontSize={{ base: "sm", lg: "md" }}
-                        color="brand.primaryDarker"
+                        color="brand.darkText"
                       >
                         Quantity: {item.count}
                       </Text>

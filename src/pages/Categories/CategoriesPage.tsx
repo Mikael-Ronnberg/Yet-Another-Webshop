@@ -7,17 +7,17 @@ import { AllCategories } from "./components/AllCategories";
 export const CategoriesPage = () => {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <Hero
         heading="Plant Categories"
         description="Our different categories"
         image="/hero/leafyBanner.png"
         btnLabel="View All Products"
         btnLink="/products"
-      ></Hero>
+      />
 
       <AllCategories categories={categories}></AllCategories>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };

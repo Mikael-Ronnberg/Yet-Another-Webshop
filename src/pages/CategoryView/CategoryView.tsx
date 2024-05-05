@@ -15,14 +15,14 @@ export const CategoryView = ({ id }: ICategoryViewProps) => {
   if (!displayProduct) {
     return (
       <>
-        <Navbar></Navbar>
+        <Navbar />
         <div>Category not found</div>
       </>
     );
   } else {
     return (
       <>
-        <Navbar></Navbar>
+        <Navbar />
         <Hero
           heading={displayProduct.category.name}
           description={`Awesome ${displayProduct.category.name}`}

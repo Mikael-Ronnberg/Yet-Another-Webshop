@@ -4,5 +4,5 @@ import { ProductView } from "./ProductView";
 export const ProductRoute = () => {
   const { productId } = useParams();
 
-  return <ProductView id={productId}></ProductView>;
+  return <ProductView id={productId} />;
 };

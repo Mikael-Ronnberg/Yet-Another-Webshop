@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-      <Box bgGradient="linear(to-t, brand.primaryDark, brand.primaryLight)">
+      <Box bg="brand.whiteCream">
         <CartContext.Provider value={state}>
           <CartDispatchContext.Provider value={dispatch}>
             <RouterProvider router={router} />

@@ -38,8 +38,6 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
   const state = useContext(CartContext);
 
   const handleCheckout = () => {
-    // dispatch({ type: ActionType.RESET_ITEMS, payload: { key: "checkout" } });
-
     dispatch({
       type: ActionType.ADD_ITEM,
       payload: {
@@ -52,7 +50,7 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <BreadCrumbs
         items={[
           ...defaultBreadItems,
@@ -77,11 +75,11 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
           <Image src={product.image} alt={product.name} mx="auto" />
         </GridItem>
         <GridItem p="1rem" bgColor="brand.whiteCream" rounded="sm">
-          <Heading color="brand.primaryDarker">{product.name}</Heading>
-          <Text my="1rem" color="brand.primaryDarker">
+          <Heading color="brand.darkText">{product.name}</Heading>
+          <Text my="1rem" color="brand.darkText">
             {product.description}
           </Text>
-          <Text fontWeight="bold" fontSize="2rem" color="brand.primaryDarker">
+          <Text fontWeight="bold" fontSize="2rem" color="brand.darkText">
             {product.price} sek
           </Text>
           <Divider my="1rem" />
@@ -107,7 +105,7 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
           </Box>
           <Stack py="2rem">
             <Box borderWidth={1} borderColor="brand.primary" p="1rem">
-              <Text fontWeight="bold" color="brand.primaryDarker">
+              <Text fontWeight="bold" color="brand.darkText">
                 Free Delivery Over 500 sek!
               </Text>
               <ChakraLink textDecor="underline" color="gray.500">
@@ -115,13 +113,11 @@ export const ProductInfo = ({ product }: IProductInfoProps) => {
               </ChakraLink>
             </Box>
             <Box borderWidth={1} borderColor="brand.primary" p="1rem">
-              <Text fontWeight="bold" color="brand.primaryDarker">
+              <Text fontWeight="bold" color="brand.darkText">
                 Return Delivery?
               </Text>
-              <Text color="brand.primaryDarker">
-                Free return within 14 days
-              </Text>
-              <ChakraLink textDecor="underline" color="brand.primaryDarker">
+              <Text color="brand.darkText">Free return within 14 days</Text>
+              <ChakraLink textDecor="underline" color="brand.darkText">
                 Details
               </ChakraLink>
             </Box>
