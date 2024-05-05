@@ -2,9 +2,8 @@
 
 This was a project we did as an assignment in Basic Javascript, but I remade it with ReactTS. It is basically only the frontend part of a webshop.
 
-![Screenshot 2023-11-16 at 19 07 38](https://github.com/Mikael-Ronnberg/Yet-Another-Webshop/assets/113439687/f2ba26e7-d1e8-43d2-a9de-890276fd77b9)
+![Screenshot 2024-05-05 at 15 54 48](https://github.com/Mikael-Ronnberg/Yet-Another-Webshop/assets/113439687/2ddf9497-c024-418b-9090-ccfbab8735d2)
 
-![Screenshot 2023-11-16 at 19 08 43](https://github.com/Mikael-Ronnberg/Yet-Another-Webshop/assets/113439687/b81cb3c3-a0e6-446d-ac6d-e531d6a8ba09)
 
 ## Features
 
